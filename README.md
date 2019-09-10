@@ -33,7 +33,6 @@ Market at Home is an app that shows the nearby Markets, their daily products, al
 * user can select a market to see list of products and a detailed page to see all the informations about the selected market
 * user can select a product to see details about it
 * user can add products to cart and then process a payment to buy it
-* user can add reviews about markets and the app
 * user can receive notifications with a confirmation code.
 
 **Optional Nice-to-have Stories**
@@ -43,17 +42,19 @@ Market at Home is an app that shows the nearby Markets, their daily products, al
 * user can have on-time pictures of products
 * user can select a product and see a list of similar items
 * user can rate market and services
+* user can add reviews about markets and the app
 * user can see market nearby depending of his location 
 
 
 ### 2. Screen Archetypes
 
-* Splash screen
+* Welcome screen
 * Browse products 
 * Select a product and see every details about it.
-* Add to cart 
-* Login
+* Add to favorites 
+* Add to cart
 * Register - User signs up with a social account or logs into their account 
+* Login
 * Payment 
 * Select a market, and see every details about it(location and offered services)
 ### 3. Navigation
@@ -92,3 +93,71 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+## Schema 
+### Models
+#### Post
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | image         | File     | image that app managers post |
+   | name          | String   | name of products |
+   | price         | Number   | price of products |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
+   
+   #### User
+   | Property            | Type     | Description |
+   | -------------       | -------- | ------------|
+   | ProfileImage        | File     | Profile image that app managers post |
+   | Name                | String   | name of the user |
+   | Username            | String   | username of the user |
+   | Password            | String   | password of the user |
+   | Email               | String   |  email of the user |
+   | Username            | String   | username of the user |
+   | Phone	              | number	  | The phone number of the user |
+   | Alternative contact | number   | Phone number of the Alternative person |
+   | Adress              | String   | Adress of the user|
+   | createdAt           | DateTime | date when post is created (default field) |
+   | updatedAt           | DateTime | date when post is last updated (default field) |
+   
+   
+### Networking
+#### List of network requests by screen
+   - Home Feed Screen
+      - (Read/GET) Query all recent posts by the app managers 
+   - Details Screen
+      - (Read/GET) Query all products post by the app managers 
+   - Sign up Screen 
+      - (Create/POST) Create a new user 
+      - (Read/GET) Query log in user
+   - Sign in Screen 
+      -(Read/GET) Query log in new user
+   - Cart Screen 
+      - (Create/POST) Create a new order
+      - (Read/GET) Return confirmation code to the user 
+      
+#### [OPTIONAL:] Existing API Endpoints
+##### An API Of Ice And Fire
+- Base URL - [http://www.anapioficeandfire.com/api](http://www.anapioficeandfire.com/api)
+
+   HTTP Verb | Endpoint | Description
+   ----------|----------|------------
+    `GET`    | /characters | get all characters
+    `GET`    | /characters/?name=name | return specific character by name
+    `GET`    | /houses   | get all houses
+    `GET`    | /houses/?name=name | return specific house by name
+
+##### Game of Thrones API
+- Base URL - [https://api.got.show/api](https://api.got.show/api)
+
+   HTTP Verb | Endpoint | Description
+   ----------|----------|------------
+    `GET`    | /cities | gets all cities
+    `GET`    | /cities/byId/:id | gets specific city by :id
+    `GET`    | /continents | gets all continents
+    `GET`    | /continents/byId/:id | gets specific continent by :id
+    `GET`    | /regions | gets all regions
+    `GET`    | /regions/byId/:id | gets specific region by :id
+    `GET`    | /characters/paths/:name | gets a character's path with a given name
+
