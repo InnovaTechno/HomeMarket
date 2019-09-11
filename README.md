@@ -82,8 +82,6 @@ Optional:
 
 ### [BONUS] Digital Wireframes & Mockups
 <img src="https://imgur.com/jvXnnkO.jpg" height=200>
-<img src="https://imgur.com/Ga3OaOK.jpg" height=200> <img src="https://imgur.com/l44BSZQ.jpg" height=200>
-
  
 ### [BONUS] Interactive Prototype
 https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
