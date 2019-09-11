@@ -110,12 +110,11 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    #### User
    | Property            | Type     | Description |
    | -------------       | -------- | ------------|
-   | ProfileImage        | File     | Profile image that app managers post |
+   | ProfileImage        | File     | Profile image of the user |
    | Name                | String   | name of the user |
    | Username            | String   | username of the user |
    | Password            | String   | password of the user |
    | Email               | String   |  email of the user |
-   | Username            | String   | username of the user |
    | Phone	              | number	  | The phone number of the user |
    | Alternative contact | number   | Phone number of the Alternative person |
    | Adress              | String   | Adress of the user|
