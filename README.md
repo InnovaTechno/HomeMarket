@@ -28,11 +28,12 @@ Market at Home is an app that shows the nearby Markets, their daily products, al
 
 **Required Must-have Stories**
 * user can create an account
-* user can see a list of markets
+* user can see all categories of items
 * user can browse products
-* user can select a market to see list of products and a detailed page to see all the informations about the selected market
+* user can select a market to see list a detailed page to see all the informations about the selected market
 * user can select a product to see details about it
 * user can add products to cart and then process a payment to buy it
+* user can see a list of markets
 * user can receive notifications with a confirmation code.
 
 **Optional Nice-to-have Stories**
@@ -124,8 +125,6 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    
 ### Networking
 #### List of network requests by screen
-   - Home Feed Screen
-      - (Read/GET) Query all recent posts by the app managers 
    - Details Screen
       - (Read/GET) Query all products post by the app managers 
    - Sign up Screen 
