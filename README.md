@@ -38,13 +38,13 @@ Market at Home is an app that shows the nearby Markets, their daily products, al
 
 **Optional Nice-to-have Stories**
 
-[] user can ask for a delivery
-[] user can have multiple methods of online payment
-[] user can have on-time pictures of products
-[] user can select a product and see a list of similar items
-[] user can rate market and services
-[] user can add reviews about markets and the app
-[] user can see market nearby depending of his location 
+- [] user can ask for a delivery
+- [] user can have multiple methods of online payment
+- [] user can have on-time pictures of products
+- [] user can select a product and see a list of similar items
+- [] user can rate market and services
+- [] user can add reviews about markets and the app
+- [] user can see market nearby depending of his location 
 
 
 ### 2. Screen Archetypes
