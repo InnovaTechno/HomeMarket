@@ -100,7 +100,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
 ## Schema 
 ### Models
 #### Post
-
+ 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | image         | File     | image that app managers post |
