@@ -11,15 +11,11 @@
         android:icon="@drawable/ic_favorite_black_24dp"
         android:title="Favorites"
         app:showAsAction="always" />
+
     <item
         android:id="@+id/action_cart"
         android:icon="@drawable/ic_shopping_cart_black_24dp"
         android:title="Cart"
         app:showAsAction="always" />
 
-    <item
-        android:id="@+id/action_profile"
-        android:icon="@drawable/ic_person_black_24dp"
-        android:title="Profile"
-        app:showAsAction="always" />
 </menu>

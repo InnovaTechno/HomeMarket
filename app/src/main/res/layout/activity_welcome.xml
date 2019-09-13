@@ -25,17 +25,17 @@
 
     <Button
         android:id="@+id/btnWelcome"
-        android:layout_marginHorizontal="50dp"
-        android:layout_below="@id/ivLogo"
         android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_height="57dp"
-        android:background="#C50410"
+        android:layout_height="47dp"
+        android:layout_below="@id/ivLogo"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="14dp"
+        android:background="#C8020E"
         android:clickable="true"
         android:elevation="5dp"
         android:onClick="goToMainActivity"
         android:shadowRadius="15"
         android:text="Start Shopping"
         android:textColor="#ffffffff"
-        />
+        app:cornerRadius="15dp" />
 </RelativeLayout>
