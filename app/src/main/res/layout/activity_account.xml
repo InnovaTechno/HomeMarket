@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etAdresse"
+        android:layout_marginBottom="92dp"
+        android:text="Create an account"
+        android:textColor="#FF6347"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="385dp"
+        android:layout_height="55dp"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-101dp"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etAdresse"
+        android:layout_width="385dp"
+        android:layout_height="55dp"
+        android:layout_alignBottom="@+id/etName"
+        android:layout_marginBottom="-61dp"
+        android:ems="10"
+        android:hint="Adresse"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="381dp"
+        android:layout_height="56dp"
+        android:layout_alignBottom="@+id/etAdresse"
+        android:layout_marginBottom="-60dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:layout_centerHorizontal="true"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/etAPhone"
+        android:layout_width="377dp"
+        android:layout_height="55dp"
+        android:layout_alignBottom="@+id/etPhone"
+        android:layout_marginBottom="-63dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:layout_centerHorizontal="true"
+        android:hint="Alternative Phone"/>
+
+    <EditText
+        android:id="@+id/etEmaill"
+        android:layout_width="375dp"
+        android:layout_height="57dp"
+        android:layout_alignBottom="@+id/etAPhone"
+        android:layout_marginBottom="-62dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:layout_centerHorizontal="true"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="375dp"
+        android:layout_height="57dp"
+        android:layout_alignBottom="@+id/etAPhone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-126dp"
+        android:ems="10"
+        android:hint="Username" />
+
+    <EditText
+        android:id="@+id/etPasswordd"
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etUsername"
+        android:layout_marginBottom="-49dp"
+        android:ems="10"
+        android:hint="Password"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/etPassworddd"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etUsername"
+        android:layout_marginBottom="-108dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnCAccaount"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etPassworddd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-60dp"
+        android:background="#C8020E"
+        android:text="Create account" />
+
+
+</RelativeLayout>

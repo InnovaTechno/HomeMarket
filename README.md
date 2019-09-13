@@ -27,33 +27,35 @@ Market at Home is an app that shows the nearby Markets, their daily products, al
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-* user can create an account
-* user can see a list of markets
-* user can browse products
-* user can select a market to see list of products and a detailed page to see all the informations about the selected market
-* user can select a product to see details about it
-* user can add products to cart and then process a payment to buy it
-* user can add reviews about markets and the app
-* user can receive notifications with a confirmation code.
+- [ ] user can create an account and login
+- [x] user can see all categories of items
+- [ ] user can browse products
+- [ ] user can select a market to see list a detailed page to see all the informations about the selected market
+- [ ] user can select a product to see details about it
+- [ ] user can add products to cart and then process a payment to buy it
+- [ ] user can see a list of markets
+- [ ] user can receive notifications with a confirmation code.
 
 **Optional Nice-to-have Stories**
 
-* user can ask for a delivery
-* user can have multiple methods of online payment
-* user can have on-time pictures of products
-* user can select a product and see a list of similar items
-* user can rate market and services
-* user can see market nearby depending of his location 
+- [ ] user can ask for a delivery
+- [ ] user can have multiple methods of online payment
+- [ ] user can have on-time pictures of products
+- [ ] user can select a product and see a list of similar items
+- [ ] user can rate market and services
+- [ ] user can add reviews about markets and the app
+- [ ] user can see market nearby depending of his location 
 
 
 ### 2. Screen Archetypes
 
-* Splash screen
+* Welcome screen
 * Browse products 
 * Select a product and see every details about it.
-* Add to cart 
-* Login
+* Add to favorites 
+* Add to cart
 * Register - User signs up with a social account or logs into their account 
+* Login
 * Payment 
 * Select a market, and see every details about it(location and offered services)
 ### 3. Navigation
@@ -80,6 +82,7 @@ Optional:
 
 
 ### [BONUS] Digital Wireframes & Mockups
+<img src="https://imgur.com/jvXnnkO.jpg" height=200>
  
 ### [BONUS] Interactive Prototype
 https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
@@ -92,3 +95,44 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+## Schema 
+### Models
+#### Post
+ 
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | image         | File     | image that app managers post |
+   | name          | String   | name of products |
+   | price         | Number   | price of products |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
+   
+   #### User
+   | Property            | Type     | Description |
+   | -------------       | -------- | ------------|
+   | ProfileImage        | File     | Profile image of the user |
+   | Name                | String   | name of the user |
+   | Username            | String   | username of the user |
+   | Password            | String   | password of the user |
+   | Email               | String   |  email of the user |
+   | Phone	              | number	  | The phone number of the user |
+   | Alternative contact | number   | Phone number of the Alternative person |
+   | Adress              | String   | Adress of the user|
+   | createdAt           | DateTime | date when post is created (default field) |
+   | updatedAt           | DateTime | date when post is last updated (default field) |
+   
+   
+### Networking
+#### List of network requests by screen
+   - Details Screen
+      - (Read/GET) Query all products post by the app managers 
+   - Sign up Screen 
+      - (Create/POST) Create a new user 
+      - (Read/GET) Query log in user
+   - Sign in Screen 
+      -(Read/GET) Query log in new user
+   - Cart Screen 
+      - (Create/POST) Create a new order
+      - (Read/GET) Return confirmation code to the user 
+      
