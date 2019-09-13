@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    tools:context=".WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/ivWelcome"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        app:srcCompat="@drawable/welcome"
+        />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_below="@+id/ivWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="258dp"
+        app:srcCompat="@drawable/logo1" />
+
+    <Button
+        android:id="@+id/btnWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_below="@id/ivLogo"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="14dp"
+        android:background="#C8020E"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:onClick="goToMainActivity"
+        android:shadowRadius="15"
+        android:text="Start Shopping"
+        android:textColor="#ffffffff"
+        app:cornerRadius="15dp" />
+</RelativeLayout>
