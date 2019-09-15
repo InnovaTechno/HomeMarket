@@ -11,16 +11,20 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.InnovaTechno.homemarket.Categories;
 import com.InnovaTechno.homemarket.R;
-import com.InnovaTechno.homemarket.adapter.HomeAdapter;
+import com.InnovaTechno.homemarket.adapter.RecyclerViewAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeFragment extends Fragment {
-    private GridView gridView;
 
-    String[] categoriesWord = {"Fruits et Légumes", "Viandes", "Produits Laitiers", "Boissons", "Paints ","Chips & Sucreries"};
-    int[] categoriesImage = {R.drawable.fruits_et_legumes, R.drawable.viandess,
-            R.drawable.produits_laitierss, R.drawable.boissonss, R.drawable.painss, R.drawable.sucreriess};
+    List<Categories> lstCategories ;
+
 
     @Nullable
     @Override
@@ -28,24 +32,29 @@ public class HomeFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        gridView = view.findViewById(R.id.gridView);
-
-        HomeAdapter adapter = new HomeAdapter(getContext(), categoriesWord, categoriesImage);
-        gridView.setAdapter(adapter);
+        RecyclerView rv_id = view.findViewById(R.id.rv_id);
 
 
-        //HomeAdapter adapter = new HomeAdapter (this,  categoriesWord, categoriesImage);
-        //gridView.setAdapter(adapter);
+        lstCategories = new ArrayList<>();
+        lstCategories.add(new Categories("Fruits et Légumes", R.drawable.fruits_et_legumes ));
+        lstCategories.add(new Categories("Viandes", R.drawable.viandess ));
+        lstCategories.add(new Categories("Produits Laitiers", R.drawable.produits_laitierss ));
+        lstCategories.add(new Categories("Boissons", R.drawable.boissonss ));
+        lstCategories.add(new Categories("Pains", R.drawable.painss ));
+        lstCategories.add(new Categories("Chips&Sucreries", R.drawable.sucreriess ));
+        lstCategories.add(new Categories("Boissons Alcolisées", R.drawable.boissons_alcoliseess ));
+        lstCategories.add(new Categories("Produits Cosmétiques", R.drawable.produits_cosmetiquess ));
+        lstCategories.add(new Categories("Article Ménagers", R.drawable.articles_de_menagess));
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Toast.makeText(getActivity(), "You clicked Gloria " + categoriesWord[+position], Toast.LENGTH_SHORT).show();
-            }
-        });
+
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter (getContext(), lstCategories);
+        rv_id.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        rv_id.setAdapter(adapter);
+
 
     }
 }
