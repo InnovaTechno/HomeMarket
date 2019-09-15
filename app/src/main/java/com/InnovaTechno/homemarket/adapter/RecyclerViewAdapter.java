@@ -12,8 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories;
-import com.InnovaTechno.homemarket.ItemDetails;
+import com.InnovaTechno.homemarket.Categories.Fruits_Legumes;
+import com.InnovaTechno.homemarket.Category;
+
 import com.InnovaTechno.homemarket.R;
 
 import java.util.List;
@@ -21,9 +22,9 @@ import java.util.List;
 public class RecyclerViewAdapter extends RecyclerView.Adapter <RecyclerViewAdapter.MyViewHolder>{
 
     private Context mContext;
-    private List<Categories> mData;
+    private List<Category> mData;
 
-    public RecyclerViewAdapter(Context mContext, List<Categories> mData) {
+    public RecyclerViewAdapter(Context mContext, List<Category> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -48,7 +49,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter <RecyclerViewAdapt
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(mContext, ItemDetails.class);
+                Intent i = new Intent(mContext, Fruits_Legumes.class);
                 //TODO: ITEM DETAILS
                 //Start activity
                 mContext.startActivity(i);

@@ -4,9 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories;
+import com.InnovaTechno.homemarket.Category;
 import com.InnovaTechno.homemarket.R;
 import com.InnovaTechno.homemarket.adapter.RecyclerViewAdapter;
 
@@ -23,7 +20,7 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    List<Categories> lstCategories ;
+    List<Category> lstCategories ;
 
 
     @Nullable
@@ -40,15 +37,15 @@ public class HomeFragment extends Fragment {
 
 
         lstCategories = new ArrayList<>();
-        lstCategories.add(new Categories("Fruits et Légumes", R.drawable.fruits_et_legumes ));
-        lstCategories.add(new Categories("Viandes", R.drawable.viandess ));
-        lstCategories.add(new Categories("Produits Laitiers", R.drawable.produits_laitierss ));
-        lstCategories.add(new Categories("Boissons", R.drawable.boissonss ));
-        lstCategories.add(new Categories("Pains", R.drawable.painss ));
-        lstCategories.add(new Categories("Chips&Sucreries", R.drawable.sucreriess ));
-        lstCategories.add(new Categories("Boissons Alcolisées", R.drawable.boissons_alcoliseess ));
-        lstCategories.add(new Categories("Produits Cosmétiques", R.drawable.produits_cosmetiquess ));
-        lstCategories.add(new Categories("Article Ménagers", R.drawable.articles_de_menagess));
+        lstCategories.add(new Category("Fruits et Légumes", R.drawable.fruits_et_legumes ));
+        lstCategories.add(new Category("Viandes", R.drawable.viandess ));
+        lstCategories.add(new Category("Produits Laitiers", R.drawable.produits_laitierss ));
+        lstCategories.add(new Category("Boissons", R.drawable.boissonss ));
+        lstCategories.add(new Category("Pains", R.drawable.painss ));
+        lstCategories.add(new Category("Chips&Sucreries", R.drawable.sucreriess ));
+        lstCategories.add(new Category("Boissons Alcolisées", R.drawable.boissons_alcoliseess ));
+        lstCategories.add(new Category("Produits Cosmétiques", R.drawable.produits_cosmetiquess ));
+        lstCategories.add(new Category("Article Ménagers", R.drawable.articles_de_menagess));
 
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter (getContext(), lstCategories);

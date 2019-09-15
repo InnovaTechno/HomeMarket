@@ -1,14 +1,14 @@
 package com.InnovaTechno.homemarket;
 
-public class Categories  {
+public class Category {
 
     private String Title;
     private int Thumbnail;
 
-    public Categories() {
+    public Category() {
     }
 
-    public Categories(String title, int thumbnail) {
+    public Category(String title, int thumbnail) {
         Title = title;
         Thumbnail = thumbnail;
     }
