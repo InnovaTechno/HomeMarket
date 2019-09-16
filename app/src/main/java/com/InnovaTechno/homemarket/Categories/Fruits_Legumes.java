@@ -11,6 +11,6 @@ public class Fruits_Legumes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(R.layout.activity_fruits__legumes);
+        setContentView(R.layout.activity_fruits_legumes);
     }
 }
