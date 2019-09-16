@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:layout_margin = "10dp">
+    android:layout_margin = "5dp">
 
     <FrameLayout
         android:id="@+id/flContainer"

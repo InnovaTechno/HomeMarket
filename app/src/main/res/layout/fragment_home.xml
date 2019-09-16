@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:scrollbars="vertical"
-    android:scrollbarSize="5dp"
-    android:scrollbarAlwaysDrawVerticalTrack="true">
+    >
 
 
     <TextView
@@ -22,7 +20,11 @@
         android:id="@+id/rv_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp">
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        android:scrollbarSize="5dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:fastScrollVerticalThumbDrawable="@color/colorPrimary">
 
 
     </androidx.recyclerview.widget.RecyclerView>
