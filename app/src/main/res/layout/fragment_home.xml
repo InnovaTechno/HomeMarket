@@ -4,12 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:scrollbarSize="5dp"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+
+    <TextView
+        android:id="@+id/tvCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Categories"
+        android:textSize="25sp" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_id"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
 
     </androidx.recyclerview.widget.RecyclerView>
 

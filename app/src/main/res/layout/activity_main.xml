@@ -15,12 +15,21 @@
         android:layout_above="@id/bottom_navigation"
         android:layout_marginBottom="4dp" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:background="#CAC3C3">
+
+    </View>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id = "@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="#FBF6F6"
         app:menu="@menu/menu_bottom_navigation" />
 
 </RelativeLayout>
