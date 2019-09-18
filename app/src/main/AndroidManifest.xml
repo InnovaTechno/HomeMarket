@@ -11,8 +11,11 @@
         android:name=".ParseApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-               <activity android:name=".WelcomeActivity">
+
+        android:theme="@style/AppTheme"
+        >
+        <activity android:name=".Categories.Fruits_Legumes"></activity>
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,11 +30,18 @@
             </intent-filter>
         </activity>
 
+
         <activity android:name=".Categories.Fruits_Legumes">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
+
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.Default" />
             </intent-filter>
         </activity>
     </application>
