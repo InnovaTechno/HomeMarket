@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    
+
 
         private void goMainActivity() {
             Log.d(TAG, "Navigating to MainActivity");
