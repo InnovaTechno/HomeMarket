@@ -11,9 +11,13 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.text.ParseException;
+import com.parse.LogInCallback;
+import com.parse.ParseException;
+import com.parse.ParseUser;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private static final String TAG = "LoginActivity";
 
     private ImageView ivProfile;
     private EditText etEmail;
@@ -34,9 +38,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String Email = etEmail.getText().toString();
-                String Password = etPassword.getText().toString();
-               // login (Email,Password);
+                String email = etEmail.getText().toString();
+                String password = etPassword.getText().toString();
+                login(email, password);
             }
         });
 
@@ -48,6 +52,32 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             // show the signup or login screen
         }
-        }
+
     }
+
+    private void login(final String email, String password) {
+        ParseUser.logInInBackground(email, password, new LogInCallback() {
+            @Override
+            public void done(ParseUser user, ParseException e) {
+                if (e !=null){
+                    Log.e(TAG, "Issue with login");
+                    e.printStackTrace();
+                    return;
+                }
+                //TODO: navigate to the new activity if the user has signed properly
+                goMainActivity();
+            }
+        });
+    }
+
+    private void goMainActivity() {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        finish();
+    }
+}
+
+
+
+
 
