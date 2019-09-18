@@ -35,6 +35,13 @@
                 <category android:name="android.intent.category.Default" />
             </intent-filter>
         </activity>
+        <activity android:name=".SignUpActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.Default" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
