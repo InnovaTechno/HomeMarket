@@ -56,9 +56,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter <RecyclerViewAdapt
             }
         });
 
-
-
-
     }
 
     @Override
@@ -67,7 +64,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter <RecyclerViewAdapt
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-
 
         TextView categories_word;
         ImageView categories_img_id;
