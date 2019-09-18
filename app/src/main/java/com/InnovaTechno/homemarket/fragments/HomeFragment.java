@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,6 +36,8 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         RecyclerView rv_id = view.findViewById(R.id.rv_id);
+        //SearchView searchProducts = view.findViewById(R.id.searchProducts);
+        TextView tvCategories = view.findViewById(R.id.tvCategories);
 
 
         lstCategories = new ArrayList<>();
@@ -45,7 +49,7 @@ public class HomeFragment extends Fragment {
         lstCategories.add(new Category("Chips&Sucreries", R.drawable.sucreriess ));
         lstCategories.add(new Category("Boissons Alcolisées", R.drawable.boissons_alcoliseess ));
         lstCategories.add(new Category("Produits Cosmétiques", R.drawable.produits_cosmetiquess ));
-        lstCategories.add(new Category("Article Ménagers", R.drawable.articles_de_menagess));
+        lstCategories.add(new Category("Articles Ménagers", R.drawable.articles_de_menagess));
 
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter (getContext(), lstCategories);

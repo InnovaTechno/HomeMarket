@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
                 String username = etEmail.getText().toString();
                 String password = etPassword.getText().toString();
                 Toast.makeText(LoginActivity.this, "login succes", Toast.LENGTH_SHORT).show();
-               // login (username, password);
+                login (username, password);
             }
         });
 
@@ -63,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
                 Toast.makeText(LoginActivity.this, "Login succes", Toast.LENGTH_SHORT).show();
+                goMainActivity();
 
             }
         });
@@ -82,13 +83,13 @@ public class LoginActivity extends AppCompatActivity {
                     //goMainActivity();
                 }
             });
-        }
+        }*/
 
-       /* private void goMainActivity() {
+        private void goMainActivity() {
             Log.d(TAG, "Navigating to MainActivity");
             Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
             finish();
-        } */
+        }
 }
 

@@ -30,7 +30,7 @@
         android:layout_below="@id/ivLogo"
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="14dp"
-        android:background="#C8020E"
+        android:background="@drawable/roundedbutton"
         android:clickable="true"
         android:elevation="5dp"
         android:onClick="goToMainActivity"
