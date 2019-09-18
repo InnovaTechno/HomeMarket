@@ -4,16 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:background="#EBE4E4"
+    android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/tvNewProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=" New Products"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="242dp"
+        android:layout_height="130dp"
+        tools:srcCompat="@drawable/grocery" />
 
     <TextView
         android:id="@+id/tvCategories"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="All Categories"
-        android:textSize="25sp" />
+        android:gravity="center"
+        android:text=" All Categories"
+        android:textSize="20sp" />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -21,13 +36,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="5dp"
-        android:scrollbars="vertical"
-        android:scrollbarSize="5dp"
         android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarSize="5dp"
+        android:scrollbars="vertical"
         app:fastScrollVerticalThumbDrawable="@color/colorPrimary">
 
 
     </androidx.recyclerview.widget.RecyclerView>
 
 
-    </LinearLayout>
+</LinearLayout>

@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:layout_margin = "5dp">
+    android:layout_margin = "5dp"
+    android:background="#ebebeb">
 
     <FrameLayout
         android:id="@+id/flContainer"
@@ -19,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:layout_above="@+id/bottom_navigation"
-        android:background="#CAC3C3">
+        android:background="#ebebeb">
 
     </View>
 

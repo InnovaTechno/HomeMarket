@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Categories.Fruits_Legumes">
+    tools:context=".Categories.Fruits_Legumes"
+    android:background="#ebebeb">
 
     <SearchView
         android:id="@+id/simpleSearchView"
@@ -13,4 +14,16 @@
         android:iconifiedByDefault="false"
         android:queryHint="Search products" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_fruits_legumes"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@+id/simpleSearchView"
+        android:layout_marginTop="30dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarSize="5dp"
+        android:scrollbars="vertical"
+        app:fastScrollVerticalThumbDrawable="@color/colorPrimary">
+
+    </androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>
