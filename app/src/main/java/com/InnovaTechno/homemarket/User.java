@@ -7,25 +7,25 @@ import com.parse.ParseUser;
 public class User extends ParseUser{
 
         public static final  String KEY_USERNAME = "username";
-        public static final  String KEY_FIRST = "First Name";
-        public static final  String KEY_LAST = "Last Name";
+        public static final  String KEY_FIRSTNAME = "firstName";
+        public static final  String KEY_LASTNAME = "lastName";
         public static final  String KEY_EMAIL = "email";
         public static final  String KEY_PASSWORD = "password";
 
         public String getFirstName(){
-            return getString(KEY_FIRST);
+            return getString(KEY_FIRSTNAME);
         }
 
         public void setFirstName(String firstName){
-            put(KEY_FIRST,firstName);
+            put(KEY_FIRSTNAME,firstName);
         }
 
         public String getLastName(){
-        return getString(KEY_LAST);
+        return getString(KEY_LASTNAME);
     }
 
        public void setLastName(String lastName){
-        put(KEY_FIRST,lastName);
+        put(KEY_LASTNAME,lastName);
         }
 
        public String getUsername(){

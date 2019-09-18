@@ -8,7 +8,7 @@
         android:id="@+id/ivProfile"
         android:layout_width="match_parent"
         android:layout_height="215dp"
-        app:srcCompat="@drawable/profile" />
+       />
 
     <EditText
         android:id="@+id/etEmail"
@@ -18,11 +18,9 @@
         android:inputType="textEmailAddress"
         android:hint="Email address"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="75dp">
 
-        <com.google.android.material.textfield.TextInputEditText
+
+        <EditText
             android:id="@+id/etPassword"
             android:layout_width="413dp"
             android:layout_height="wrap_content"
@@ -30,7 +28,7 @@
             android:inputType="textPassword"
             android:textColor="#FFFFFF"
             android:textSize="20dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/btnLogin"

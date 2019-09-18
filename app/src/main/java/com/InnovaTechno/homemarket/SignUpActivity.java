@@ -19,6 +19,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private static final String TAG = "SignUpActivity";
 
+    private User user;
     private EditText etFirstName;
     private EditText etLastName;
     private EditText etEmailS;
@@ -63,6 +64,7 @@ public class SignUpActivity extends AppCompatActivity {
                 user.setUsername(FirstName + LastName);
                 user.setEmail(email);
                 user.setPassword(password);
+
 
                 user.signUpInBackground(new SignUpCallback() {
                     @Override
