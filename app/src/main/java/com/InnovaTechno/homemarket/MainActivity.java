@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         // Toast.makeText(MainActivity.this, "Cart", Toast.LENGTH_SHORT).show();
                     default:
                         //TODO: Swap fragment here
-                        fragment = new HomeFragment();
+                        fragment = new CartFragment();
                         break;
                 }
                 fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();

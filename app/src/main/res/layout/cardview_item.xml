@@ -19,7 +19,7 @@
             android:layout_width="111dp"
             android:layout_height="148dp"
             android:background="#000000"
-            android:scaleType="centerCrop" />
+            android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/categories_word"
