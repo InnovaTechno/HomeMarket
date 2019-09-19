@@ -1,10 +1,13 @@
 package com.InnovaTechno.homemarket;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -14,15 +17,26 @@ import com.InnovaTechno.homemarket.fragments.FavoritesFragment;
 import com.InnovaTechno.homemarket.fragments.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
+    private DrawerLayout mdrawerLayout;
+    private ActionBarDrawerToggle mtoggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final FragmentManager fragmentManager = getSupportFragmentManager();
+
+        mdrawerLayout = findViewById(R.id.drawerLayout);
+        mtoggle = new ActionBarDrawerToggle(this, mdrawerLayout,R.string.open,R.string.close);
+        mdrawerLayout.addDrawerListener(mtoggle);
+        mtoggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -54,6 +68,15 @@ public class MainActivity extends AppCompatActivity {
         });
         // Set default selection
         bottomNavigationView.setSelectedItemId(R.id.action_home);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if( mtoggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
 
     }
 }
