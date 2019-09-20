@@ -8,6 +8,8 @@
         android:id="@+id/ivProfile"
         android:layout_width="match_parent"
         android:layout_height="215dp"
+        app:srcCompat="@drawable/profile"
+
        />
 
     <EditText

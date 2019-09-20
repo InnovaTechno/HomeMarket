@@ -6,12 +6,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.widget.SearchView;
 
 import com.InnovaTechno.homemarket.R;
+import com.InnovaTechno.homemarket.SignUpActivity;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
@@ -19,13 +26,13 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.security.AccessController.getContext;
 
 public class Fruits_Legumes extends AppCompatActivity {
 
     public static final String TAG ="Fruits_Legumes";
     private PostAdapter adapter;
     private List<Post> mPosts;
+    private Button btnAddToCart;
 
 
     @Override
@@ -58,13 +65,28 @@ public class Fruits_Legumes extends AppCompatActivity {
                 mPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
                 for (int i = 0; i < posts.size(); i++) {
-                    Post post = posts.get(i);
-                    Log.d(TAG, "Post : " + posts.get(i).getName() + ", devise" + post.getDevise());
+                    //Post post = posts.get(i);
+                    Log.d(TAG, "Post : " + posts.get(i).getName() );
                 }
 
             }
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //inflate searchView in the action bar
+        getMenuInflater().inflate(R.menu.toolbar_search_menu, menu);
+        MenuItem menuItem = menu.findItem(R.id.action_seach);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setQueryHint("Search Products");
+        return super.onCreateOptionsMenu(menu);
+    }
 
+    public void addToCart(View view) {
+        Intent i = new Intent(this, SignUpActivity.class);
+        startActivity(i);
+        finish();
+
+    }
 }

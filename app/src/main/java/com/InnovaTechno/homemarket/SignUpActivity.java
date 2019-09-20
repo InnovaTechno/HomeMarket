@@ -88,4 +88,10 @@ public class SignUpActivity extends AppCompatActivity {
 
         });
     }
+
+//onClick for login if the user already have an account
+    public void loginBack(View view) {
+        Intent i = new Intent(this, LoginActivity.class);
+        startActivity(i);
+    }
 }

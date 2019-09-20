@@ -109,7 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-603dp"
+        android:layout_marginBottom="-493dp"
         android:background="@drawable/roundedbutton"
         android:text="Create account" />
 
