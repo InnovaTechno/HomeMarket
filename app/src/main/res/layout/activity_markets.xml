@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Categories.Fruits_Legumes"
-    android:background="#ebebeb">
+    tools:context=".MarketsActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_fruits_legumes"
+        android:id="@+id/rv_markets"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbarAlwaysDrawVerticalTrack="true"
         android:scrollbarSize="5dp"
         android:scrollbars="vertical"
         app:fastScrollVerticalThumbDrawable="@color/colorPrimary">
-
     </androidx.recyclerview.widget.RecyclerView>
+
 </RelativeLayout>
