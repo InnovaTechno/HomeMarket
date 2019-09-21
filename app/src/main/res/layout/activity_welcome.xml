@@ -10,16 +10,17 @@
 
     <ImageView
         android:id="@+id/ivWelcome"
-        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:srcCompat="@drawable/welcome"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+         />
 
-        />
 
     <ImageView
         android:id="@+id/ivLogo"
-        android:layout_below="@+id/ivWelcome"
+        android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="240dp"
         app:srcCompat="@drawable/logo1"
@@ -29,8 +30,9 @@
         android:id="@+id/btnWelcome"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginBottom="70dp"
         android:background="@drawable/roundedbutton"
         android:clickable="true"
         android:elevation="5dp"
@@ -41,6 +43,7 @@
         android:layout_marginBottom="30dp"
         android:textColor="#ffffffff"
         app:cornerRadius="15dp" />
+
 
     <Button
         android:id="@+id/btnSignIn"
@@ -57,4 +60,5 @@
         android:text="Sign up"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"/>
+
 </RelativeLayout>

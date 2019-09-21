@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:id="@+id/cvFruits_Legumes"
     android:layout_width="173dp"
@@ -25,8 +26,11 @@
             android:id="@+id/favorites"
             android:layout_width="27dp"
             android:layout_height="23dp"
-            android:layout_alignEnd="@+id/ivFruits_Legumes"
-            android:layout_marginEnd="4dp"
+            android:layout_above="@+id/tvName"
+            android:layout_alignRight="@+id/ivFruits_Legumes"
+
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="91dp"
             android:background="@drawable/favorite"
             android:gravity="end" />
 
@@ -73,14 +77,14 @@
             android:layout_width="95dp"
             android:layout_height="24dp"
             android:layout_below="@+id/ivFruits_Legumes"
-            android:layout_alignEnd="@+id/tvName"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="55dp"
-            android:layout_marginEnd="31dp"
             android:background="@drawable/add_to_cart"
             android:clickable="true"
             android:text="Add to cart"
             android:textColor="#ffffff"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:onClick="addToCart"/>
 
 
     </RelativeLayout>

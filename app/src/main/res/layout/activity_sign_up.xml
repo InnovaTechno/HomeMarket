@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".SignUpActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="92dp"
+        android:text="Create an account"
+        android:textColor="#C8020E"
+        android:textSize="30dp"
+         />
+
 
     <EditText
         android:id="@+id/etFirstName"
@@ -83,12 +94,18 @@
         android:id="@+id/btnSignUp"
         android:layout_width="223dp"
         android:layout_height="wrap_content"
+
         android:layout_marginLeft="90dp"
         android:layout_marginRight="92dp"
-        android:layout_below="@id/textField2"
-        android:layout_marginTop="15dp"
-        android:text="Sign Up" />
 
+        android:layout_below="@id/textField2"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="92dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Sign Up"
+        android:textColor="#fff"
+        android:typeface="normal" />
 
 
     <View
@@ -99,6 +116,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="58dp"
+
         android:background="?android:attr/listDivider" />
 
     <TextView
@@ -110,9 +128,10 @@
         android:layout_marginLeft="50dp"
         android:text="Already have an account?"
         android:layout_marginBottom="10dp"/>
+
     <TextView
         android:id="@+id/tvLoginback"
-        android:layout_width="wrap_content"
+        android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/divider"
         android:layout_toRightOf="@id/tvQuestion"
@@ -120,5 +139,6 @@
         android:layout_marginLeft="5dp"
         android:textStyle="bold"
         android:layout_marginTop="-40dp"/>
+
 
 </RelativeLayout>

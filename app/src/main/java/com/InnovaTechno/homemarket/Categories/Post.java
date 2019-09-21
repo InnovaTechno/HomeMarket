@@ -4,6 +4,8 @@ import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 
+import static java.lang.Integer.*;
+
 @ParseClassName("Post")
 public class Post extends ParseObject {
 
@@ -11,6 +13,7 @@ public class Post extends ParseObject {
     public static final String KEY_IMAGE =  "productImage";
     public static final String KEY_DEVISE = "devise";
     public static final String KEY_PRICE = "price2";
+
 
 
     public String getPrice() {
@@ -41,5 +44,5 @@ public class Post extends ParseObject {
         put(KEY_DEVISE, devise);
     }
 
-  
+
 }

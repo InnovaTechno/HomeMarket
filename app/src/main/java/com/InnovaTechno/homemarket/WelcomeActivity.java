@@ -15,6 +15,7 @@ public class WelcomeActivity extends AppCompatActivity {
     private ImageView ivWelcome;
     private ImageView ivLogo;
      private Button btnWelcome;
+
      private Button btnSignIn;
      private Button btnSignUp;
     ParseUser currentUser;
@@ -31,6 +32,7 @@ public class WelcomeActivity extends AppCompatActivity {
         ivWelcome = findViewById(R.id.ivWelcome);
         ivLogo = findViewById(R.id.ivLogo);
         btnWelcome = findViewById(R.id.btnWelcome);
+
         btnSignIn = findViewById(R.id.btnSignIn);
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +51,7 @@ public class WelcomeActivity extends AppCompatActivity {
             }
         });
     }
+
 
     public void goToMainActivity(View view) {
         Intent i = new Intent(this, MainActivity.class);

@@ -37,7 +37,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-
             android:background="#FBF6F6"
             app:menu="@menu/menu_bottom_navigation" />
     </RelativeLayout>
@@ -48,7 +47,8 @@
         app:headerLayout="@layout/nav_header"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:itemTextColor="@color/colorBlack"
+        app:itemTextColor="#000"
+        android:background="#ffffff"
         app:itemIconTint="@color/colorPrimaryDark"
         app:menu="@menu/drawer_nenu"
         android:layout_gravity="start"
