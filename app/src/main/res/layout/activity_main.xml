@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:layout_margin = "5dp"
     android:background="#ebebeb">
-    >
+
 
 
     <RelativeLayout
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:layout_above="@+id/bottom_navigation"
-        android:background="#ebebeb">
+        android:background="#ebebeb"/>
 
         <FrameLayout
             android:id="@+id/flContainer"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@id/bottom_navigation"
             android:layout_marginBottom="4dp" />
->
+
 
 
         <com.google.android.material.bottomnavigation.BottomNavigationView

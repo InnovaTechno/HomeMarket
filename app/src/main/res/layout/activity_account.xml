@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-486dp"
+        android:layout_marginBottom="-310dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword" />

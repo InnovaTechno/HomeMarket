@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -41,6 +42,10 @@ public class SignUpActivity extends AppCompatActivity {
         etPasswordConfirmS = findViewById(R.id.etPasswordConfirmS);
         //tvLoginBack = findViewById(R.id.tvLoginback);
 
+        final ParseACL acl = new ParseACL();
+        acl.setPublicWriteAccess(true);
+        acl.setPublicReadAccess(true);
+
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,10 +64,14 @@ public class SignUpActivity extends AppCompatActivity {
 
                 //Create user
                 ParseUser user = new ParseUser();
+                user.setACL(acl);
 
                 user.setUsername(FirstName + LastName);
                 user.setEmail(email);
                 user.setPassword(password);
+
+
+
 
 
                 user.signUpInBackground(new SignUpCallback() {
