@@ -34,7 +34,7 @@ public class AccountActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account);
+        //setContentView(R.layout.activity_account);
 
         etName = findViewById(R.id.etName);
         etAdresse = findViewById(R.id.etAdresse);
