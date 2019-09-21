@@ -16,6 +16,8 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
+import org.parceler.Parcels;
+
 public class SignUpActivity extends AppCompatActivity {
 
     private static final String TAG = "SignUpActivity";
@@ -26,6 +28,7 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText etPasswordS;
     private EditText etPasswordConfirmS;
     private Button btnSignUp;
+
    // private TextView tvLoginBack;
 
     @Override
@@ -41,6 +44,7 @@ public class SignUpActivity extends AppCompatActivity {
         etEmailS = findViewById(R.id.etEmailS);
         etPasswordConfirmS = findViewById(R.id.etPasswordConfirmS);
         //tvLoginBack = findViewById(R.id.tvLoginback);
+
 
         final ParseACL acl = new ParseACL();
         acl.setPublicWriteAccess(true);
@@ -69,6 +73,8 @@ public class SignUpActivity extends AppCompatActivity {
                 user.setUsername(FirstName + LastName);
                 user.setEmail(email);
                 user.setPassword(password);
+
+
 
 
 

@@ -10,11 +10,12 @@ public class User extends ParseUser {
     public static final String KEY_USERNAME = "username";
     public static final String KEY_FULLNAME = "fullname";
     public static final String KEY_EMAIL = "email";
-    private static final String KEY_ADDRESS = "address";
-    private static final String KEY_PHONE = "phone";
-    private static final String KEY_ALTERNATIVECONTACT = "alternativecontact";
+    public static final String KEY_ADDRESS = "address";
+    public static final String KEY_PHONE = "phone";
+    public static final String KEY_ALTERNATIVECONTACT = "alternativecontact";
 
     public static final String KEY_PASSWORD = "password";
+
 
 
     public String getAddress() {
