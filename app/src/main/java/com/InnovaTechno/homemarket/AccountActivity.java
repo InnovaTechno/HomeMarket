@@ -18,6 +18,8 @@ import com.parse.SignUpCallback;
 
 public class AccountActivity extends AppCompatActivity {
 
+    private static final String TAG = "AccountActivity";
+
     private TextView textView;
     private EditText etName;
     private EditText etAdresse ;
@@ -43,6 +45,7 @@ public class AccountActivity extends AppCompatActivity {
         etPasswordd = findViewById(R.id.etPasswordd);
         etPassworddd = findViewById(R.id.etPassworddd);
         btnCAccount = findViewById(R.id.btnCAccaount);
+        textView = findViewById(R.id.textView);
         //tvLoginBack = findViewById(R.id.tvLoginback);
 
         btnCAccount.setOnClickListener(new View.OnClickListener() {
@@ -55,18 +58,27 @@ public class AccountActivity extends AppCompatActivity {
                         return;
                     }
                 }
-                String FirstName = etFirstName.getText().toString();
-                String LastName = etLastName.getText().toString();
-                String email = etEmailS.getText().toString();
-                String password = etPasswordS.getText().toString();
+                String FullName = etName.getText().toString();
+                String Adress = etAdresse.getText().toString();
+                String Phone = etPhone.getText().toString();
+                String AlternativePhone = etAPhone.getText().toString();
+                String Email = etEmaill.getText().toString();
+                String Username = etUsername.getText().toString();
+                String Password = etPasswordd.getText().toString();
+                String PasswordConfirm = etPassworddd.getText().toString();
                 //String passwordConfirm = etPasswordConfirmS.getText().toString();
 
                 //Create user
                 ParseUser user = new ParseUser();
 
-                user.setUsername(FirstName + LastName);
-                user.setEmail(email);
-                user.setPassword(password);
+                user.put("fullname",FullName);
+                user.put("address",Adress);
+                user.put("phone",Phone);
+                user.put("alternativecontact",AlternativePhone);
+                user.put("passwordConfirm",PasswordConfirm);
+                user.setUsername(Username);
+                user.setEmail(Email);
+                user.setPassword(Password);
 
                 user.signUpInBackground(new SignUpCallback() {
                     @Override
@@ -76,12 +88,14 @@ public class AccountActivity extends AppCompatActivity {
                             e.printStackTrace();
                             return;
                         }
-                        etFirstName.setText("");
-                        etLastName.setText("");
-                        etEmailS.setText("");
-                        etPasswordS.setText("");
-                        etPasswordConfirmS.setText("");
-                        etPasswordConfirmS.setText("");
+                        etName.setText("");
+                        etAdresse.setText("");
+                        etPhone.setText("");
+                        etAPhone.setText("");
+                        etEmaill.setText("");
+                        etUsername.setText("");
+                        etPasswordd.setText("");
+                        etPassworddd.setText("");
                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(i);
                     }
