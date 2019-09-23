@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import static java.security.AccessController.getContext;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +18,7 @@ import android.widget.Button;
 import androidx.appcompat.widget.SearchView;
 
 import com.InnovaTechno.homemarket.R;
-import com.InnovaTechno.homemarket.SignUpActivity;
+
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
@@ -62,16 +62,21 @@ public class Fruits_Legumes extends AppCompatActivity {
                     e.printStackTrace();
                     return;
                 }
+
                 mPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
-                for (int i = 0; i < posts.size(); i++) {
-                    //Post post = posts.get(i);
-                    Log.d(TAG, "Post : " + posts.get(i).getName() );
-                }
 
+
+                for (int i = 0; i < posts.size(); i++){
+                    Post post = posts.get(i);
+                    Log.d(TAG, "Post: " + posts.get(i).getName() + ",devise" + post.getDevise());
+                }
             }
         });
-    }
+
+
+                }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -83,10 +88,6 @@ public class Fruits_Legumes extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    public void addToCart(View view) {
-        Intent i = new Intent(this, SignUpActivity.class);
-        startActivity(i);
-        finish();
-
-    }
+  //  public void addToCart(View view) {        Intent c = new Intent(this, SignUpActivity.class);
+     //   startActivity(c);    }
 }

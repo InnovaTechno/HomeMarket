@@ -10,7 +10,7 @@
     cardview:cardCornerRadius="8dp">
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
@@ -19,19 +19,17 @@
             android:id="@+id/ivMarket"
             android:layout_width="157dp"
             android:layout_height="match_parent"
-            android:background="#4CAF50" />
+            android:background="#4CAF50"
+            android:clickable="true"
+            android:onClick="marketDetails"/>
 
         <TextView
             android:id="@+id/tvMarket"
-            android:layout_width="188dp"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/ivMarket"
-            android:layout_alignBottom="@+id/ivMarket"
-            android:layout_marginEnd="-221dp"
+            android:layout_width="210dp"
+            android:layout_height="47dp"
+            android:layout_margin="24dp"
             android:gravity="left"
-            android:layout_marginBottom="64dp"
-            android:text="Avani"
-            />
+            android:text="Avani" />
 
-    </RelativeLayout>
+    </LinearLayout>
 </androidx.cardview.widget.CardView>
