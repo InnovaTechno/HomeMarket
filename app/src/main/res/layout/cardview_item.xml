@@ -16,7 +16,7 @@
 
         <ImageView
             android:id="@+id/categories_img_id"
-            android:layout_width="110dp"
+            android:layout_width="match_parent"
             android:layout_height="152dp"
             android:background="#000000"
             android:scaleType="fitXY" />
@@ -29,7 +29,9 @@
             android:gravity="center"
             android:text="Categories"
             android:textColor="#ffffff"
-            android:textSize="12sp" />
+            android:textSize="11sp" />
+
+           
 
     </LinearLayout>
 

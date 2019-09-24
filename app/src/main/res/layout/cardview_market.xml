@@ -19,7 +19,7 @@
             android:id="@+id/ivMarket"
             android:layout_width="157dp"
             android:layout_height="match_parent"
-            android:background="#4CAF50"
+            android:background="#ffff"
             android:clickable="true"
             android:onClick="marketDetails"/>
 

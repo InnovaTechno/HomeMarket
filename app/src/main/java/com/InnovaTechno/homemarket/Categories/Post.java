@@ -11,7 +11,13 @@ public class Post extends ParseObject {
     public static final String KEY_NAME =  "name";
     public static final String KEY_IMAGE =  "productImage";
     public static final String KEY_DEVISE = "devise";
-    //public static final Integer KEY_PRICE = valueOf("price");
+    public static final String KEY_PRICE = "price2";
+
+
+
+    public String getPrice() {
+        return getString(KEY_PRICE);
+    }
 
     public String getName(){
         return getString(KEY_NAME);
@@ -37,8 +43,5 @@ public class Post extends ParseObject {
         put(KEY_DEVISE, devise);
     }
 
-    //public Integer getPrice() {     return getParseI(String.valueOf(KEY_PRICE));}
-
-   // public void setPrice (String price) {       put(String.valueOf(KEY_PRICE),price); }
 
 }

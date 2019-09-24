@@ -11,24 +11,25 @@
     <ImageView
         android:id="@+id/ivWelcome"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/welcome"
         android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
-        app:srcCompat="@drawable/welcome" />
+         />
+
 
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
-        android:layout_height="258dp"
+        android:layout_height="240dp"
         app:srcCompat="@drawable/logo1"
-
          />
 
     <Button
         android:id="@+id/btnWelcome"
         android:layout_width="match_parent"
-        android:layout_height="47dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="50dp"
         android:layout_marginBottom="70dp"
@@ -41,5 +42,21 @@
         android:textColor="#ffffffff"
         app:cornerRadius="15dp" />
 
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN IN"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

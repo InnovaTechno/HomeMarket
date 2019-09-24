@@ -44,7 +44,7 @@ public class AccountActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUsername);
         etPasswordd = findViewById(R.id.etPasswordd);
         etPassworddd = findViewById(R.id.etPassworddd);
-        btnCAccount = findViewById(R.id.btnCAccaount);
+        btnCAccount = findViewById(R.id.btnCAccount);
         textView = findViewById(R.id.textView);
         //tvLoginBack = findViewById(R.id.tvLoginback);
 
