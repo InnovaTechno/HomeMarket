@@ -66,7 +66,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             tvDevise = itemView.findViewById(R.id.tvDevise);
             btnAddToCart = itemView.findViewById(R.id.btnAddToCart);
             cvFruits_Legumes = itemView.findViewById(R.id.cvFruits_Legumes);
-            //tvPrice = itemView.findViewById(R.id.tvPrice);
+            tvPrice = itemView.findViewById(R.id.tvPrice);
 
         }
         public void bind(Post post) {
@@ -77,7 +77,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             tvName.setText(post.getName());
             tvDevise.setText(post.getDevise());
             tvPrice.setText(post.getPrice());
-            //tvPrice.setText(Post.getKeyPrice());
+            //tvPrice.setText(Post.getPrice());
 
 
 

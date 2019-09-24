@@ -132,6 +132,7 @@
         android:layout_below="@id/divider"
         android:layout_toRightOf="@id/tvQuestion"
         android:text="Login"
+        android:onClick="loginBack"
         android:layout_marginLeft="5dp"
         android:textStyle="bold"
         android:layout_marginTop="-40dp"/>

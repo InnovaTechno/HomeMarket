@@ -96,6 +96,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_marketlist:
                 Toast.makeText(this, "MarketList", Toast.LENGTH_SHORT).show();
+                Intent m = new Intent(this, MarketsActivity.class);
+                startActivity(m);
+
                 break;
             case R.id.nav_logout:
 
