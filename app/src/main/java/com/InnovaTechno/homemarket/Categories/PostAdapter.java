@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.InnovaTechno.homemarket.R;
 import com.bumptech.glide.Glide;
 import com.parse.ParseFile;
+import com.parse.ParseUser;
 
 import java.util.List;
 
@@ -56,6 +57,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         TextView tvDevise;
         Button btnAddToCart;
         CardView cvFruits_Legumes;
+        private TextView tvPrice;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,6 +66,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             tvDevise = itemView.findViewById(R.id.tvDevise);
             btnAddToCart = itemView.findViewById(R.id.btnAddToCart);
             cvFruits_Legumes = itemView.findViewById(R.id.cvFruits_Legumes);
+            tvPrice = itemView.findViewById(R.id.tvPrice);
 
         }
         public void bind(Post post) {
@@ -73,6 +76,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             }
             tvName.setText(post.getName());
             tvDevise.setText(post.getDevise());
+            tvPrice.setText(post.getPrice());
+            //tvPrice.setText(Post.getPrice());
+
+
 
         }
 

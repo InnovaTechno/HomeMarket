@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etEmail;
     private EditText etPassword;
     private Button btnLogin;
+    private ProgressBar progressBar;
 
 
     @Override
@@ -34,19 +36,22 @@ public class LoginActivity extends AppCompatActivity {
 
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
+       // progressBar = findViewById(R.id.siProgressbar);
+        progressBar.setVisibility(View.GONE);
 
         btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressBar.setVisibility(View.VISIBLE);
+                progressBar.setIndeterminate(true);
                 String email = etEmail.getText().toString();
                 String password = etPassword.getText().toString();
-                Toast.makeText(LoginActivity.this, "login succes", Toast.LENGTH_SHORT).show();
                 login (email, password);
             }
         });
 
-
+        progressBar.setVisibility(View.GONE);
         }
 
     private void login(String email, String password) {
@@ -77,5 +82,11 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(i);
             finish();
         }
+
+    public void goToSignUpActivity(View view) {
+        Intent i = new Intent(this,SignUpActivity.class);
+        startActivity(i);
+        finish();
+    }
 }
 

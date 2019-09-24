@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MarketsActivity">
+    tools:context=".MarketsActivity"
+    android:background="#ebebeb">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_markets"

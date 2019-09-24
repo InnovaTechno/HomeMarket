@@ -22,7 +22,7 @@
         android:id="@+id/etFirstName"
         android:layout_width="381dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="Enter your first name"
@@ -33,7 +33,7 @@
         android:layout_width="381dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/etFirstName"
-        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Enter your Last name"
@@ -43,7 +43,7 @@
         android:id="@+id/etEmailS"
         android:layout_width="381dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:ems="10"
         android:layout_marginTop="10dp"
         android:hint="Enter your email"
@@ -64,7 +64,7 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/etEmailS"
-            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:ems="10"
             android:hint="Enter your password"
             android:inputType="textPassword" />
@@ -84,7 +84,7 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/etPassword"
-            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:ems="10"
             android:hint="Confirm your password"
             android:inputType="textPassword" />
@@ -94,10 +94,10 @@
         android:id="@+id/btnSignUp"
         android:layout_width="223dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
         android:layout_below="@id/textField2"
         android:layout_marginStart="90dp"
         android:layout_marginTop="25dp"
-        android:layout_marginRight="92dp"
         android:background="@drawable/roundedbutton"
         android:text="Sign Up"
         android:textColor="#fff"
@@ -108,33 +108,34 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="163dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="58dp"
+
         android:background="?android:attr/listDivider" />
 
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/divider"
-        android:layout_alignBottom="@+id/divider"
-        android:layout_marginLeft="155dp"
-        android:layout_marginBottom="-35dp"
-        android:text="Already have an account?" />
+        android:layout_below="@id/divider"
+        android:layout_marginTop="-40dp"
+        android:layout_marginLeft="50dp"
+        android:text="Already have an account?"
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:id="@+id/tvLoginback"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tvQuestion"
-        android:layout_alignLeft="@+id/divider"
-        android:layout_marginLeft="329dp"
-        android:layout_marginBottom="-19dp"
-        android:clickable="true"
+        android:layout_below="@id/divider"
+        android:layout_toRightOf="@id/tvQuestion"
         android:text="Login"
         android:onClick="loginBack"
-        android:textStyle="bold" />
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        android:layout_marginTop="-40dp"/>
+
 
 </RelativeLayout>

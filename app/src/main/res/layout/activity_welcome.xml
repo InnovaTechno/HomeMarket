@@ -10,25 +10,24 @@
 
     <ImageView
         android:id="@+id/ivWelcome"
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_width="397dp"
+        android:layout_height="193dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
         app:srcCompat="@drawable/welcome" />
 
+
     <ImageView
         android:id="@+id/ivLogo"
+        android:layout_width="352dp"
+        android:layout_height="220dp"
         android:layout_centerInParent="true"
-        android:layout_width="match_parent"
-        android:layout_height="258dp"
-        app:srcCompat="@drawable/logo1"
-
-         />
+        app:srcCompat="@drawable/logo1" />
 
     <Button
         android:id="@+id/btnWelcome"
         android:layout_width="match_parent"
-        android:layout_height="47dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="50dp"
         android:layout_marginBottom="70dp"
@@ -41,5 +40,25 @@
         android:textColor="#ffffffff"
         app:cornerRadius="15dp" />
 
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN IN"
+        android:background="@drawable/roundedbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:background="@drawable/roundedbutton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="#fff"/>
 
 </RelativeLayout>

@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import static java.security.AccessController.getContext;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +18,7 @@ import android.widget.Button;
 import androidx.appcompat.widget.SearchView;
 
 import com.InnovaTechno.homemarket.R;
+
 import com.InnovaTechno.homemarket.SignUpActivity;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -54,6 +55,7 @@ public class Fruits_Legumes extends AppCompatActivity {
     private void queryPost() {
         ParseQuery<Post> postQuery = new ParseQuery<Post>(Post.class);
         postQuery.include(Post.KEY_DEVISE);
+        postQuery.include(Post.KEY_PRICE);
         postQuery.findInBackground(new FindCallback<Post>() {
             @Override
             public void done(List<Post> posts, ParseException e) {
@@ -64,14 +66,16 @@ public class Fruits_Legumes extends AppCompatActivity {
                 }
                 mPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
-                for (int i = 0; i < posts.size(); i++) {
-                    //Post post = posts.get(i);
-                    Log.d(TAG, "Post : " + posts.get(i).getName() );
+                for (int i = 0; i < posts.size(); i++){
+                    Post post = posts.get(i);
+                    Log.d(TAG, "Post: " + posts.get(i).getName() + ",devise" + post.getDevise() + ", price2" + post.getPrice());
                 }
-
             }
         });
-    }
+
+
+                }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -84,9 +88,6 @@ public class Fruits_Legumes extends AppCompatActivity {
     }
 
     public void addToCart(View view) {
-        Intent i = new Intent(this, SignUpActivity.class);
-        startActivity(i);
-        finish();
-
-    }
+        Intent c = new Intent(this, SignUpActivity.class);
+        startActivity(c);    }
 }

@@ -11,21 +11,23 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
+
 
 public class SignUpActivity extends AppCompatActivity {
 
     private static final String TAG = "SignUpActivity";
 
-    private User user;
     private EditText etFirstName;
     private EditText etLastName;
     private EditText etEmailS;
     private EditText etPasswordS;
     private EditText etPasswordConfirmS;
     private Button btnSignUp;
+
    // private TextView tvLoginBack;
 
     @Override
@@ -41,6 +43,11 @@ public class SignUpActivity extends AppCompatActivity {
         etEmailS = findViewById(R.id.etEmailS);
         etPasswordConfirmS = findViewById(R.id.etPasswordConfirmS);
         //tvLoginBack = findViewById(R.id.tvLoginback);
+
+
+        final ParseACL acl = new ParseACL();
+        acl.setPublicWriteAccess(true);
+        acl.setPublicReadAccess(true);
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,10 +67,16 @@ public class SignUpActivity extends AppCompatActivity {
 
                 //Create user
                 ParseUser user = new ParseUser();
+                user.setACL(acl);
 
                 user.setUsername(FirstName + LastName);
                 user.setEmail(email);
                 user.setPassword(password);
+
+
+
+
+
 
 
                 user.signUpInBackground(new SignUpCallback() {
