@@ -28,11 +28,10 @@
             android:layout_height="23dp"
             android:layout_above="@+id/tvName"
             android:layout_alignRight="@+id/ivFruits_Legumes"
-
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="91dp"
             android:background="@drawable/favorite"
-            android:gravity="end" />
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="91dp" />
+
 
         <TextView
             android:id="@+id/tvName"

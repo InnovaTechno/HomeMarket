@@ -11,10 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Market;
-import com.InnovaTechno.homemarket.R;
-
-
 
 import java.util.List;
 

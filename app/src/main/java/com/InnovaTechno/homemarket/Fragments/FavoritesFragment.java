@@ -1,4 +1,4 @@
-package com.InnovaTechno.homemarket.fragments;
+package com.InnovaTechno.homemarket.Fragments;
 
 import androidx.fragment.app.Fragment;
 

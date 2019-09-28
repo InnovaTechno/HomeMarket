@@ -9,20 +9,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Switch;
 import android.widget.Toast;
 
-import com.InnovaTechno.homemarket.fragments.CartFragment;
-import com.InnovaTechno.homemarket.fragments.FavoritesFragment;
-import com.InnovaTechno.homemarket.fragments.HomeFragment;
+import com.InnovaTechno.homemarket.Fragments.CartFragment;
+import com.InnovaTechno.homemarket.Fragments.FavoritesFragment;
+import com.InnovaTechno.homemarket.Fragments.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.parse.ParseUser;
-
-import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 

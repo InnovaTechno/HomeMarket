@@ -11,7 +11,7 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="379dp"
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:background="#ffff"
             android:clickable="true"
-            android:onClick="marketDetails"/>
+            android:onClick="marketDetails" />
 
         <TextView
             android:id="@+id/tvMarket"
@@ -29,7 +29,8 @@
             android:layout_height="47dp"
             android:layout_margin="24dp"
             android:gravity="left"
-            android:text="Avani" />
+            android:text="Avani"
+            android:textSize="25sp"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
