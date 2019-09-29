@@ -56,7 +56,7 @@ public class MarketsDetailsActivity extends AppCompatActivity {
         //setting the data
         ivDetailsMarkets.setImageResource(image);
 
-        queryMarketDetails();
+        //queryMarketDetails();
     }
 
     private void queryMarketDetails() {
@@ -79,7 +79,14 @@ public class MarketsDetailsActivity extends AppCompatActivity {
                     Log.d(TAG, "MarketDetails: " + details.get(i).getDescription() + ", adresse" + marketDetails.getAdresse()
                             + ", telephone" + marketDetails.getTelephone() + ", services" + marketDetails.getServices());
 
+                    //set the data
+                    tvMarketsDescription.setText(marketDetails.getDescription());
+                    tvAdresse.setText(marketDetails.getAdresse());
+                    tvTelephone.setText(marketDetails.getTelephone());
+                    tvServices.setText(marketDetails.getServices());
+
                 }
+
 
             }
         });
