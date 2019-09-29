@@ -1,28 +1,40 @@
-package com.InnovaTechno.homemarket.fragments;
+package com.InnovaTechno.homemarket.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
+import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import com.InnovaTechno.homemarket.Category;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Category;
+import com.InnovaTechno.homemarket.New_Products.NewProducts;
+import com.InnovaTechno.homemarket.New_Products.NewProductsAdapter;
 import com.InnovaTechno.homemarket.R;
 import com.InnovaTechno.homemarket.adapter.RecyclerViewAdapter;
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
+    public static final String TAG ="HomeFragment";
 
     List<Category> lstCategories ;
+    private NewProductsAdapter adapterr;
+    private List<NewProducts> newProducts;
 
 
     @Nullable
@@ -37,6 +49,10 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         RecyclerView rv_id = view.findViewById(R.id.rv_id);
         TextView tvCategories = view.findViewById(R.id.tvCategories);
+        ImageView ivNewProducts = view.findViewById(R.id.ivNewProducts);
+        TextView tvNameProducts = view.findViewById(R.id.tvNameProducts);
+
+
 
 
         lstCategories = new ArrayList<>();
@@ -50,12 +66,42 @@ public class HomeFragment extends Fragment {
         lstCategories.add(new Category("Produits Cosmétiques", R.drawable.produits_cosmetiquess ));
         lstCategories.add(new Category("Articles Ménagers", R.drawable.articles_de_menagess));
 
-
-
         RecyclerViewAdapter adapter = new RecyclerViewAdapter (getContext(), lstCategories);
         rv_id.setLayoutManager(new GridLayoutManager(getContext(), 3));
         rv_id.setAdapter(adapter);
 
+        //New products adapter
+        newProducts = new ArrayList<>();
+        //create the adapter
+         adapterr = new NewProductsAdapter(getContext(), newProducts);
+        RecyclerView rvNewProducts = view.findViewById(R.id.rvNewProducts);
+        rvNewProducts.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        rvNewProducts.setAdapter(adapterr);
 
+        QueryNewProducts();
+    }
+
+    private void QueryNewProducts() {
+        ParseQuery<NewProducts>newProductsQuery = new ParseQuery<NewProducts>(NewProducts.class);
+        newProductsQuery.addDescendingOrder(NewProducts.KEY_CREATED_AT);
+        newProductsQuery.findInBackground(new FindCallback<NewProducts>() {
+
+            @Override
+            public void done(List<NewProducts> products, ParseException e) {
+                if (e != null) {
+                    Log.d(TAG, "Error with New Products Query");
+                    e.printStackTrace();
+                    return;
+                }
+
+                newProducts.addAll(products);
+                adapterr.notifyDataSetChanged();
+
+                for (int i = 0; i < products.size(); i++){
+                    Log.d(TAG, "NewProducts: " + products.get(i).getName());
+                }
+
+            }
+        });
     }
 }

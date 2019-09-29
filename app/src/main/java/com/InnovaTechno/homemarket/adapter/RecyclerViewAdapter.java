@@ -35,7 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter <RecyclerViewAdapt
 
         View view;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.cardview_item, parent, false);
+        view = mInflater.inflate(R.layout.cardview_categories, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -45,12 +45,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter <RecyclerViewAdapt
         holder.categories_word.setText(mData.get(position).getTitle());
         holder.categories_img_id.setImageResource(mData.get(position).getThumbnail());
 
-        //set the click listener
+        //set the click listener on every categories
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(mContext, Fruits_Legumes.class);
                 //TODO: ITEM DETAILS
+
                 //Start activity
                 mContext.startActivity(i);
             }

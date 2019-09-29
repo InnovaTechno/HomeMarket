@@ -73,7 +73,6 @@ public class Fruits_Legumes extends AppCompatActivity {
             }
         });
 
-
                 }
 
 

@@ -1,4 +1,4 @@
-Group Project - README Template
+﻿Group Project - README Template
 ===
 
 # HOMEMARKET
@@ -51,7 +51,7 @@ Market at Home is an app that shows the nearby Markets, their daily products, al
 ### 2. Screen Archetypes
 
 * Welcome screen
-* Browse products 
+* Browse products (New products and By categories) 
 * Select a product and see every details about it.
 * Add to favorites 
 * Add to cart
@@ -72,10 +72,11 @@ Optional:
 
 **Flow Navigation** (Screen to Screen)
 * Welcome screen reen 
-* List of products 
+* List of products
 * List of markets 
 * Cart screen 
 * Forced Log-in -> Account creation if no log in is available
+
 
 
 ## Wireframes
@@ -108,6 +109,26 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    | price         | Number   | price of products |
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
+
+#### NewProducts
+ 
+   | Property       | Type      | Description |
+   | -------------  | --------  | ------------|
+   | newProductImage| File     | image that app managers post |
+   | name           | String   | name of products |
+   | createdAt      | DateTime | date when post is created (default field) |
+   | updatedAt      | DateTime | date when post is last updated (default field) |
+
+#### MarketDetails
+ 
+   | Property       | Type      | Description |
+   | -------------  | --------  | ------------|
+   | description    | String    | description of the market |
+   | adresse        | String    | adress of the market |
+   | telephone      | Number    | phone number of the market |
+   | services       | String    | services offer by the market |
+   | createdAt      | DateTime  | date when post is created (default field) |
+   | updatedAt      | DateTime  | date when post is last updated (default field) |
    
 #### NewProducts
  
@@ -137,7 +158,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    | Username            | String   | username of the user |
    | Password            | String   | password of the user |
    | Email               | String   |  email of the user |
-   | Phone	              | number	  | The phone number of the user |
+   | Phone	         | number   | The phone number of the user |
    | Alternative contact | number   | Phone number of the Alternative person |
    | Adress              | String   | Adress of the user|
    | createdAt           | DateTime | date when post is created (default field) |

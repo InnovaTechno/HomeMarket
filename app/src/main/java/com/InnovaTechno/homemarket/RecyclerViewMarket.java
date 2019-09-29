@@ -1,6 +1,7 @@
 package com.InnovaTechno.homemarket;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,10 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Market;
-import com.InnovaTechno.homemarket.R;
 
-
+import com.InnovaTechno.homemarket.Markets_Details.MarketsDetailsActivity;
 
 import java.util.List;
 
@@ -38,10 +37,18 @@ public class RecyclerViewMarket extends RecyclerView.Adapter <RecyclerViewMarket
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerViewMarket.MyViewHolderr holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerViewMarket.MyViewHolderr holder, final int position) {
         holder.tvMarket.setText(mDataa.get(position).getNamee());
         holder.ivMarket.setImageResource(mDataa.get(position).getThumbnail());
-
+        holder.ivMarket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    //Passing the data
+                Intent intent = new Intent(mContextt, MarketsDetailsActivity.class);
+                intent.putExtra("Thumbnail", mDataa.get(position).getThumbnail());
+                mContextt.startActivity(intent);
+            }
+        });
     }
 
     @Override
