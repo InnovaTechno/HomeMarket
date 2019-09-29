@@ -9,6 +9,7 @@ public class NewProducts extends ParseObject {
 
     public static final String KEY_NAME =  "name";
     public static final String KEY_IMAGE =  "newProductImage";
+    public static final String KEY_CREATED_AT  =  "createdAt";
 
     public String getName(){
         return getString(KEY_NAME);

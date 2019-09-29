@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:background="#ffff"
             android:clickable="true"
-            android:onClick="marketDetails" />
+             />
 
         <TextView
             android:id="@+id/tvMarket"

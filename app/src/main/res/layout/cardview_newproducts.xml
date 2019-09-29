@@ -5,19 +5,20 @@
     android:orientation="vertical"
     android:id="@+id/cvNewProducts"
     android:layout_height="122dp"
-    android:layout_width="120dp"
-    cardview:cardCornerRadius="3dp"
+    android:layout_width="122dp"
+    cardview:cardCornerRadius="2dp"
     android:layout_marginRight="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <ImageView
             android:id="@+id/ivNewProducts"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="103dp"
             android:background="#000000"
             android:scaleType="fitXY" />
 

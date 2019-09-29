@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MarketsDetailsActivity" />
+        <activity android:name=".Markets_Details.MarketsDetailsActivity" />
         <activity android:name=".MarketsActivity" />
         <activity android:name=".Categories.Fruits_Legumes" />
         <activity android:name=".WelcomeActivity">

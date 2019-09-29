@@ -49,7 +49,6 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         RecyclerView rv_id = view.findViewById(R.id.rv_id);
         TextView tvCategories = view.findViewById(R.id.tvCategories);
-        RecyclerView rvNewProducts = view.findViewById(R.id.rvNewProducts);
         ImageView ivNewProducts = view.findViewById(R.id.ivNewProducts);
         TextView tvNameProducts = view.findViewById(R.id.tvNameProducts);
 
@@ -74,7 +73,8 @@ public class HomeFragment extends Fragment {
         //New products adapter
         newProducts = new ArrayList<>();
         //create the adapter
-        NewProductsAdapter adapterr = new NewProductsAdapter(getContext(), newProducts);
+         adapterr = new NewProductsAdapter(getContext(), newProducts);
+        RecyclerView rvNewProducts = view.findViewById(R.id.rvNewProducts);
         rvNewProducts.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         rvNewProducts.setAdapter(adapterr);
 
@@ -83,7 +83,9 @@ public class HomeFragment extends Fragment {
 
     private void QueryNewProducts() {
         ParseQuery<NewProducts>newProductsQuery = new ParseQuery<NewProducts>(NewProducts.class);
+        newProductsQuery.addDescendingOrder(NewProducts.KEY_CREATED_AT);
         newProductsQuery.findInBackground(new FindCallback<NewProducts>() {
+
             @Override
             public void done(List<NewProducts> products, ParseException e) {
                 if (e != null) {
@@ -96,8 +98,7 @@ public class HomeFragment extends Fragment {
                 adapterr.notifyDataSetChanged();
 
                 for (int i = 0; i < products.size(); i++){
-                    NewProducts newProducts = products.get(i);
-                    Log.d(TAG, "New Products " + products.get(i).getName());
+                    Log.d(TAG, "NewProducts: " + products.get(i).getName());
                 }
 
             }
