@@ -108,6 +108,14 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
    
+#### NewProducts
+ 
+   | Property       | Type      | Description |
+   | -------------  | --------  | ------------|
+   | newProductImage| File     | image that app managers post |
+   | name           | String   | name of products |
+   | createdAt      | DateTime | date when post is created (default field) |
+   
    
 #### MarketDetails
  
@@ -141,17 +149,17 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
       - (Read/GET) Query all products post by the app managers 
       
    - New Products Screen
-      -(Read/GET) Query all the new products post by the app managers
+      - (Read/GET) Query all the new products post by the app managers
       
    - Sign up Screen 
       - (Create/POST) Create a new user 
       - (Read/GET) Query log in user
       
    - Market Details Screen
-      -(Read/GET) Query all the deatils post by the app managers
+      - (Read/GET) Query all the deatils post by the app managers
       
    - Sign in Screen 
-      -(Read/GET) Query log in new user
+      - (Read/GET) Query log in new user
       
    - Cart Screen 
       - (Create/POST) Create a new order
