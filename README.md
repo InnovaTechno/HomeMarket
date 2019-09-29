@@ -125,8 +125,11 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    
 ### Networking
 #### List of network requests by screen
-   - Details Screen
+   - Products Screen
       - (Read/GET) Query all products post by the app managers 
+      
+   - New Products Screen
+      -(Read/GET) Query all the new products post by the app managers
       
    - Sign up Screen 
       - (Create/POST) Create a new user 
