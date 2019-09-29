@@ -108,6 +108,18 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
    
+   
+#### MarketDetails
+ 
+   | Property       | Type      | Description |
+   | -------------  | --------  | ------------|
+   | description    | String    | description of the market |
+   | adresse        | String    | adress of the market |
+   | telephone      | Number    | phone number of the market |
+   | services       | String    | services offer by the market |
+   | createdAt      | DateTime  | date when post is created (default field) |
+   | updatedAt      | DateTime  | date when post is last updated (default field) |
+   
    #### User
    | Property            | Type     | Description |
    | -------------       | -------- | ------------|
