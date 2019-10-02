@@ -100,7 +100,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
 
 ## Schema 
 ### Models
-#### Post (Fruits & legumes, Viandes, Produits Laitiers, Boissons, Pains, Chips & Sucreries, Boissons Alcolisees, Produits Cosmetiques )
+#### Post (Fruits & legumes, Viandes, Produits Laitiers, Boissons, Pains, Chips & Sucreries, Boissons Alcolisees, Produits Cosmetiques, Articles Menagers)
  
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
