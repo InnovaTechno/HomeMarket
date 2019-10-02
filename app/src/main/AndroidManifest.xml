@@ -12,6 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Categories.Viandes"/>
+        <activity android:name=".Categories.Produits_Laitiers"/>
+        <activity android:name=".Categories.Produits_Cosmetiques"/>
+        <activity android:name=".Categories.Pains"/>
+        <activity android:name=".Categories.Chips_Sucreries"/>
+        <activity android:name=".Categories.Boissons"/>
+        <activity android:name=".Categories.Boissons_Alcolisees"/>
+        <activity android:name=".Categories.Articles_Menagers"/>
         <activity android:name=".Markets_Details.MarketsDetailsActivity" />
         <activity android:name=".MarketsActivity" />
         <activity android:name=".Categories.Fruits_Legumes" />

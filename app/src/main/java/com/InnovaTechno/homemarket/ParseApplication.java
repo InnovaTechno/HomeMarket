@@ -3,7 +3,14 @@ package com.InnovaTechno.homemarket;
 import android.app.Application;
 
 
-import com.InnovaTechno.homemarket.Categories.Post;
+import com.InnovaTechno.homemarket.Categories.Post.Post;
+import com.InnovaTechno.homemarket.Categories.Post.PostAMenagers;
+import com.InnovaTechno.homemarket.Categories.Post.PostBAlcolisees;
+import com.InnovaTechno.homemarket.Categories.Post.PostBoissons;
+import com.InnovaTechno.homemarket.Categories.Post.PostPLaitiers;
+import com.InnovaTechno.homemarket.Categories.Post.PostPains;
+import com.InnovaTechno.homemarket.Categories.Post.PostSucreries;
+import com.InnovaTechno.homemarket.Categories.Post.PostViandes;
 import com.InnovaTechno.homemarket.New_Products.NewProducts;
 import com.parse.Parse;
 import com.parse.ParseObject;
@@ -14,12 +21,15 @@ public class ParseApplication extends Application {
         super.onCreate();
 
         ParseObject.registerSubclass(User.class);
-
-         ParseObject.registerSubclass(Post.class);
-
+        ParseObject.registerSubclass(Post.class);
         ParseObject.registerSubclass(NewProducts.class);
-
-
+        ParseObject.registerSubclass(PostViandes.class);
+        ParseObject.registerSubclass(PostPLaitiers.class);
+        ParseObject.registerSubclass(PostBoissons.class);
+        ParseObject.registerSubclass(PostPains.class);
+        ParseObject.registerSubclass(PostSucreries.class);
+        ParseObject.registerSubclass(PostBAlcolisees.class);
+        ParseObject.registerSubclass(PostAMenagers.class);
 
         // set applicationId, and server server based on the values in the Heroku settings.
         // clientKey is not needed unless explicitly configured
