@@ -1,4 +1,4 @@
-package com.InnovaTechno.homemarket.Categories;
+package com.InnovaTechno.homemarket.Categories.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,23 +12,21 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-
+import com.InnovaTechno.homemarket.Categories.Post.PostPains;
 import com.InnovaTechno.homemarket.R;
 import com.bumptech.glide.Glide;
 import com.parse.ParseFile;
-import com.parse.ParseUser;
 
 import java.util.List;
 
-public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
+public class PainsAdapter extends RecyclerView.Adapter<PainsAdapter.ViewHolder> {
 
     private Context context;
-    private List <Post> posts;
+    private List<PostPains> posts;
 
-    public PostAdapter(Context context, List<Post> posts) {
+    public PainsAdapter(Context context, List<PostPains> posts) {
         this.context = context;
         this.posts = posts;
-
     }
 
 
@@ -42,7 +40,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Post post = posts.get(position);
+        PostPains post = posts.get(position);
         holder.bind(post);
     }
 
@@ -69,7 +67,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             tvPrice = itemView.findViewById(R.id.tvPrice);
 
         }
-        public void bind(Post post) {
+        public void bind(PostPains post) {
             ParseFile image = post.getImage();
             if (image != null) {
                 Glide.with(context).load(image.getUrl()).into(ivFruits_Legumes);
@@ -78,9 +76,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             tvDevise.setText(post.getDevise());
             tvPrice.setText(post.getPrice());
             //tvPrice.setText(Post.getPrice());
-
-
-
         }
 
     }

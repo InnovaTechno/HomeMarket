@@ -1,17 +1,17 @@
-package com.InnovaTechno.homemarket.Categories;
+package com.InnovaTechno.homemarket.Categories.Post;
 
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 
 
-@ParseClassName("Post")
-public class Post extends ParseObject {
+@ParseClassName("PostAMenagers")
+public class PostAMenagers extends ParseObject {
 
     public static final String KEY_NAME =  "name";
     public static final String KEY_IMAGE =  "productImage";
     public static final String KEY_DEVISE = "devise";
-    public static final String KEY_PRICE = "price2";
+    public static final String KEY_PRICE = "price";
 
 
 
@@ -42,6 +42,4 @@ public class Post extends ParseObject {
     public void setDevise (String devise){
         put(KEY_DEVISE, devise);
     }
-
-
 }
