@@ -171,7 +171,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
       - (Read/GET) Query all products post by the app managers 
 
    - New Products Screen
-      -(Read/GET) Query all the new products post by the app managers
+      - (Read/GET) Query all the new products post by the app managers
 
    - Sign up Screen 
       - (Create/POST) Create a new user 
@@ -181,7 +181,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
       -(Read/GET) Query log in new user
 
    - Market Details Screen
-      -(Read/GET) Query all the deatils post by the app managers
+      - (Read/GET) Query all the deatils post by the app managers
 
    - Cart Screen 
       - (Create/POST) Create a new order
