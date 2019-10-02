@@ -106,7 +106,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    | ------------- | -------- | ------------|
    | image         | File     | image that app managers post |
    | name          | String   | name of products |
-   | price         | Number   | price of products |
+   | price         | String   | price of products |
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
 
