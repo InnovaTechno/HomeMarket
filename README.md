@@ -33,7 +33,7 @@ Market at Home is an app that shows the nearby Markets, their daily products, al
 - [x] user can browse products
 - [x] user can see a list of markets
 - [x] user can select a market to see list a detailed page to see all the informations about the selected market
-- [ ] user can select a product to see details about it
+- [x] user can select a product to see details about it
 - [ ] user can add products to cart and then process a payment to buy it
 - [ ] user can receive notifications with a confirmation code.
 
@@ -107,6 +107,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    | image         | File     | image that app managers post |
    | name          | String   | name of products |
    | price         | String   | price of products |
+   | devise        | String   | devise and quantity |
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
 
@@ -130,27 +131,18 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    | createdAt      | DateTime  | date when post is created (default field) |
    | updatedAt      | DateTime  | date when post is last updated (default field) |
    
-#### NewProducts
+#### Related Items
  
    | Property       | Type      | Description |
    | -------------  | --------  | ------------|
-   | newProductImage| File     | image that app managers post |
-   | name           | String   | name of products |
-   | createdAt      | DateTime | date when post is created (default field) |
-   
-   
-#### MarketDetails
- 
-   | Property       | Type      | Description |
-   | -------------  | --------  | ------------|
-   | description    | String    | description of the market |
-   | adresse        | String    | adress of the market |
-   | telephone      | Number    | phone number of the market |
-   | services       | String    | services offer by the market |
+   | name           | String    | name of the products |
+   | price          | String    | the price of the products |
+   | image          |File       | image that app managers post |
+   | devise         | String    | de |
    | createdAt      | DateTime  | date when post is created (default field) |
    | updatedAt      | DateTime  | date when post is last updated (default field) |
    
-   #### User
+#### User
    | Property            | Type     | Description |
    | -------------       | -------- | ------------|
    | ProfileImage        | File     | Profile image of the user |
@@ -172,7 +164,10 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
 
    - New Products Screen
       - (Read/GET) Query all the new products post by the app managers
-
+      
+   - Product Details Screen
+      - (Read/GET) Query all the new products post by the app managers
+      
    - Sign up Screen 
       - (Create/POST) Create a new user 
       - (Read/GET) Query log in user
