@@ -16,6 +16,7 @@ import androidx.appcompat.widget.SearchView;
 
 import com.InnovaTechno.homemarket.Categories.Adapter.PostAdapter;
 import com.InnovaTechno.homemarket.Categories.Post.Post;
+import com.InnovaTechno.homemarket.Fragments.CartFragment;
 import com.InnovaTechno.homemarket.R;
 
 import com.InnovaTechno.homemarket.SignUpActivity;
@@ -86,6 +87,6 @@ public class Fruits_Legumes extends AppCompatActivity {
     }
 
     public void addToCart(View view) {
-        Intent c = new Intent(this, SignUpActivity.class);
+        Intent c = new Intent(this, CartFragment.class);
         startActivity(c);    }
 }

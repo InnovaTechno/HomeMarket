@@ -57,6 +57,7 @@ public class MarketsDetailsActivity extends AppCompatActivity {
         ivDetailsMarkets.setImageResource(image);
 
         //queryMarketDetails();
+        //todo-details
     }
 
     private void queryMarketDetails() {
