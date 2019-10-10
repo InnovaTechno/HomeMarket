@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Items_Detail.ItemDetails"/>
         <activity android:name=".Categories.Viandes"/>
         <activity android:name=".Categories.Produits_Laitiers"/>
         <activity android:name=".Categories.Produits_Cosmetiques"/>

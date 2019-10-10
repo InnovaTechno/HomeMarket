@@ -1,6 +1,7 @@
 package com.InnovaTechno.homemarket.Categories.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,10 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.InnovaTechno.homemarket.Cart;
 import com.InnovaTechno.homemarket.Categories.Post.Post;
+import com.InnovaTechno.homemarket.Fragments.CartFragment;
+import com.InnovaTechno.homemarket.Items_Detail.ItemDetails;
 import com.InnovaTechno.homemarket.R;
 import com.bumptech.glide.Glide;
 import com.parse.ParseFile;
@@ -69,19 +73,49 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             tvPrice = itemView.findViewById(R.id.tvPrice);
 
         }
-        public void bind(Post post) {
+        public void bind(Post post){
             ParseFile image = post.getImage();
             if (image != null) {
                 Glide.with(context).load(image.getUrl()).into(ivFruits_Legumes);
             }
+
             tvName.setText(post.getName());
             tvDevise.setText(post.getDevise());
             tvPrice.setText(post.getPrice());
-            //tvPrice.setText(Post.getPrice());
+
+            //Passing the data to items details activity
+            cvFruits_Legumes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    Intent intent = new Intent(context, ItemDetails.class);
+                    intent.putExtra("name", posts.get(position).getName());
+                    intent.putExtra("price2", posts.get(position).getPrice());
+                    intent.putExtra("devise", posts.get(position).getDevise());
+                    context.startActivity(intent);
+
+                }
+            });
 
 
 
-        }
+            //passing and saving the data to FragmentCart when cliked add to cart
+            btnAddToCart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //Passing the data
+                    int position = getAdapterPosition();
+                    Intent intent = new Intent(context, CartFragment.class);
+                    intent.putExtra("name", posts.get(position).getName());
+                    intent.putExtra("price2", posts.get(position).getPrice());
+                    intent.putExtra("devise", posts.get(position).getDevise());
+                    intent.putExtra("productImage", posts.get(position).getImage());
+                    context.startActivity(intent);
+                }
+
+        });
 
     }
+    }
 }
+

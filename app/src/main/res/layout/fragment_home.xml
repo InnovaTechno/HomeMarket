@@ -44,7 +44,7 @@
         android:id="@+id/rv_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp"
+        android:layout_marginLeft="5dp"
         android:scrollbarAlwaysDrawVerticalTrack="true"
         android:scrollbarSize="5dp"
         android:scrollbars="vertical"

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:id="@+id/cvFruits_Legumes"
-    android:layout_width="173dp"
+    android:layout_width="170dp"
     android:layout_height="200dp"
     android:foreground="?android:attr/selectableItemBackground"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
@@ -11,7 +11,7 @@
     cardview:cardCornerRadius="8dp">
 
     <RelativeLayout
-        android:layout_width="173dp"
+        android:layout_width="170dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -55,10 +55,6 @@
             android:gravity="center"
             android:layout_alignParentStart="true"
             android:layout_marginLeft="25dp"/>
-
-
-
-
 
         <TextView
             android:id="@+id/tvDevise"
