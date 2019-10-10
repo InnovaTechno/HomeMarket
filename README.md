@@ -174,7 +174,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
       - (Read/GET) Query log in user
 
    - Sign in Screen 
-      -(Read/GET) Query log in new user
+      - (Read/GET) Query log in new user
 
    - Market Details Screen
       - (Read/GET) Query all the deatils post by the app managers
