@@ -34,6 +34,7 @@ Market at Home is an app that shows the nearby Markets, their daily products, al
 - [x] user can see a list of markets
 - [x] user can select a market to see list a detailed page to see all the informations about the selected market
 - [x] user can select a product to see details about it
+- [x] user can select a product to see the related items
 - [ ] user can add products to cart and then process a payment to buy it
 - [ ] user can receive notifications with a confirmation code.
 
