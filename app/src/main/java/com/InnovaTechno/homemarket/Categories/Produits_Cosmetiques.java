@@ -34,6 +34,9 @@ public class Produits_Cosmetiques extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produits_cosmetiques);
+        //Set Title
+        this.setTitle("Produits Cosmétiques");
+
                 //create the data source
                 mPosts = new ArrayList<>();
                 //create the adapter

@@ -59,11 +59,13 @@ public class ItemDetails extends AppCompatActivity {
         String name = intent.getExtras().getString("name");
         String price2 = intent.getExtras().getString("price2");
         String devise = intent.getExtras().getString("devise");
+        int image = intent.getExtras().getInt("productImage");
 
         //Setting the data
         tv_Price.setText(price2);
         tv_Devise.setText(devise);
         tvName.setText(name);
+        ivItemDetails.setImageResource(image);
 
         QueryItemsDetails();
 
@@ -81,7 +83,7 @@ public class ItemDetails extends AppCompatActivity {
     private void QueryItemsDetails() {
         ParseQuery<Details> detailsQuery = new ParseQuery<Details>(Details.class);
         detailsQuery.include(Details.KEY_DESCRIPTION);
-        detailsQuery.include(Details.KEY_IMAGE);
+        //detailsQuery.include(Details.KEY_IMAGE);
         detailsQuery.findInBackground(new FindCallback<Details>() {
             @Override
             public void done(List<Details> details, ParseException e) {
@@ -97,6 +99,7 @@ public class ItemDetails extends AppCompatActivity {
                     Log.d(TAG, "Details: " + details.get(i).getName() + ", description" + detailsItems.getDescription() );
 
                     tvDescription.setText(detailsItems.getDescription());
+
 
                 }
 

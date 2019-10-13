@@ -40,7 +40,7 @@ public class RecyclerViewMarket extends RecyclerView.Adapter <RecyclerViewMarket
     public void onBindViewHolder(@NonNull RecyclerViewMarket.MyViewHolderr holder, final int position) {
         holder.tvMarket.setText(mDataa.get(position).getNamee());
         holder.ivMarket.setImageResource(mDataa.get(position).getThumbnail());
-        holder.ivMarket.setOnClickListener(new View.OnClickListener() {
+        holder.cvMarket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                     //Passing the data
@@ -68,6 +68,12 @@ public class RecyclerViewMarket extends RecyclerView.Adapter <RecyclerViewMarket
             tvMarket = (TextView) itemView.findViewById(R.id.tvMarket);
             ivMarket = (ImageView) itemView.findViewById(R.id.ivMarket);
             cvMarket = (CardView) itemView.findViewById(R.id.cvMarket);
+            cvMarket.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
         }
     }
 }

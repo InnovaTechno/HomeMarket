@@ -23,6 +23,8 @@ public class MarketsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_markets);
+        //Set Title
+        this.setTitle("Markets");
 
         lsMarket = new ArrayList<>();
         lsMarket.add( new Market("Avani", R.drawable.avani));

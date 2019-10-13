@@ -33,6 +33,7 @@ public class Articles_Menagers  extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_articles_menagers);
+        this.setTitle("Articles Ménagers");
 
            //create the data source
             mPosts = new ArrayList<>();

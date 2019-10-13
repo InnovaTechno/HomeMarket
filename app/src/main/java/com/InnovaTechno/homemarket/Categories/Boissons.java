@@ -35,6 +35,9 @@ public class Boissons extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boissons);
+        //Set Title
+        this.setTitle("Boissons");
+
         //create the data source
         mPosts = new ArrayList<>();
         //create the adapter
