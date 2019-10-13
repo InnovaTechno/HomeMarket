@@ -40,9 +40,15 @@
         android:gravity="center"
         android:textColor="#201D1D"
         android:textStyle="bold"
-        android:text=" All Categories"
+        android:text=" Shop by Categories"
         android:textSize="20sp" />
 
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_id"
