@@ -43,7 +43,6 @@ public class CartFragment extends Fragment {
         TextView tv_Total_Acheter = view.findViewById(R.id.tv_Total_Acheter);
         TextView tv_Total_Livraison = view.findViewById(R.id.tv_Total_Livraison);
         Button btnCheckout = view.findViewById(R.id.btnCheckout);
-        Button btnClear = view.findViewById(R.id.btnClear);
         ImageView ivCart_Item = view.findViewById(R.id.ivCart_Item);
         TextView tvNameItem = view.findViewById(R.id.tvNameItem);
         TextView tvPrice_Item = view.findViewById(R.id.tvPrice_Item);
@@ -56,16 +55,8 @@ public class CartFragment extends Fragment {
         final RecyclerView rv_Cart = view.findViewById(R.id.rv_Cart);
         CartAdapter adapter = new CartAdapter(getContext(), post);
         rv_Cart.setLayoutManager(new LinearLayoutManager(getContext()));
-        rv_Cart.setAdapter(adapter);
+        //rv_Cart.setAdapter(adapter);
 
-        //Onclick on button clear cart
-        btnClear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "Clearing the shopping cart");
-                //clear items
-            }
-        });
 
         //receive data
 

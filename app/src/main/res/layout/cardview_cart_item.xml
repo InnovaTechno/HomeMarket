@@ -4,7 +4,7 @@
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cvCart_Item"
     android:layout_width="391dp"
-    android:layout_height="115dp"
+    android:layout_height="125dp"
     android:layout_margin="7dp"
     android:foreground="?android:attr/selectableItemBackground"
     android:orientation="vertical"
@@ -12,8 +12,8 @@
     cardview:cardCornerRadius="5dp">
 
     <RelativeLayout
-        android:layout_width="391dp"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -35,7 +35,6 @@
             android:layout_marginRight="-101dp"
             android:layout_marginBottom="88dp"
             android:text="Citron"
-            android:textColor="#3F3D3D"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -137,6 +136,14 @@
             android:text="HTG/LBS"
             android:textSize="15sp"
             android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ivCart_Item"
+            android:layout_marginTop="-2dp"
+            android:background="?android:attr/listDivider" />
 
 
     </RelativeLayout>
