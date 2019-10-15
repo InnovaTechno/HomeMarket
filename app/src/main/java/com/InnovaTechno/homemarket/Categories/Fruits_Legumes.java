@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.Button;
 
 import androidx.appcompat.widget.SearchView;
@@ -40,14 +43,25 @@ public class Fruits_Legumes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fruits_legumes);
+        //Set Title
+        this.setTitle("Fruits et Légumes");
+
+        RecyclerView rv_fruits_legumes = (RecyclerView) findViewById(R.id.rv_fruits_legumes);
+
+        //set the animation
+        //LayoutAnimationController animationController = AnimationUtils.loadLayoutAnimation(this, R.anim.layout_animation_fall_down);
+        //rv_fruits_legumes.setLayoutAnimation(animationController);
+
 
         //create the data source
         mPosts = new ArrayList<>();
         //create the adapter
         adapter = new PostAdapter(this, mPosts);
-        RecyclerView rv_fruits_legumes = (RecyclerView) findViewById(R.id.rv_fruits_legumes);
         rv_fruits_legumes.setLayoutManager(new GridLayoutManager(this, 2));
         rv_fruits_legumes.setAdapter(adapter);
+
+        //Bundle data = getIntent().getExtras();
+      //  Post post = (Post) data.getSerializable("post");
 
         queryPost();
     }
@@ -75,6 +89,17 @@ public class Fruits_Legumes extends AppCompatActivity {
 
                 }
 
+    //The return of the animation after changing the data
+    private void runLayoutAnimation (RecyclerView rv_fruits_legumes){
+        Context context = rv_fruits_legumes.getContext();
+        LayoutAnimationController layoutAnimationController =
+                AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation_fall_down);
+
+        rv_fruits_legumes.setLayoutAnimation(layoutAnimationController);
+        rv_fruits_legumes.getAdapter().notifyDataSetChanged();
+        rv_fruits_legumes.scheduleLayoutAnimation();
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -85,6 +110,9 @@ public class Fruits_Legumes extends AppCompatActivity {
         searchView.setQueryHint("Search Products");
         return super.onCreateOptionsMenu(menu);
     }
+
+
+
 
     public void addToCart(View view) {
         Intent c = new Intent(this, CartFragment.class);

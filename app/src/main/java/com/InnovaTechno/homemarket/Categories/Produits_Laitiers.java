@@ -34,6 +34,8 @@ public class Produits_Laitiers extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produits_laiters);
+        //Set Title
+        this.setTitle("Produits Laitiers");
 
                 //create the data source
                 mPosts = new ArrayList<>();

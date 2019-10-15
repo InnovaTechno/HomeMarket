@@ -23,13 +23,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="352dp"
+        android:layout_height="326dp"
         android:orientation="horizontal">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_Cart"
             android:layout_width="401dp"
-            android:layout_height="348dp"
+            android:layout_height="326dp"
             android:layout_marginLeft="5dp">
 
         </androidx.recyclerview.widget.RecyclerView>
@@ -43,27 +43,20 @@
 
         <TextView
             android:id="@+id/tvTotal_Acheter"
-            android:layout_width="202dp"
+            android:layout_width="199dp"
             android:layout_height="42dp"
-            android:background="#4CAF50"
             android:gravity="center"
             android:text="Total Acheter"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
+            android:textColor="#3F3D3D" />
 
         <TextView
             android:id="@+id/tv_Total_Acheter"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_width="211dp"
+            android:layout_height="42dp"
             android:layout_marginEnd="0dp"
-            android:background="#C8020E"
             android:gravity="center|end"
-            android:text="985,00 HTG"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:text="952.00 HTG"
+            android:textColor="#3F3D3D" />
 
 
     </LinearLayout>
@@ -77,25 +70,28 @@
         android:id="@+id/tvTotal_Livraison"
         android:layout_width="203dp"
         android:layout_height="40dp"
-        android:background="#4CAF50"
         android:gravity="center"
-        android:text="LIVRAISON"
-        android:textColor="#fff"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:text="Livraison"
+        android:textColor="#3F3D3D"
+        />
 
     <TextView
         android:id="@+id/tv_Total_Livraison"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginEnd="0dp"
-        android:background="#C8020E"
         android:gravity="center|end"
-        android:text="985,00 HTG"
-        android:textColor="#fff"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:text="150,00 HTG"
+        android:textColor="#3F3D3D"
+         />
     </LinearLayout>
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="41dp"
@@ -105,41 +101,40 @@
             android:id="@+id/tvTOTAL"
             android:layout_width="202dp"
             android:layout_height="42dp"
-            android:background="#4CAF50"
+            android:textStyle="bold"
             android:gravity="center"
             android:text="TOTAL"
-            android:textColor="#fff"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textColor="#3F3D3D"
+             />
 
 
         <TextView
-            android:id="@+id/tv_TOTAL"
+            android:id="@+id/tv_TOTAL_PRICE"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginEnd="0dp"
-            android:background="#C8020E"
-            android:gravity="center|end"
+           android:gravity="center|end"
             android:text="985,00 HTG"
-            android:textColor="#fff"
+            android:textStyle="bold"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textColor="#3F3D3D"
+             />
+
 
 
     </LinearLayout>
-
 
     <Button
         android:id="@+id/btnCheckout"
         android:layout_width="108dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginEnd="5dp"
         android:layout_marginTop="10dp"
-        android:background="#C8020E"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/roundedbutton"
         android:gravity="center"
         android:text="CHECKOUT"
         android:textColor="#fff" />
-
 
 </LinearLayout>

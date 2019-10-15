@@ -36,6 +36,8 @@ public class Viandes extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viandes);
+        //Set Title
+        this.setTitle("Viandes");
 
             //create the data source
             mPosts = new ArrayList<>();

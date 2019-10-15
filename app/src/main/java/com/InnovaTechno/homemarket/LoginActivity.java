@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
 
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
-       // progressBar = findViewById(R.id.siProgressbar);
+        progressBar = findViewById(R.id.siProgressbar);
         progressBar.setVisibility(View.GONE);
 
         btnLogin = findViewById(R.id.btnLogin);

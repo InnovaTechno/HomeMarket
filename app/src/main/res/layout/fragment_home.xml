@@ -13,6 +13,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text=" New Products"
+        android:textColor="#201D1D"
+        android:textStyle="bold"
         android:textSize="17sp" />
 
 
@@ -36,17 +38,25 @@
         android:layout_width="match_parent"
         android:layout_height="28dp"
         android:gravity="center"
-        android:text=" All Categories"
+        android:textColor="#201D1D"
+        android:textStyle="bold"
+        android:text=" Shop by Categories"
         android:textSize="20sp" />
 
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="2dp"
         android:scrollbarAlwaysDrawVerticalTrack="true"
-        android:scrollbarSize="5dp"
+        android:scrollbarSize="2dp"
         android:scrollbars="vertical"
         app:fastScrollVerticalThumbDrawable="@color/colorPrimary">
 

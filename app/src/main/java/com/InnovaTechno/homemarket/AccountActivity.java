@@ -1,5 +1,6 @@
 package com.InnovaTechno.homemarket;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,6 +32,7 @@ public class AccountActivity extends AppCompatActivity {
     private EditText etPassworddd;
     private Button btnCAccount;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +42,7 @@ public class AccountActivity extends AppCompatActivity {
         etAdresse = findViewById(R.id.etAdresse);
         etPhone = findViewById(R.id.etPhone);
         etAPhone = findViewById(R.id.etAPhone);
-        etEmaill = findViewById(R.id.etEmail);
+        etEmaill = findViewById(R.id.etEmaill);
         etUsername = findViewById(R.id.etUsername);
         etPasswordd = findViewById(R.id.etPasswordd);
         etPassworddd = findViewById(R.id.etPassworddd);

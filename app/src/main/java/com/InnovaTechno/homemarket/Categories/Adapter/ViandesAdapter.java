@@ -1,6 +1,7 @@
 package com.InnovaTechno.homemarket.Categories.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.InnovaTechno.homemarket.Categories.Post.PostViandes;
+import com.InnovaTechno.homemarket.Items_Detail.ItemDetails;
 import com.InnovaTechno.homemarket.R;
 import com.bumptech.glide.Glide;
 import com.parse.ParseFile;
@@ -76,6 +78,21 @@ public class ViandesAdapter extends RecyclerView.Adapter<ViandesAdapter.ViewHold
             tvDevise.setText(post.getDevise());
             tvPrice.setText(post.getPrice());
             //tvPrice.setText(Post.getPrice());
+
+            //Passing the data to items details activity
+            cvFruits_Legumes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    Intent intent = new Intent(context, ItemDetails.class);
+                    intent.putExtra("name", posts.get(position).getName());
+                    intent.putExtra("price", posts.get(position).getPrice());
+                    intent.putExtra("devise", posts.get(position).getDevise());
+                    intent.putExtra("productImage" , posts.get(position).getImage());
+                    context.startActivity(intent);
+
+                }
+            });
         }
 
     }

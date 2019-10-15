@@ -50,4 +50,11 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/favorites"
+        android:layout_width="27dp"
+        android:layout_height="23dp"
+        android:background="@drawable/favorite"
+        android:layout_gravity="right"/>
+
 </androidx.cardview.widget.CardView>

@@ -29,8 +29,9 @@
             android:layout_height="47dp"
             android:layout_margin="24dp"
             android:gravity="left"
+            android:layout_gravity="center"
             android:text="Avani"
-            android:textSize="25sp"/>
+            android:textSize="25sp" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

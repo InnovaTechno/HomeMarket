@@ -22,6 +22,7 @@
             android:background="#000000"
             android:scaleType="fitXY" />
 
+
         <TextView
             android:id="@+id/tvNameProducts"
             android:layout_width="120dp"
@@ -29,8 +30,15 @@
             android:gravity="center"
             android:text="Fanta" />
 
-
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/favorites"
+        android:layout_width="27dp"
+        android:layout_height="23dp"
+        android:background="@drawable/favorite"
+        android:layout_gravity="right"
+        />
 
 
 

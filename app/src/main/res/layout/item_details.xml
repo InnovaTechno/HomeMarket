@@ -34,35 +34,34 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="57dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_Price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="150"
-            android:layout_marginLeft="45dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:layout_gravity="center"
-            android:textColor="#C8020E"/>
+            android:layout_marginLeft="45dp"
+            android:text="150"
+            android:textColor="#C8020E"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_Devise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HTG/LBS"
+            android:layout_gravity="center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="50dp"
-            ndroid:textSize="19sp"
+            android:text="HTG/LBS"
+            android:textColor="#C8020E"
             android:textStyle="bold"
-            android:layout_gravity="center"
-            android:textColor="#C8020E"/>
+            ndroid:textSize="19sp" />
 
 
-        <androidx.cardview.widget.CardView
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:cardview="http://schemas.android.com/apk/res-auto"
             android:id="@+id/cvItem_Qty"
             android:layout_width="141dp"
@@ -76,7 +75,7 @@
                 android:id="@+id/btnPlus"
                 android:layout_width="38dp"
                 android:layout_height="match_parent"
-                android:background= "#C92C36"
+                android:background="#C92C36"
                 android:text="+"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -96,7 +95,7 @@
                 android:layout_width="45dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="100dp"
-                android:background= "#C92C36"
+                android:background="#C92C36"
                 android:text="-"
                 android:textColor="#201D1D"
                 android:textSize="20sp"
@@ -144,7 +143,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRelated_items"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="145dp"
         android:layout_marginEnd="5dp"
         android:orientation="horizontal">
 
@@ -176,6 +175,8 @@
             android:gravity="center"
             android:text="Buy Now"
             android:textColor="#fff" />
+
+
 
 
     </LinearLayout>

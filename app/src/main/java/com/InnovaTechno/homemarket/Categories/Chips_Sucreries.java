@@ -36,6 +36,9 @@ public class Chips_Sucreries extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chips_sucreries);
+        //Set Title
+        this.setTitle("Chips et Sucreries");
+
             //create the data source
             mPosts = new ArrayList<>();
             //create the adapter

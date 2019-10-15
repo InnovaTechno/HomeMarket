@@ -36,6 +36,8 @@ public class Boissons_Alcolisees extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boissons_alcolisees);
+        //Set Title
+        this.setTitle("Boissons Alcolisées");
 
             //create the data source
             mPosts = new ArrayList<>();
