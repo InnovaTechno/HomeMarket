@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ebebeb">
 
-    <TextView
-        android:id="@+id/tvListProducts"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="List of selected products"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:textStyle="bold"/>
-
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="?android:attr/listDivider" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="326dp"
+        android:layout_height="242dp"
         android:orientation="horizontal">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_Cart"
             android:layout_width="401dp"
-            android:layout_height="326dp"
+            android:layout_height="239dp"
             android:layout_marginLeft="5dp">
 
         </androidx.recyclerview.widget.RecyclerView>
@@ -44,19 +31,21 @@
         <TextView
             android:id="@+id/tvTotal_Acheter"
             android:layout_width="199dp"
-            android:layout_height="42dp"
-            android:gravity="center"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
             android:text="Total Acheter"
             android:textColor="#3F3D3D" />
 
         <TextView
             android:id="@+id/tv_Total_Acheter"
-            android:layout_width="211dp"
+            android:layout_width="194dp"
             android:layout_height="42dp"
-            android:layout_marginEnd="0dp"
-            android:gravity="center|end"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
             android:text="952.00 HTG"
-            android:textColor="#3F3D3D" />
+            android:textColor="#3F3D3D"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -70,8 +59,9 @@
         android:id="@+id/tvTotal_Livraison"
         android:layout_width="203dp"
         android:layout_height="40dp"
-        android:gravity="center"
+        android:layout_marginLeft="5dp"
         android:text="Livraison"
+        android:textStyle="bold"
         android:textColor="#3F3D3D"
         />
 
@@ -79,9 +69,10 @@
         android:id="@+id/tv_Total_Livraison"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginEnd="0dp"
-        android:gravity="center|end"
+        android:layout_marginEnd="5dp"
+        android:gravity="center"
         android:text="150,00 HTG"
+        android:textStyle="bold"
         android:textColor="#3F3D3D"
          />
     </LinearLayout>
@@ -102,7 +93,7 @@
             android:layout_width="202dp"
             android:layout_height="42dp"
             android:textStyle="bold"
-            android:gravity="center"
+            android:layout_marginLeft="5dp"
             android:text="TOTAL"
             android:textSize="20sp"
             android:textColor="#3F3D3D"
@@ -111,15 +102,14 @@
 
         <TextView
             android:id="@+id/tv_TOTAL_PRICE"
-            android:layout_width="match_parent"
+            android:layout_width="188dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="0dp"
-           android:gravity="center|end"
-            android:text="985,00 HTG"
-            android:textStyle="bold"
-            android:textSize="20sp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:text="1,000,00 HTG"
             android:textColor="#3F3D3D"
-             />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
 

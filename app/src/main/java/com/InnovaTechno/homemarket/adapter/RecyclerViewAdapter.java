@@ -59,7 +59,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter <RecyclerViewAdapt
     }
 
 
-    class MyViewHolder extends RecyclerView.ViewHolder  implements View.OnClickListener {
+    public class MyViewHolder extends RecyclerView.ViewHolder  implements View.OnClickListener {
 
         TextView categories_word;
         ImageView categories_img_id;

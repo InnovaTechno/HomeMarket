@@ -5,8 +5,7 @@ public class Category {
     private String Title;
     private int Thumbnail;
 
-    public Category() {
-    }
+
 
     public Category(String title, int thumbnail) {
         Title = title;

@@ -44,12 +44,6 @@
         android:textSize="20sp" />
 
 
-    <View
-        android:id="@+id/divider5"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="?android:attr/listDivider" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_id"
         android:layout_width="match_parent"

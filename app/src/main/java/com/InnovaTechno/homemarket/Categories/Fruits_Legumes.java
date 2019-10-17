@@ -39,6 +39,7 @@ public class Fruits_Legumes extends AppCompatActivity {
     private Button btnAddToCart;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +57,7 @@ public class Fruits_Legumes extends AppCompatActivity {
         //create the data source
         mPosts = new ArrayList<>();
         //create the adapter
-        adapter = new PostAdapter(this, mPosts);
+        adapter = new PostAdapter(this, mPosts );
         rv_fruits_legumes.setLayoutManager(new GridLayoutManager(this, 2));
         rv_fruits_legumes.setAdapter(adapter);
 
@@ -112,9 +113,4 @@ public class Fruits_Legumes extends AppCompatActivity {
     }
 
 
-
-
-    public void addToCart(View view) {
-        Intent c = new Intent(this, CartFragment.class);
-        startActivity(c);    }
 }

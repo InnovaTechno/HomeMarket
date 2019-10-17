@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,16 +18,18 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.InnovaTechno.homemarket.Categories.Adapter.PostAdapter;
 import com.InnovaTechno.homemarket.Categories.Post.Post;
 
 import com.InnovaTechno.homemarket.R;
 import com.InnovaTechno.homemarket.adapter.CartAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class CartFragment extends Fragment {
-    public static final String TAG ="CartFragment";
+    public static final String TAG = "CartFragment";
     private CartAdapter adapter;
     private List<Post> post;
 
@@ -39,7 +42,6 @@ public class CartFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TextView tvListProducts = view.findViewById(R.id.tvListProducts);
         TextView tv_Total_Acheter = view.findViewById(R.id.tv_Total_Acheter);
         TextView tv_Total_Livraison = view.findViewById(R.id.tv_Total_Livraison);
         Button btnCheckout = view.findViewById(R.id.btnCheckout);
@@ -51,18 +53,29 @@ public class CartFragment extends Fragment {
         TextView tvDevise_Total = view.findViewById(R.id.tvDevise_Total);
 
 
+        //create the data source
+        post = new ArrayList<>();
         //set the adapter
         final RecyclerView rv_Cart = view.findViewById(R.id.rv_Cart);
-        CartAdapter adapter = new CartAdapter(getContext(), post);
+        adapter = new CartAdapter(getContext(), post);
         rv_Cart.setLayoutManager(new LinearLayoutManager(getContext()));
-        //rv_Cart.setAdapter(adapter);
-
+        rv_Cart.setAdapter(adapter);
 
         //receive data
+        if (getArguments() != null) {
+            String name = getArguments().getString("name");
+            String price2 = getArguments().getString("price2");
+            String devise = getArguments().getString("devise");
+
+                //setting values
+                tvNameItem.setText(name);
+                tvPrice_Item.setText(price2);
+                tvDevise_Item.setText(devise);
+                tvDevise_Total.setText(devise);
 
 
-        //setting values
-
-
+            }
+        }
     }
-}
+
+
