@@ -8,7 +8,7 @@
     android:background="#ebebeb">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_boissons_alcolisees1"
+        android:id="@+id/rv_boissons_alcolisees"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbarAlwaysDrawVerticalTrack="true"

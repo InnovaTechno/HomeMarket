@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/ivItemDetails"
-        android:layout_width="145dp"
-        android:layout_height="122dp"
+        android:layout_width="108dp"
+        android:layout_height="79dp"
         android:layout_gravity="center"
         android:background="#000"
         android:scaleType="fitXY" />
@@ -34,16 +34,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="57dp"
+        android:layout_height="46dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_Price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginLeft="45dp"
             android:text="150"
+            android:layout_gravity="center"
             android:textColor="#C8020E"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -52,9 +52,9 @@
             android:id="@+id/tv_Devise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="50dp"
+            android:layout_gravity="center"
             android:text="HTG/LBS"
             android:textColor="#C8020E"
             android:textStyle="bold"
@@ -72,11 +72,11 @@
             cardview:cardBackgroundColor="#FFF">
 
             <Button
-                android:id="@+id/btnPlus"
+                android:id="@+id/btnMoins"
                 android:layout_width="38dp"
                 android:layout_height="match_parent"
                 android:background="#C92C36"
-                android:text="+"
+                android:text="-"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -91,17 +91,15 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btnMoins"
+                android:id="@+id/btnPlus"
                 android:layout_width="45dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="100dp"
                 android:background="#C92C36"
-                android:text="-"
+                android:text="+"
                 android:textColor="#201D1D"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
@@ -111,6 +109,65 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="?android:attr/listDivider" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/ic_local_shipping_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text=" Livraison pas disponible"
+            android:textColor="#C92C36"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_location_city_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text=" PickUp disponible"
+            android:textColor="#C92C36"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -157,10 +214,9 @@
         <Button
             android:id="@+id/btnAdd_to_Cart"
             android:layout_width="149dp"
-            android:layout_height="52dp"
+            android:layout_height="match_parent"
             android:layout_gravity="left"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
             android:background="#4CAF50"
             android:gravity="center"
             android:text="Add to Cart"
@@ -168,11 +224,12 @@
 
         <Button
             android:id="@+id/btnBuy_Now"
-            android:layout_width="149dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="75dp"
-            android:background= "#C92C36"
+            android:layout_width="143dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="100dp"
+            android:background="#C92C36"
             android:gravity="center"
+            android:paddingEnd="10dp"
             android:text="Buy Now"
             android:textColor="#fff" />
 

@@ -8,6 +8,7 @@
     android:foreground="?android:attr/selectableItemBackground"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
+
     cardview:cardCornerRadius="8dp">
 
     <RelativeLayout
@@ -18,7 +19,7 @@
         <ImageView
             android:id="@+id/ivFruits_Legumes"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="117dp"
             android:background="#000000"
             android:scaleType="fitXY" />
 
@@ -28,9 +29,9 @@
             android:layout_height="23dp"
             android:layout_above="@+id/tvName"
             android:layout_alignRight="@+id/ivFruits_Legumes"
-            android:background="@drawable/favorite"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="91dp" />
+            android:layout_marginBottom="85dp"
+            android:background="@drawable/favorite" />
 
 
         <TextView
@@ -38,48 +39,58 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ivFruits_Legumes"
+            android:layout_marginTop="3dp"
             android:gravity="center"
             android:text="Pommes"
-            android:textColor="#3F3D3D"
-            android:textSize="15sp" />
+            android:textStyle="bold"
+            android:textColor="#C8020E"
+            android:textSize="18sp" />
 
 
         <TextView
             android:id="@+id/tvPrice"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="1000"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/tvName"
-            android:textSize="13sp"
-            android:textColor="#3F3D3D"
-            android:gravity="center"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="25dp"/>
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="1000"
+            android:textColor="#3F3D3D"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/tvDevise"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
             android:layout_below="@+id/tvName"
+            android:layout_alignEnd="@+id/btnAddToCart"
+            android:layout_alignRight="@+id/btnAddToCart"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="-7dp"
+            android:layout_marginRight="-7dp"
             android:gravity="center"
             android:text="HTG/LBS"
             android:textColor="#3F3D3D"
-            android:textSize="13sp"
-            />
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/btnAddToCart"
-            android:layout_width="95dp"
-            android:layout_height="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
             android:layout_below="@+id/ivFruits_Legumes"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="55dp"
             android:background="@drawable/add_to_cart"
             android:clickable="true"
+            android:onClick="addToCart"
             android:text="Add to cart"
+            android:gravity="center"
             android:textColor="#ffffff"
-            android:textSize="10dp"
-            android:onClick="addToCart"/>
+            android:textSize="10dp" />
 
 
     </RelativeLayout>
