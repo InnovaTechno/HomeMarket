@@ -14,7 +14,17 @@
         <item
             android:id="@+id/nav_marketlist"
             android:icon="@drawable/ic_market_list"
-            android:title="List of markets" />
+            android:title="Liste de markets" />
+
+        <item
+            android:id="@+id/nav_livraison"
+            android:icon="@drawable/ic_local_shipping_black_24dp"
+            android:title="Livraison" />
+
+        <item
+            android:id="@+id/nav_pickup"
+            android:icon="@drawable/ic_store_mall_directory_black_24dp"
+            android:title="Pick Up" />
 
         <item
             android:id="@+id/nav_logout"
