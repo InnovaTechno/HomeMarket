@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -24,10 +26,14 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //let's make the activity full screen for better ui
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_welcome);
 
-        currentUser = ParseUser.getCurrentUser();
+        getSupportActionBar().hide();
 
+        currentUser = ParseUser.getCurrentUser();
         btnSignUp = findViewById(R.id.btnSignUp);
         ivWelcome = findViewById(R.id.ivWelcome);
         ivLogo = findViewById(R.id.ivLogo);
@@ -41,16 +47,8 @@ public class WelcomeActivity extends AppCompatActivity {
                 finish();
             }
         });
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(WelcomeActivity.this, SignUpActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
-    }
 
+    }
 
     public void goToMainActivity(View view) {
         Intent i = new Intent(this, MainActivity.class);

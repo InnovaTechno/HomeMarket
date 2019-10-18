@@ -131,7 +131,6 @@
             android:layout_marginStart="10dp"
             android:gravity="center"
             android:text=" Livraison pas disponible"
-            android:textColor="#C92C36"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -150,7 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
             android:layout_gravity="center"
-            android:background="@drawable/ic_location_city_black_24dp" />
+            android:background="@drawable/ic_store_mall_directory_black_24dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -159,7 +158,6 @@
             android:layout_marginStart="10dp"
             android:gravity="center"
             android:text=" PickUp disponible"
-            android:textColor="#C92C36"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -200,7 +198,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRelated_items"
         android:layout_width="match_parent"
-        android:layout_height="145dp"
+        android:layout_height="134dp"
         android:layout_marginEnd="5dp"
         android:orientation="horizontal">
 

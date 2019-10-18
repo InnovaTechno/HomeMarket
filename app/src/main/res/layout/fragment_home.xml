@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text=" New Products"
+        android:text=" Nouveaux produits"
         android:textColor="#201D1D"
         android:textStyle="bold"
         android:textSize="17sp" />
@@ -38,9 +38,8 @@
         android:layout_width="match_parent"
         android:layout_height="28dp"
         android:gravity="center"
-        android:textColor="#201D1D"
         android:textStyle="bold"
-        android:text=" Shop by Categories"
+        android:text=" Shop par Categories"
         android:textSize="20sp" />
 
 
