@@ -68,7 +68,7 @@ public class ItemDetails extends AppCompatActivity {
         tv_Devise.setText(devise);
         tvName.setText(name);
         tvDescription.setText(description);
-        ivItemDetails.setImageResource(Integer.parseInt(image));
+//        ivItemDetails.setImageResource(Integer.parseInt(image));
 
         //QueryItemsDetails();
 
