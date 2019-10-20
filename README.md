@@ -92,12 +92,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
 
 ## Schema 
 [This section will be completed in Unit 9]
-### Models
-[Add table of models]
-### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
 
 ## Schema 
 ### Models
