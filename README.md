@@ -108,6 +108,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    | image         | File     | image that app managers post |
    | name          | String   | name of products |
    | price         | String   | price of products |
+   | description   | String   | description of every products |
    | devise        | String   | devise and quantity |
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
@@ -139,7 +140,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    | name           | String    | name of the products |
    | price          | String    | the price of the products |
    | image          |File       | image that app managers post |
-   | devise         | String    | de |
+   | devise         | String    | devise |
    | createdAt      | DateTime  | date when post is created (default field) |
    | updatedAt      | DateTime  | date when post is last updated (default field) |
    
@@ -151,7 +152,7 @@ https://www.figma.com/file/cuvx51VCAIDak9bQvivNBt/HOMEMARKET?node-id=0%3A1
    | Username            | String   | username of the user |
    | Password            | String   | password of the user |
    | Email               | String   |  email of the user |
-   | Phone	         | number   | The phone number of the user |
+   | Phone	              | number   | The phone number of the user |
    | Alternative contact | number   | Phone number of the Alternative person |
    | Adress              | String   | Adress of the user|
    | createdAt           | DateTime | date when post is created (default field) |
