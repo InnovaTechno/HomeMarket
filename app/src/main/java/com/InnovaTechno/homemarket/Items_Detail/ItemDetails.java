@@ -59,15 +59,18 @@ public class ItemDetails extends AppCompatActivity {
         String name = intent.getExtras().getString("name");
         String price2 = intent.getExtras().getString("price2");
         String devise = intent.getExtras().getString("devise");
-        int image = intent.getExtras().getInt("productImage");
+        String description = intent.getExtras().getString("description");
+        String image = intent.getExtras().getString("productImage");
+
 
         //Setting the data
         tv_Price.setText(price2);
         tv_Devise.setText(devise);
         tvName.setText(name);
-        ivItemDetails.setImageResource(image);
+        tvDescription.setText(description);
+//        ivItemDetails.setImageResource(Integer.parseInt(image));
 
-        QueryItemsDetails();
+        //QueryItemsDetails();
 
         //Related Items adapter
         relatedItems = new ArrayList<>();

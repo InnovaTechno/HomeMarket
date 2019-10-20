@@ -4,14 +4,15 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/ivProfile"
-        android:layout_alignParentTop="true"
-        android:layout_width="match_parent"
-        android:layout_height="215dp"
-        app:srcCompat="@drawable/profile"
-
-       />
+        android:layout_width="188dp"
+        android:layout_height="174dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:civ_border_color="@android:color/black"
+        app:civ_border_width="2dp" />
 
     <EditText
         android:id="@+id/etEmail"

@@ -11,11 +11,15 @@ import androidx.fragment.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.InnovaTechno.homemarket.Fragments.CartFragment;
 import com.InnovaTechno.homemarket.Fragments.FavoritesFragment;
 import com.InnovaTechno.homemarket.Fragments.HomeFragment;
+import com.InnovaTechno.homemarket.Livraison.Livraison;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.parse.ParseUser;
@@ -25,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private BottomNavigationView bottomNavigationView;
     private DrawerLayout mdrawerLayout;
     private ActionBarDrawerToggle mtoggle;
+    private static final String IMAGE_DIRECTORY = "/demonuts";
+    private int GALLERY = 1, CAMERA = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,15 +102,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(m);
 
                 break;
-            case R.id.nav_logout:
+            case R.id.nav_livraison:
+                Toast.makeText(this, "Livraison", Toast.LENGTH_SHORT).show();
+                Intent l = new Intent(this, Livraison.class);
+                startActivity(l);
 
+                break;
+            case R.id.nav_pickup:
+                Toast.makeText(this, "MarketList", Toast.LENGTH_SHORT).show();
+
+                break;
+
+            case R.id.nav_logout:
                 if (ParseUser.getCurrentUser() == null){
                     Toast.makeText(this, "You haven't login yet, please login to buy your items", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "Successfully Log out", Toast.LENGTH_SHORT).show();
                 ParseUser.logOut();
                 // ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
-
                 Intent i = new Intent(this, WelcomeActivity.class);
                 startActivity(i);
                 finish();

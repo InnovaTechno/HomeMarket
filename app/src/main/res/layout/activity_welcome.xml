@@ -10,27 +10,30 @@
 
     <ImageView
         android:id="@+id/ivWelcome"
-        android:layout_width="397dp"
-        android:layout_height="193dp"
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="3dp"
         app:srcCompat="@drawable/welcome" />
 
 
     <ImageView
         android:id="@+id/ivLogo"
-        android:layout_width="352dp"
-        android:layout_height="220dp"
-        android:layout_centerInParent="true"
+        android:layout_width="379dp"
+        android:layout_height="240dp"
+        android:layout_below="@+id/ivWelcome"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="4dp"
         app:srcCompat="@drawable/logo1" />
 
     <Button
         android:id="@+id/btnWelcome"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/roundedbutton"
         android:clickable="true"
         android:elevation="5dp"
@@ -43,22 +46,15 @@
 
     <Button
         android:id="@+id/btnSignIn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="SIGN IN"
-        android:background="@drawable/roundedbutton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:textColor="#fff"/>
-
-    <Button
-        android:id="@+id/btnSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign up"
-        android:background="@drawable/roundedbutton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:textColor="#fff"/>
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/roundedwvutton"
+        android:shadowRadius="15"
+        android:text="SIGN IN"
+        android:textColor="@color/colorPrimary" />
 
 </RelativeLayout>

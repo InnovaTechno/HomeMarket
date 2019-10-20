@@ -97,6 +97,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                     intent.putExtra("price2", posts.get(position).getPrice());
                     intent.putExtra("devise", posts.get(position).getDevise());
                     intent.putExtra("productImage" , posts.get(position).getImage());
+                    intent.putExtra("description" , posts.get(position).getDescription());
                     context.startActivity(intent);
 
                 }

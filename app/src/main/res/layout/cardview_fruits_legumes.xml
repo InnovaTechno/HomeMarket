@@ -31,7 +31,7 @@
             android:layout_alignRight="@+id/ivFruits_Legumes"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="85dp"
-            android:background="@drawable/favorite" />
+            android:background="@drawable/ic_favorite_border_black_24dp" />
 
 
         <TextView
