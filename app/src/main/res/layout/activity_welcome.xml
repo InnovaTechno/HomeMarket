@@ -33,7 +33,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="19dp"
-        android:layout_marginBottom="49dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/roundedbutton"
         android:clickable="true"
         android:elevation="5dp"
@@ -51,10 +51,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="16dp"
-        android:layout_marginBottom="49dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/roundedwvutton"
         android:shadowRadius="15"
         android:text="SIGN IN"
-        android:textColor="#C92C36" />
+        android:textColor="@color/colorPrimary" />
 
 </RelativeLayout>

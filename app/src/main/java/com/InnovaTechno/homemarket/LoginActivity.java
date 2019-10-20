@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private static final String IMAGE_DIRECTORY = "HomeMarket";
     private int GALLERY = 1, CAMERA = 2;
-    private ImageView imageview;
+    private ImageView imageView;
 
 
     @Override
@@ -133,7 +133,7 @@ public class LoginActivity extends AppCompatActivity {
         pictureDialog.setTitle("Select Action");
         String[] pictureDialogItems = {
                 "Select photo from gallery",
-                "Capture photo from camera" };
+                "Take a Photo" };
         pictureDialog.setItems(pictureDialogItems,
                 new DialogInterface.OnClickListener() {
                     @Override
@@ -177,7 +177,7 @@ public class LoginActivity extends AppCompatActivity {
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentURI);
                     String path = saveImage(bitmap);
                     Toast.makeText(LoginActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
-                    imageview.setImageBitmap(bitmap);
+                    imageView.setImageBitmap(bitmap);
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -187,7 +187,7 @@ public class LoginActivity extends AppCompatActivity {
 
         } else if (requestCode == CAMERA) {
             Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-            imageview.setImageBitmap(thumbnail);
+            imageView.setImageBitmap(thumbnail);
             saveImage(thumbnail);
             Toast.makeText(LoginActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
         }

@@ -71,6 +71,7 @@ public class Fruits_Legumes extends AppCompatActivity {
         ParseQuery<Post> postQuery = new ParseQuery<Post>(Post.class);
         postQuery.include(Post.KEY_DEVISE);
         postQuery.include(Post.KEY_PRICE);
+        postQuery.include(Post.KEY_DESCRIPTION);
         postQuery.findInBackground(new FindCallback<Post>() {
             @Override
             public void done(List<Post> posts, ParseException e) {
@@ -83,7 +84,8 @@ public class Fruits_Legumes extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
                 for (int i = 0; i < posts.size(); i++){
                     Post post = posts.get(i);
-                    Log.d(TAG, "Post: " + posts.get(i).getName() + ",devise" + post.getDevise() + ", price2" + post.getPrice());
+                    Log.d(TAG, "Post: " + posts.get(i).getName() + ",devise" + post.getDevise() + ", price2" + post.getPrice() +
+                            ", description" + post.getDescription());
                 }
             }
         });
