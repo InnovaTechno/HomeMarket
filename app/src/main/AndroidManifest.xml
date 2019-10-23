@@ -42,13 +42,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".ImagePickerActivity" />
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.Default" />
             </intent-filter>
         </activity>
+
         <activity android:name=".SignUpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,6 +59,23 @@
                 <category android:name="android.intent.category.Default" />
             </intent-filter>
         </activity>
-    </application>
 
+    <!-- uCrop cropping activity -->
+    <activity
+        android:name="com.yalantis.ucrop.UCropActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"/>
+
+
+        <!-- cache directory file provider paths -->
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="com.InnovaTechno.file_paths"
+        android:exported="false"
+        android:grantUriPermissions="true">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/file_paths" />
+    </provider>
+</application>
 </manifest>

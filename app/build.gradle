@@ -17,7 +17,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-   // compileOptions {
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    // compileOptions {
      //   sourceCompatibility = '1.8'
        // targetCompatibility = '1.8'
   //  }
@@ -45,11 +50,12 @@ dependencies {
     annotationProcessor 'org.parceler:parceler:1.1.12'
 
     //Ucrop - Crop profile images
-    //implementation 'com.github.yalantis:ucrop:2.2.4'
+    implementation "com.github.yalantis:ucrop:2.2.4"
 
     //Butterknife
-    //implementation 'com.jakewharton:butterknife:8.8.1'
-    //annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
 
     //dexter permissions
     implementation "com.karumi:dexter:5.0.0"

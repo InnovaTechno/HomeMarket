@@ -1,4 +1,4 @@
-package com.InnovaTechno.homemarket.Categories.Adapter;
+package com.InnovaTechno.homemarket.Categories.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories.Post.PostPCosmetiques;
+import com.InnovaTechno.homemarket.Categories.Models.PostSucreries;
 import com.InnovaTechno.homemarket.Items_Detail.ItemDetails;
 import com.InnovaTechno.homemarket.R;
 import com.bumptech.glide.Glide;
@@ -21,12 +21,12 @@ import com.parse.ParseFile;
 
 import java.util.List;
 
-public class PCosmetiquesAdapter extends RecyclerView.Adapter<PCosmetiquesAdapter.ViewHolder> {
+public class SucreriesAdapter extends RecyclerView.Adapter<SucreriesAdapter.ViewHolder> {
 
     private Context context;
-    private List<PostPCosmetiques> posts;
+    private List<PostSucreries> posts;
 
-    public PCosmetiquesAdapter (Context context, List<PostPCosmetiques> posts) {
+    public SucreriesAdapter(Context context, List<PostSucreries> posts) {
         this.context = context;
         this.posts = posts;
     }
@@ -42,8 +42,8 @@ public class PCosmetiquesAdapter extends RecyclerView.Adapter<PCosmetiquesAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        PostPCosmetiques postPCosmetiques = posts.get(position);
-        holder.bind(postPCosmetiques);
+        PostSucreries postSucreries = posts.get(position);
+        holder.bind(postSucreries);
     }
 
     @Override
@@ -69,7 +69,7 @@ public class PCosmetiquesAdapter extends RecyclerView.Adapter<PCosmetiquesAdapte
             tvPrice = itemView.findViewById(R.id.tvPrice);
 
         }
-        public void bind(PostPCosmetiques post) {
+        public void bind(PostSucreries post) {
             ParseFile image = post.getImage();
             if (image != null) {
                 Glide.with(context).load(image.getUrl()).into(ivFruits_Legumes);

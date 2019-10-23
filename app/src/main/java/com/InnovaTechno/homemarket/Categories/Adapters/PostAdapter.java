@@ -1,7 +1,8 @@
-package com.InnovaTechno.homemarket.Categories.Adapter;
+package com.InnovaTechno.homemarket.Categories.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories.Post.PostSucreries;
+
+import com.InnovaTechno.homemarket.Categories.Models.Post;
+import com.InnovaTechno.homemarket.Fragments.CartFragment;
 import com.InnovaTechno.homemarket.Items_Detail.ItemDetails;
 import com.InnovaTechno.homemarket.R;
 import com.bumptech.glide.Glide;
@@ -21,14 +24,17 @@ import com.parse.ParseFile;
 
 import java.util.List;
 
-public class SucreriesAdapter extends RecyclerView.Adapter<SucreriesAdapter.ViewHolder> {
+public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     private Context context;
-    private List<PostSucreries> posts;
+    private List <Post> posts;
 
-    public SucreriesAdapter(Context context, List<PostSucreries> posts) {
+
+    public PostAdapter(Context context, List<Post> posts ) {
         this.context = context;
         this.posts = posts;
+
+
     }
 
 
@@ -42,9 +48,10 @@ public class SucreriesAdapter extends RecyclerView.Adapter<SucreriesAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        PostSucreries postSucreries = posts.get(position);
-        holder.bind(postSucreries);
+        Post post = posts.get(position);
+        holder.bind(post);
     }
+
 
     @Override
     public int getItemCount() {
@@ -69,15 +76,15 @@ public class SucreriesAdapter extends RecyclerView.Adapter<SucreriesAdapter.View
             tvPrice = itemView.findViewById(R.id.tvPrice);
 
         }
-        public void bind(PostSucreries post) {
+        public void bind(Post post){
             ParseFile image = post.getImage();
             if (image != null) {
                 Glide.with(context).load(image.getUrl()).into(ivFruits_Legumes);
             }
+
             tvName.setText(post.getName());
             tvDevise.setText(post.getDevise());
             tvPrice.setText(post.getPrice());
-            //tvPrice.setText(Post.getPrice());
 
             //Passing the data to items details activity
             cvFruits_Legumes.setOnClickListener(new View.OnClickListener() {
@@ -86,14 +93,43 @@ public class SucreriesAdapter extends RecyclerView.Adapter<SucreriesAdapter.View
                     int position = getAdapterPosition();
                     Intent intent = new Intent(context, ItemDetails.class);
                     intent.putExtra("name", posts.get(position).getName());
-                    intent.putExtra("price", posts.get(position).getPrice());
+                    intent.putExtra("price2", posts.get(position).getPrice());
                     intent.putExtra("devise", posts.get(position).getDevise());
                     intent.putExtra("productImage" , posts.get(position).getImage());
+                    intent.putExtra("description" , posts.get(position).getDescription());
                     context.startActivity(intent);
 
                 }
             });
-        }
+
+
+
+            //passing and saving the data to FragmentCart when cliked add to cart
+            btnAddToCart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    //Passing the data in a bundle
+                    Bundle bundle = new Bundle();
+                    bundle.putString("name", posts.get(position).getName());
+                    bundle.putString("price2", posts.get(position).getPrice());
+                    bundle.putString("devise", posts.get(position).getDevise());
+
+                    CartFragment cartFragment = new CartFragment();
+                    cartFragment.setArguments(bundle);
+
+
+                   //Intent intent = new Intent(context, CartFragment.class);
+                   // intent.putExtra("name", posts.get(position).getName());
+                   // intent.putExtra("price2", posts.get(position).getPrice());
+                   // intent.putExtra("devise", posts.get(position).getDevise());
+                    //intent.putExtra("productImage", posts.get(position).getImage());
+                   // context.startActivity(intent);
+                }
+
+        });
 
     }
+    }
 }
+

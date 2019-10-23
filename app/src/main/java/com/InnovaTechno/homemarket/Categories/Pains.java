@@ -8,14 +8,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories.Adapter.PainsAdapter;
-import com.InnovaTechno.homemarket.Categories.Post.PostPains;
+import com.InnovaTechno.homemarket.Categories.Adapters.PainsAdapter;
+import com.InnovaTechno.homemarket.Categories.Models.PostPains;
 import com.InnovaTechno.homemarket.R;
 import com.InnovaTechno.homemarket.SignUpActivity;
 import com.parse.FindCallback;
