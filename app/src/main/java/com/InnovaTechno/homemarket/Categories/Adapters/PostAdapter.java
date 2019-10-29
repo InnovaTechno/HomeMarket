@@ -7,11 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -64,6 +68,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         TextView tvDevise;
         Button btnAddToCart;
         CardView cvFruits_Legumes;
+        ToggleButton favorites;
         private TextView tvPrice;
 
         public ViewHolder(@NonNull View itemView) {
@@ -74,6 +79,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             btnAddToCart = itemView.findViewById(R.id.btnAddToCart);
             cvFruits_Legumes = itemView.findViewById(R.id.cvFruits_Legumes);
             tvPrice = itemView.findViewById(R.id.tvPrice);
+            favorites = itemView.findViewById(R.id.favorites);
 
         }
         public void bind(Post post){
@@ -101,8 +107,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
                 }
             });
-
-
+            //Favorites
+            favorites.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                    Toast.makeText(itemView.getContext(), "Added to your favorites" + isChecked, Toast.LENGTH_SHORT).show();
+                }
+            });
 
             //passing and saving the data to FragmentCart when cliked add to cart
             btnAddToCart.setOnClickListener(new View.OnClickListener() {
