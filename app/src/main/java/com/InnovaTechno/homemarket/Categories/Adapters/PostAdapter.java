@@ -15,17 +15,15 @@ import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.InnovaTechno.homemarket.Categories.Models.Post;
 import com.InnovaTechno.homemarket.Fragments.CartFragment;
+import com.InnovaTechno.homemarket.Fragments.FavoritesFragment;
 import com.InnovaTechno.homemarket.GlideApp;
 import com.InnovaTechno.homemarket.Items_Detail.ItemDetails;
 import com.InnovaTechno.homemarket.R;
-import com.InnovaTechno.homemarket.SharedPreference;
-import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.parse.ParseFile;
 
@@ -35,17 +33,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     private Context context;
     private List <Post> posts;
-    SharedPreference sharedPreference;
-
 
     public PostAdapter(Context context, List<Post> posts ) {
         this.context = context;
         this.posts = posts;
-        sharedPreference = new SharedPreference();
-
 
     }
-
 
     @NonNull
     @Override
@@ -53,7 +46,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         View view= LayoutInflater.from(context).inflate(R.layout.cardview_fruits_legumes, parent, false);
         return new ViewHolder(view);
     }
-
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
@@ -85,7 +77,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             cvFruits_Legumes = itemView.findViewById(R.id.cvFruits_Legumes);
             tvPrice = itemView.findViewById(R.id.tvPrice);
             favorites = itemView.findViewById(R.id.favorites);
-
         }
         public void bind(Post post){
             ParseFile image = post.getImage();
@@ -95,7 +86,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .into(ivFruits_Legumes) ;
             }
-
             tvName.setText(post.getName());
             tvDevise.setText(post.getDevise());
             tvPrice.setText(post.getPrice());
@@ -119,10 +109,18 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             favorites.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                    Toast.makeText(itemView.getContext(),
-                            "Added to your favorites" + isChecked, Toast.LENGTH_SHORT).show();
-
+                    if (compoundButton != null) {
+                        Toast.makeText(itemView.getContext(),
+                                "Added to your favorites" + isChecked, Toast.LENGTH_SHORT).show();
+                        int position = getAdapterPosition();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("name", posts.get(position).getName());
+                        bundle.putString("price2", posts.get(position).getPrice());
+                        //set FavoritesFragment
+                        FavoritesFragment favoritesFragment = new FavoritesFragment();
+                        favoritesFragment.setArguments(bundle);
                     }
+                }
             });
 
          //passing and saving the data to FragmentCart when cliked add to cart
@@ -130,22 +128,14 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
-                    //Passing the data in a bundle
-                    Bundle bundle = new Bundle();
-                    bundle.putString("name", posts.get(position).getName());
-                    bundle.putString("price2", posts.get(position).getPrice());
-                    bundle.putString("devise", posts.get(position).getDevise());
-
-                    CartFragment cartFragment = new CartFragment();
-                    cartFragment.setArguments(bundle);
+                    //Passing the data using intent
+                    Intent intent = new Intent(context, CartFragment.class);
+                    intent.putExtra("name", posts.get(position).getName());
+                    intent.putExtra("price2", posts.get(position).getPrice());
+                    intent.putExtra("devise", posts.get(position).getDevise());
+//                    context.startActivity(intent);
 
 
-                   //Intent intent = new Intent(context, CartFragment.class);
-                   // intent.putExtra("name", posts.get(position).getName());
-                   // intent.putExtra("price2", posts.get(position).getPrice());
-                   // intent.putExtra("devise", posts.get(position).getDevise());
-                    //intent.putExtra("productImage", posts.get(position).getImage());
-                   // context.startActivity(intent);
                 }
 
         });

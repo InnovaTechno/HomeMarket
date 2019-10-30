@@ -1,5 +1,6 @@
 package com.InnovaTechno.homemarket.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +28,8 @@ public class CartFragment extends Fragment {
     public static final String TAG = "CartFragment";
     private CartAdapter adapter;
     private List<Post> post;
+
+
 
     @Nullable
     @Override
@@ -57,20 +60,21 @@ public class CartFragment extends Fragment {
         rv_Cart.setAdapter(adapter);
 
         //receive data
-        if (getArguments() != null) {
-            String name = getArguments().getString("name");
-            String price2 = getArguments().getString("price2");
-            String devise = getArguments().getString("devise");
+        //Intent intent = getIntent();
+        //String name = getActivity().getIntent().getExtras().getString("name");
+        //String price2 = getActivity().getIntent().getExtras().getString("price2");
+        //String devise = getActivity().getIntent().getExtras().getString("devise");
+        //String image = intent.getExtras().getString("productImage");
 
                 //setting values
-                tvNameItem.setText(name);
-                tvPrice_Item.setText(price2);
-                tvDevise_Item.setText(devise);
-                tvDevise_Total.setText(devise);
+               // tvNameItem.setText(name);
+               // tvPrice_Item.setText(price2);
+               // tvDevise_Item.setText(devise);
+               // tvDevise_Total.setText(devise);
 
 
             }
         }
-    }
+
 
 
