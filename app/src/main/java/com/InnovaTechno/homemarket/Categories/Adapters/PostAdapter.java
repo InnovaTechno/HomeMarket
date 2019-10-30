@@ -21,9 +21,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.InnovaTechno.homemarket.Categories.Models.Post;
 import com.InnovaTechno.homemarket.Fragments.CartFragment;
+import com.InnovaTechno.homemarket.GlideApp;
 import com.InnovaTechno.homemarket.Items_Detail.ItemDetails;
 import com.InnovaTechno.homemarket.R;
+import com.InnovaTechno.homemarket.SharedPreference;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.parse.ParseFile;
 
 import java.util.List;
@@ -32,11 +35,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     private Context context;
     private List <Post> posts;
+    SharedPreference sharedPreference;
 
 
     public PostAdapter(Context context, List<Post> posts ) {
         this.context = context;
         this.posts = posts;
+        sharedPreference = new SharedPreference();
 
 
     }
@@ -85,7 +90,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         public void bind(Post post){
             ParseFile image = post.getImage();
             if (image != null) {
-                Glide.with(context).load(image.getUrl()).into(ivFruits_Legumes);
+                GlideApp.with(context)
+                        .load(image.getUrl())
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .into(ivFruits_Legumes) ;
             }
 
             tvName.setText(post.getName());
@@ -107,15 +115,17 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
                 }
             });
-            //Favorites
+            //SharedPreference
             favorites.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                    Toast.makeText(itemView.getContext(), "Added to your favorites" + isChecked, Toast.LENGTH_SHORT).show();
-                }
+                    Toast.makeText(itemView.getContext(),
+                            "Added to your favorites" + isChecked, Toast.LENGTH_SHORT).show();
+
+                    }
             });
 
-            //passing and saving the data to FragmentCart when cliked add to cart
+         //passing and saving the data to FragmentCart when cliked add to cart
             btnAddToCart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
