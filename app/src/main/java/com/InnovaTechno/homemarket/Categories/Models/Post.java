@@ -1,17 +1,20 @@
-package com.InnovaTechno.homemarket.Categories.Post;
+package com.InnovaTechno.homemarket.Categories.Models;
 
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 
 
-@ParseClassName("PostViandes")
-public class PostViandes extends ParseObject {
+@ParseClassName("Post")
+public class Post extends ParseObject {
 
     public static final String KEY_NAME =  "name";
     public static final String KEY_IMAGE =  "productImage";
     public static final String KEY_DEVISE = "devise";
-    public static final String KEY_PRICE = "price";
+    public static final String KEY_PRICE = "price2";
+    public static final String KEY_DESCRIPTION = "description";
+
+
 
     public String getPrice() {
         return getString(KEY_PRICE);
@@ -21,13 +24,19 @@ public class PostViandes extends ParseObject {
         return getString(KEY_NAME);
     }
 
-    public void setName(String name) {
-        put(KEY_NAME, name);
+    public String getDescription(){
+        return getString(KEY_DESCRIPTION);
     }
 
     public ParseFile getImage (){
         return getParseFile(KEY_IMAGE);
     }
+
+    public void setName(String name) {
+        put(KEY_NAME, name);
+    }
+
+
 
     public void setImage (ParseFile parseFile){
         put(KEY_IMAGE, parseFile);
@@ -39,8 +48,12 @@ public class PostViandes extends ParseObject {
 
     public void setDevise (String devise){
         put(KEY_DEVISE, devise);
+    }
+
+    public void setDescription (String description){
+       put(KEY_DESCRIPTION, description);
+    }
 
 
-}
 
 }

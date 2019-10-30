@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private BottomNavigationView bottomNavigationView;
     private DrawerLayout mdrawerLayout;
     private ActionBarDrawerToggle mtoggle;
-    private static final String IMAGE_DIRECTORY = "/demonuts";
-    private int GALLERY = 1, CAMERA = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         break;
                     case R.id.action_favorites:
                         fragment = new FavoritesFragment();
-                        // Toast.makeText(MainActivity.this, "Favorites", Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(MainActivity.this, "SharedPreference", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.action_cart:
                         fragment = new CartFragment();

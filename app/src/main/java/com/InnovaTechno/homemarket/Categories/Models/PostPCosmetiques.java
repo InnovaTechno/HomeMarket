@@ -1,12 +1,12 @@
-package com.InnovaTechno.homemarket.Categories.Post;
+package com.InnovaTechno.homemarket.Categories.Models;
 
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 
 
-@ParseClassName("PostAMenagers")
-public class PostAMenagers extends ParseObject {
+@ParseClassName("PostPCosmetiques")
+public class PostPCosmetiques extends ParseObject {
 
     public static final String KEY_NAME =  "name";
     public static final String KEY_IMAGE =  "productImage";

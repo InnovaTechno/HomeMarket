@@ -8,8 +8,7 @@
     android:foreground="?android:attr/selectableItemBackground"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
-
-    cardview:cardCornerRadius="8dp">
+   cardview:cardCornerRadius="8dp">
 
     <RelativeLayout
         android:layout_width="170dp"
@@ -23,7 +22,7 @@
             android:background="#000000"
             android:scaleType="fitXY" />
 
-        <ImageView
+        <ToggleButton
             android:id="@+id/favorites"
             android:layout_width="27dp"
             android:layout_height="23dp"
@@ -31,7 +30,9 @@
             android:layout_alignRight="@+id/ivFruits_Legumes"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="85dp"
-            android:background="@drawable/ic_favorite_border_black_24dp" />
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/toggle_image" />
 
 
         <TextView

@@ -1,4 +1,4 @@
-package com.InnovaTechno.homemarket.Categories.Adapter;
+package com.InnovaTechno.homemarket.Categories.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories.Post.PostViandes;
+import com.InnovaTechno.homemarket.Categories.Models.PostPCosmetiques;
 import com.InnovaTechno.homemarket.Items_Detail.ItemDetails;
 import com.InnovaTechno.homemarket.R;
 import com.bumptech.glide.Glide;
@@ -21,12 +21,12 @@ import com.parse.ParseFile;
 
 import java.util.List;
 
-public class ViandesAdapter extends RecyclerView.Adapter<ViandesAdapter.ViewHolder> {
+public class PCosmetiquesAdapter extends RecyclerView.Adapter<PCosmetiquesAdapter.ViewHolder> {
 
     private Context context;
-    private List<PostViandes> posts;
+    private List<PostPCosmetiques> posts;
 
-    public ViandesAdapter(Context context, List<PostViandes> posts) {
+    public PCosmetiquesAdapter (Context context, List<PostPCosmetiques> posts) {
         this.context = context;
         this.posts = posts;
     }
@@ -42,8 +42,8 @@ public class ViandesAdapter extends RecyclerView.Adapter<ViandesAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        PostViandes postViandes = posts.get(position);
-        holder.bind(postViandes);
+        PostPCosmetiques postPCosmetiques = posts.get(position);
+        holder.bind(postPCosmetiques);
     }
 
     @Override
@@ -69,7 +69,7 @@ public class ViandesAdapter extends RecyclerView.Adapter<ViandesAdapter.ViewHold
             tvPrice = itemView.findViewById(R.id.tvPrice);
 
         }
-        public void bind(PostViandes post) {
+        public void bind(PostPCosmetiques post) {
             ParseFile image = post.getImage();
             if (image != null) {
                 Glide.with(context).load(image.getUrl()).into(ivFruits_Legumes);

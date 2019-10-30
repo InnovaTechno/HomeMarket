@@ -3,15 +3,15 @@ package com.InnovaTechno.homemarket;
 import android.app.Application;
 
 
-import com.InnovaTechno.homemarket.Categories.Post.Post;
-import com.InnovaTechno.homemarket.Categories.Post.PostAMenagers;
-import com.InnovaTechno.homemarket.Categories.Post.PostBAlcolisees;
-import com.InnovaTechno.homemarket.Categories.Post.PostBoissons;
-import com.InnovaTechno.homemarket.Categories.Post.PostPCosmetiques;
-import com.InnovaTechno.homemarket.Categories.Post.PostPLaitiers;
-import com.InnovaTechno.homemarket.Categories.Post.PostPains;
-import com.InnovaTechno.homemarket.Categories.Post.PostSucreries;
-import com.InnovaTechno.homemarket.Categories.Post.PostViandes;
+import com.InnovaTechno.homemarket.Categories.Models.Post;
+import com.InnovaTechno.homemarket.Categories.Models.PostAMenagers;
+import com.InnovaTechno.homemarket.Categories.Models.PostBAlcolisees;
+import com.InnovaTechno.homemarket.Categories.Models.PostBoissons;
+import com.InnovaTechno.homemarket.Categories.Models.PostPCosmetiques;
+import com.InnovaTechno.homemarket.Categories.Models.PostPLaitiers;
+import com.InnovaTechno.homemarket.Categories.Models.PostPains;
+import com.InnovaTechno.homemarket.Categories.Models.PostSucreries;
+import com.InnovaTechno.homemarket.Categories.Models.PostViandes;
 import com.InnovaTechno.homemarket.Items_Detail.Details;
 import com.InnovaTechno.homemarket.Items_Detail.RelatedItems;
 import com.InnovaTechno.homemarket.New_Products.NewProducts;

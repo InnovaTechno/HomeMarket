@@ -13,8 +13,8 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories.Adapter.PLaitiersAdapter;
-import com.InnovaTechno.homemarket.Categories.Post.PostPLaitiers;
+import com.InnovaTechno.homemarket.Categories.Adapters.PLaitiersAdapter;
+import com.InnovaTechno.homemarket.Categories.Models.PostPLaitiers;
 import com.InnovaTechno.homemarket.R;
 import com.InnovaTechno.homemarket.SignUpActivity;
 import com.parse.FindCallback;

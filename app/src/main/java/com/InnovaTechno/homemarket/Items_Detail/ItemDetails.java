@@ -4,11 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.InnovaTechno.homemarket.Categories.Models.Post;
+import com.InnovaTechno.homemarket.GlideApp;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.parse.ParseFile;
 
 import androidx.annotation.Nullable;
@@ -30,14 +35,29 @@ public class ItemDetails extends AppCompatActivity {
     private RelatedItemsAdapter adapter;
     private List<RelatedItems> relatedItems;
     private Context context;
+    private List <Post> post;
     private static final String TAG = "RelatedItems";
+    private int counter;
 
 
     ImageView ivItemDetails;
-    TextView tvName, tv_Price, tv_Devise, tvQty, tvDescription;
+    TextView tvName, tv_Price, tv_Devise, tvCounter, tvDescription;
     Button btnPlus, btnMoins, btnAdd_to_Cart, btnBuy_Now;
 
+    private View.OnClickListener clickListener = new OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()){
+                case R.id.btnMoins :
+                    minusCounter();
+                    break;
+                case R.id.btnPlus :
+                    plusCounter();
+                    break;
+            }
 
+        }
+    };
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +67,16 @@ public class ItemDetails extends AppCompatActivity {
         tvName = findViewById(R.id.tvName);
         tv_Price = findViewById(R.id.tv_Price);
         tv_Devise = findViewById(R.id.tv_Devise);
-        tvQty = findViewById(R.id.tvQty);
+        tvCounter = findViewById(R.id.tvCounter);
         tvDescription = findViewById(R.id.tvDescription);
         btnPlus = findViewById(R.id.btnPlus);
         btnMoins = findViewById(R.id.btnMoins);
         btnAdd_to_Cart = findViewById(R.id.btnAdd_to_Cart);
         btnBuy_Now = findViewById(R.id.btnBuy_Now);
+
+        btnMoins.setOnClickListener(clickListener);
+        tvCounter.setOnClickListener(clickListener);
+        btnPlus.setOnClickListener(clickListener);
 
         //receive data for the details
         Intent intent = getIntent();
@@ -60,57 +84,43 @@ public class ItemDetails extends AppCompatActivity {
         String price2 = intent.getExtras().getString("price2");
         String devise = intent.getExtras().getString("devise");
         String description = intent.getExtras().getString("description");
-        String image = intent.getExtras().getString("productImage");
-
+       // String image = intent.getExtras().getString("productImage");
 
         //Setting the data
         tv_Price.setText(price2);
         tv_Devise.setText(devise);
         tvName.setText(name);
         tvDescription.setText(description);
-//        ivItemDetails.setImageResource(Integer.parseInt(image));
-
-        //QueryItemsDetails();
 
         //Related Items adapter
         relatedItems = new ArrayList<>();
         //create the adapter
         adapter = new RelatedItemsAdapter(this, relatedItems);
         RecyclerView rvRelated_items = findViewById(R.id.rvRelated_items);
-        rvRelated_items.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        rvRelated_items.setLayoutManager(new LinearLayoutManager(this,
+                LinearLayoutManager.HORIZONTAL, false));
         //Set the adapter
         rvRelated_items.setAdapter(adapter);
         QueryRelatedItems();
+        initCounter();
+
     }
 
-    private void QueryItemsDetails() {
-        ParseQuery<Details> detailsQuery = new ParseQuery<Details>(Details.class);
-        detailsQuery.include(Details.KEY_DESCRIPTION);
-        //detailsQuery.include(Details.KEY_IMAGE);
-        detailsQuery.findInBackground(new FindCallback<Details>() {
-            @Override
-            public void done(List<Details> details, ParseException e) {
-                if (e != null) {
-                    Log.d(TAG, "Error with details Query");
-                    e.printStackTrace();
-                    return;
-                }
-
-
-                for (int i = 0; i < details.size(); i++){
-                    Details detailsItems = details.get(i);
-                    Log.d(TAG, "Details: " + details.get(i).getName() + ", description" + detailsItems.getDescription() );
-
-                    tvDescription.setText(detailsItems.getDescription());
-
-
-                }
-
-
-
-            }
-        });
+    private void initCounter() {
+        counter = 0;
+        tvCounter.setText(counter + "");
     }
+    //Minus Counter
+    private void minusCounter() {
+        counter --;
+        tvCounter.setText(counter + "");
+    }
+    //plus Counter
+    private void plusCounter() {
+        counter ++;
+        tvCounter.setText(counter + "");
+    }
+
 
     private void QueryRelatedItems() {
             ParseQuery<RelatedItems> relatedItemsQuery = new ParseQuery<RelatedItems>(RelatedItems.class);

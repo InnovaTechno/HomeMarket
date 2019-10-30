@@ -13,8 +13,8 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories.Adapter.PCosmetiquesAdapter;
-import com.InnovaTechno.homemarket.Categories.Post.PostPCosmetiques;
+import com.InnovaTechno.homemarket.Categories.Adapters.PCosmetiquesAdapter;
+import com.InnovaTechno.homemarket.Categories.Models.PostPCosmetiques;
 import com.InnovaTechno.homemarket.R;
 import com.InnovaTechno.homemarket.SignUpActivity;
 import com.parse.FindCallback;

@@ -5,24 +5,20 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.Button;
 
 import androidx.appcompat.widget.SearchView;
 
-import com.InnovaTechno.homemarket.Categories.Adapter.PostAdapter;
-import com.InnovaTechno.homemarket.Categories.Post.Post;
-import com.InnovaTechno.homemarket.Fragments.CartFragment;
+import com.InnovaTechno.homemarket.Categories.Adapters.PostAdapter;
+import com.InnovaTechno.homemarket.Categories.Models.Post;
 import com.InnovaTechno.homemarket.R;
 
-import com.InnovaTechno.homemarket.SignUpActivity;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;

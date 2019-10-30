@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import com.InnovaTechno.homemarket.Categories.Adapter.BAlcoliseesAdapter;
-import com.InnovaTechno.homemarket.Categories.Post.row;
+import com.InnovaTechno.homemarket.Categories.Adapters.BAlcoliseesAdapter;
+import com.InnovaTechno.homemarket.Categories.Models.row;
 
 import com.InnovaTechno.homemarket.R;
 

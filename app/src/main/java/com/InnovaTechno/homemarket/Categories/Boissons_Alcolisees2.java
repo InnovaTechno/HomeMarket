@@ -12,8 +12,8 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories.Adapter.BAlcoliseesAdapter2;
-import com.InnovaTechno.homemarket.Categories.Post.PostBAlcolisees;
+import com.InnovaTechno.homemarket.Categories.Adapters.BAlcoliseesAdapter2;
+import com.InnovaTechno.homemarket.Categories.Models.PostBAlcolisees;
 import com.InnovaTechno.homemarket.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;

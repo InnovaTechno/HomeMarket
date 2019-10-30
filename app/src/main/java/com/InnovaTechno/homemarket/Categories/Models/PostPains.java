@@ -1,4 +1,4 @@
-package com.InnovaTechno.homemarket.Categories.Post;
+package com.InnovaTechno.homemarket.Categories.Models;
 
 import com.parse.ParseClassName;
 import com.parse.ParseFile;

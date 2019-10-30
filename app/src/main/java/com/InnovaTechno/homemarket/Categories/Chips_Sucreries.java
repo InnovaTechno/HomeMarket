@@ -14,8 +14,8 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories.Adapter.SucreriesAdapter;
-import com.InnovaTechno.homemarket.Categories.Post.PostSucreries;
+import com.InnovaTechno.homemarket.Categories.Adapters.SucreriesAdapter;
+import com.InnovaTechno.homemarket.Categories.Models.PostSucreries;
 import com.InnovaTechno.homemarket.R;
 import com.InnovaTechno.homemarket.SignUpActivity;
 import com.parse.FindCallback;

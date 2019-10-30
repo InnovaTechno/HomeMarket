@@ -7,8 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.InnovaTechno.homemarket.Categories.Adapter.AMenagersAdapter;
-import com.InnovaTechno.homemarket.Categories.Post.PostAMenagers;
+import com.InnovaTechno.homemarket.Categories.Adapters.AMenagersAdapter;
+import com.InnovaTechno.homemarket.Categories.Models.PostAMenagers;
 import com.InnovaTechno.homemarket.R;
 import com.InnovaTechno.homemarket.SignUpActivity;
 import com.parse.FindCallback;

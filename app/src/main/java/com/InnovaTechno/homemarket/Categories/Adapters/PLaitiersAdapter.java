@@ -1,4 +1,4 @@
-package com.InnovaTechno.homemarket.Categories.Adapter;
+package com.InnovaTechno.homemarket.Categories.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories.Post.PostSucreries;
+import com.InnovaTechno.homemarket.Categories.Models.PostPLaitiers;
 import com.InnovaTechno.homemarket.Items_Detail.ItemDetails;
 import com.InnovaTechno.homemarket.R;
 import com.bumptech.glide.Glide;
@@ -21,12 +21,12 @@ import com.parse.ParseFile;
 
 import java.util.List;
 
-public class SucreriesAdapter extends RecyclerView.Adapter<SucreriesAdapter.ViewHolder> {
+public class PLaitiersAdapter  extends RecyclerView.Adapter<PLaitiersAdapter.ViewHolder> {
 
     private Context context;
-    private List<PostSucreries> posts;
+    private List<PostPLaitiers> posts;
 
-    public SucreriesAdapter(Context context, List<PostSucreries> posts) {
+    public PLaitiersAdapter(Context context, List<PostPLaitiers> posts) {
         this.context = context;
         this.posts = posts;
     }
@@ -42,8 +42,8 @@ public class SucreriesAdapter extends RecyclerView.Adapter<SucreriesAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        PostSucreries postSucreries = posts.get(position);
-        holder.bind(postSucreries);
+        PostPLaitiers postPLaitiers = posts.get(position);
+        holder.bind(postPLaitiers);
     }
 
     @Override
@@ -69,7 +69,7 @@ public class SucreriesAdapter extends RecyclerView.Adapter<SucreriesAdapter.View
             tvPrice = itemView.findViewById(R.id.tvPrice);
 
         }
-        public void bind(PostSucreries post) {
+        public void bind(PostPLaitiers post) {
             ParseFile image = post.getImage();
             if (image != null) {
                 Glide.with(context).load(image.getUrl()).into(ivFruits_Legumes);

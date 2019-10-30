@@ -2,24 +2,20 @@ package com.InnovaTechno.homemarket.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Categories.Adapter.PostAdapter;
-import com.InnovaTechno.homemarket.Categories.Post.Post;
+import com.InnovaTechno.homemarket.Categories.Models.Post;
 
 import com.InnovaTechno.homemarket.R;
 import com.InnovaTechno.homemarket.adapter.CartAdapter;
@@ -32,6 +28,8 @@ public class CartFragment extends Fragment {
     public static final String TAG = "CartFragment";
     private CartAdapter adapter;
     private List<Post> post;
+
+
 
     @Nullable
     @Override
@@ -62,20 +60,21 @@ public class CartFragment extends Fragment {
         rv_Cart.setAdapter(adapter);
 
         //receive data
-        if (getArguments() != null) {
-            String name = getArguments().getString("name");
-            String price2 = getArguments().getString("price2");
-            String devise = getArguments().getString("devise");
+        //Intent intent = getIntent();
+        //String name = getActivity().getIntent().getExtras().getString("name");
+        //String price2 = getActivity().getIntent().getExtras().getString("price2");
+        //String devise = getActivity().getIntent().getExtras().getString("devise");
+        //String image = intent.getExtras().getString("productImage");
 
                 //setting values
-                tvNameItem.setText(name);
-                tvPrice_Item.setText(price2);
-                tvDevise_Item.setText(devise);
-                tvDevise_Total.setText(devise);
+               // tvNameItem.setText(name);
+               // tvPrice_Item.setText(price2);
+               // tvDevise_Item.setText(devise);
+               // tvDevise_Total.setText(devise);
 
 
             }
         }
-    }
+
 
 
