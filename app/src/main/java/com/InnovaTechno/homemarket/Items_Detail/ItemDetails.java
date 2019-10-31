@@ -38,6 +38,7 @@ public class ItemDetails extends AppCompatActivity {
     private List <Post> post;
     private static final String TAG = "RelatedItems";
     private int counter;
+    private int priceChange;
 
 
     ImageView ivItemDetails;
@@ -119,6 +120,7 @@ public class ItemDetails extends AppCompatActivity {
     private void plusCounter() {
         counter ++;
         tvCounter.setText(counter + "");
+
     }
 
 
