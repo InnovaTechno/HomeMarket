@@ -4,15 +4,29 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/img_profile"
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/imageSlider"
+        android:layout_height="220dp"
         android:layout_width="match_parent"
-        android:layout_height="185dp"
-        app:srcCompat="@drawable/profile" />
+        app:sliderStartAutoCycle="true"
+        app:sliderScrollTimeInSec="1"
+        app:sliderIndicatorUnselectedColor="#fff"
+        app:sliderIndicatorSelectedColor="#5A5A5A"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorAnimationDuration="500"
+        app:sliderCircularHandlerEnabled="true"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAnimationDuration="600"
+        />
 
     <EditText
         android:id="@+id/etEmail"
-        android:layout_below="@id/img_profile"
+        android:layout_below="@id/imageSlider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
