@@ -92,10 +92,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_profile:
-                Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+                if (ParseUser.getCurrentUser() == null){
+                    Toast.makeText(this, "You haven't login yet, please login to buy your items",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                Intent p = new Intent(this, Profile.class);
+                startActivity(p);}
+                //Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_marketlist:
-                Toast.makeText(this, "MarketList", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "MarketList", Toast.LENGTH_SHORT).show();
                 Intent m = new Intent(this, MarketsActivity.class);
                 startActivity(m);
 
@@ -113,7 +119,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.nav_logout:
                 if (ParseUser.getCurrentUser() == null){
-                    Toast.makeText(this, "You haven't login yet, please login to buy your items", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "You haven't login yet, please login to buy your items",
+                            Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "Successfully Log out", Toast.LENGTH_SHORT).show();
                 ParseUser.logOut();
@@ -128,6 +135,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mdrawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 
     @Override
     public void onBackPressed() {
