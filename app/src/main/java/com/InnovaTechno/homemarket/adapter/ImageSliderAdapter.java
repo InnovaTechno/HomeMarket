@@ -48,7 +48,11 @@ public class ImageSliderAdapter extends SliderViewAdapter<ImageSliderAdapter.Sli
                 Glide.with(viewHolder.itemView)
                         .load(R.drawable.methoddpayment)
                         .into(viewHolder.imageView);
-
+                break;
+            case 4:
+                Glide.with(viewHolder.itemView)
+                        .load(R.drawable.fastdelivery)
+                        .into(viewHolder.imageView);
             default:
 
 
@@ -59,7 +63,7 @@ public class ImageSliderAdapter extends SliderViewAdapter<ImageSliderAdapter.Sli
     @Override
     public int getCount() {
         //slider view count could be dynamic size
-        return 4;
+        return 5;
     }
 
     class SliderAdapterVH extends SliderViewAdapter.ViewHolder {

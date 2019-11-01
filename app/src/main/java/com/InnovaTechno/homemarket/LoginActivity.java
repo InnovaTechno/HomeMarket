@@ -73,6 +73,9 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.siProgressbar);
         progressBar.setVisibility(View.GONE);
 
+    //    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    //    getSupportActionBar().setTitle(null);
+
         //Image slider
         SliderView sliderView = findViewById(R.id.imageSlider);
         ImageSliderAdapter adapter = new ImageSliderAdapter(this);

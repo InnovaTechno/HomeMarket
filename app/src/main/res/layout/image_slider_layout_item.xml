@@ -12,7 +12,7 @@
         app:cardCornerRadius="5dp">
 
         <ImageView
-            android:layout_height="220dp"
+            android:layout_height="250dp"
             android:layout_width="match_parent"
             android:background="#fff"
             android:scaleType="fitXY"
