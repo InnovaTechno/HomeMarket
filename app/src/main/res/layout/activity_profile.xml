@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f6f6f6"
     tools:context=".Profile">
 
     <com.mikhaellopez.circularimageview.CircularImageView
@@ -42,22 +43,16 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:orientation="vertical"
-        android:layout_below="@+id/tvUsername">
+        android:layout_below="@+id/tvUsername"
+        android:layout_marginTop="10dp">
 
-        <androidx.cardview.widget.CardView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_card"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            xmlns:cardview="http://schemas.android.com/apk/res-auto"
-            android:padding="10dp"
-            cardview:cardCornerRadius="10dp"            >
+            android:layout_margin="5dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Choose a Payment Method"
-                android:textColor="@color/colorPrimary"/>
-
-        </androidx.cardview.widget.CardView>
+        </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
 

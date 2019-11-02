@@ -1,4 +1,4 @@
-package com.InnovaTechno.homemarket;
+package com.InnovaTechno.homemarket.Models;
 
 public class Market {
 

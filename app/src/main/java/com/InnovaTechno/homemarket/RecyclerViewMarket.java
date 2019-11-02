@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.InnovaTechno.homemarket.Markets_Details.MarketsDetailsActivity;
+import com.InnovaTechno.homemarket.Models.Market;
 
 import java.util.List;
 

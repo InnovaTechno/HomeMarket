@@ -67,7 +67,8 @@
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" /> <!-- cache directory file provider paths -->
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CreditCardInfo" /> <!-- cache directory file provider paths -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.InnovaTechno.file_paths"

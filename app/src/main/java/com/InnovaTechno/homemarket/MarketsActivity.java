@@ -5,12 +5,12 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
+
+import com.InnovaTechno.homemarket.Models.Market;
 
 import java.util.ArrayList;
 import java.util.List;

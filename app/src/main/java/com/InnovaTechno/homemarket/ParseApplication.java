@@ -14,6 +14,8 @@ import com.InnovaTechno.homemarket.Categories.Models.PostSucreries;
 import com.InnovaTechno.homemarket.Categories.Models.PostViandes;
 import com.InnovaTechno.homemarket.Items_Detail.Details;
 import com.InnovaTechno.homemarket.Items_Detail.RelatedItems;
+import com.InnovaTechno.homemarket.Models.CardInfo;
+import com.InnovaTechno.homemarket.Models.User;
 import com.InnovaTechno.homemarket.New_Products.NewProducts;
 import com.parse.Parse;
 import com.parse.ParseObject;
@@ -36,7 +38,7 @@ public class ParseApplication extends Application {
         ParseObject.registerSubclass(PostBoissons.class);
         ParseObject.registerSubclass(RelatedItems.class);
         ParseObject.registerSubclass(Details.class);
-
+        ParseObject.registerSubclass(CardInfo.class);
 
 
         // set applicationId, and server server based on the values in the Heroku settings.

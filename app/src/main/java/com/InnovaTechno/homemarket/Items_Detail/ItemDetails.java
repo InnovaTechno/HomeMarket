@@ -108,7 +108,7 @@ public class ItemDetails extends AppCompatActivity {
     }
 
     private void initCounter() {
-        counter = 0;
+        counter = 1;
         tvCounter.setText(counter + "");
     }
     //Minus Counter
