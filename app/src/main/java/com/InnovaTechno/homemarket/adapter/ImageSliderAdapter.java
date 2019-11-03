@@ -31,22 +31,22 @@ public class ImageSliderAdapter extends SliderViewAdapter<ImageSliderAdapter.Sli
         switch (position) {
             case 0:
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.homemerkett)
+                        .load(R.drawable.freshfruits)
                         .into(viewHolder.imageView);
                 break;
             case 1:
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.freshfruits)
+                        .load(R.drawable.freshboisson)
                         .into(viewHolder.imageView);
                 break;
             case 2:
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.freshboisson)
+                        .load(R.drawable.methoddpayment)
                         .into(viewHolder.imageView);
                 break;
             case 3:
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.methoddpayment)
+                        .load(R.drawable.homemerkett)
                         .into(viewHolder.imageView);
                 break;
             case 4:
