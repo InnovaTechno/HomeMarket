@@ -64,18 +64,19 @@ public class Profile extends AppCompatActivity {
         ButterKnife.bind(this);
         setTitle("My Profile");
 
-
+        //create the data source with info and images
         lsCard = new ArrayList<>();
         lsCard.add(new Card(R.drawable.visa_icon));
         lsCard.add(new Card(R.drawable.mastercard_icon));
         lsCard.add(new Card(R.drawable.moncash_icon));
         lsCard.add(new Card(R.drawable.cashmobile_icon));
 
-        //create the adapter
+        //create the adapter for Credit card recycleview
         infos = new ArrayList<>();
         RecyclerView rv_card = findViewById(R.id.rv_card);
         adapter = new CardAdapter(this, lsCard, infos);
-        rv_card.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        rv_card.setLayoutManager(new LinearLayoutManager(this,
+                LinearLayoutManager.HORIZONTAL, false));
         //Set the card adapter
         rv_card.setAdapter(adapter);
 
@@ -234,6 +235,7 @@ public class Profile extends AppCompatActivity {
                     return;
                 }
                 infos.addAll(info);
+                adapter.notifyDataSetChanged();
 
                 for (int i = 0; i < info.size(); i++) {
                     CardInfo cardInfo = info.get(i);
