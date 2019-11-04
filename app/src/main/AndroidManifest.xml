@@ -19,6 +19,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".PaymentMethods.ChoosePayments"/>
         <activity android:name=".Livraison.Livraison" />
         <activity android:name=".Items_Detail.ItemDetails" />
         <activity android:name=".Categories.Viandes" />
@@ -68,7 +69,7 @@
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".CreditCardInfo" /> <!-- cache directory file provider paths -->
+        <activity android:name=".PaymentMethods.CardsMethod" /> <!-- cache directory file provider paths -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.InnovaTechno.file_paths"

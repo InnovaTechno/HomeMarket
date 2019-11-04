@@ -92,12 +92,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_profile:
-                if (ParseUser.getCurrentUser() == null){
-                    Toast.makeText(this, "You haven't login yet, please login to buy your items",
-                            Toast.LENGTH_SHORT).show();
-                } else {
+               // if (ParseUser.getCurrentUser() == null){
+                 //   Toast.makeText(this, "You haven't login yet, please login to buy your items",
+                   //         Toast.LENGTH_SHORT).show();
+               // } else {
                 Intent p = new Intent(this, Profile.class);
-                startActivity(p);}
+                startActivity(p);
                 //Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_marketlist:

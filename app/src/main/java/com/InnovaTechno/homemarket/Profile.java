@@ -4,13 +4,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -18,27 +15,17 @@ import android.provider.MediaStore;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.InnovaTechno.homemarket.Models.Card;
-import com.InnovaTechno.homemarket.Models.CardInfo;
-import com.InnovaTechno.homemarket.adapter.CardAdapter;
+import com.InnovaTechno.homemarket.PaymentMethods.ChoosePayments;
 import com.bumptech.glide.Glide;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseQuery;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -47,12 +34,9 @@ import butterknife.OnClick;
 
 public class Profile extends AppCompatActivity {
 
-
-    private CardAdapter adapter;
-    List<Card> lsCard;
-    List<CardInfo> infos;
-    private static final String TAG = "Profile";
+     private static final String TAG = "Profile";
     public static final int REQUEST_IMAGE = 100;
+    ImageView ivPayments;
 
     @BindView(R.id.img_profile)
     ImageView imgProfile;
@@ -63,25 +47,8 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
         setTitle("My Profile");
+        ivPayments = findViewById(R.id.ivPayments);
 
-        //create the data source with info and images
-        lsCard = new ArrayList<>();
-        lsCard.add(new Card(R.drawable.visa_icon));
-        lsCard.add(new Card(R.drawable.mastercard_icon));
-        lsCard.add(new Card(R.drawable.moncash_icon));
-        lsCard.add(new Card(R.drawable.cashmobile_icon));
-
-        //create the adapter for Credit card recycleview
-        infos = new ArrayList<>();
-        RecyclerView rv_card = findViewById(R.id.rv_card);
-        adapter = new CardAdapter(this, lsCard, infos);
-        rv_card.setLayoutManager(new LinearLayoutManager(this,
-                LinearLayoutManager.HORIZONTAL, false));
-        //Set the card adapter
-        rv_card.setAdapter(adapter);
-
-        //load  card info
-        queryCard ();
 
        //Update profile image
         loadProfileDefault();
@@ -216,35 +183,10 @@ public class Profile extends AppCompatActivity {
         startActivityForResult(intent, 101);
     }
 
-    //Edit card Info @onClick
-    public void editData(View view) {
-        Intent e = new Intent(this, CreditCardInfo.class);
-        startActivity(e);
+
+    public void choosePaymentMethods(View view) {
+        Intent p = new Intent(this, ChoosePayments.class);
+        startActivity(p);
     }
-    private void queryCard() {
-        final ParseQuery<CardInfo> cardInfoQuery = new ParseQuery<CardInfo>(CardInfo.class);
-        cardInfoQuery.include(CardInfo.KEY_NAME);
-        cardInfoQuery.include(CardInfo.KEY_DATE);
-        cardInfoQuery.findInBackground(new FindCallback<CardInfo>() {
-
-            @Override
-            public void done(List<CardInfo> info, ParseException e) {
-                if (e != null) {
-                    Log.d(TAG, "error with query");
-                    e.printStackTrace();
-                    return;
-                }
-                infos.addAll(info);
-                adapter.notifyDataSetChanged();
-
-                for (int i = 0; i < info.size(); i++) {
-                    CardInfo cardInfo = info.get(i);
-                    Log.d(TAG, "CardInfo: " + info.get(i).getNumber() + ",cardHolderName: " +
-                            info.get(i).getName() + "expDate" + info.get(i).getDate());
-                }
-            }
-        });
-            }
-
 }
 

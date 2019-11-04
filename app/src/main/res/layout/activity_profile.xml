@@ -39,23 +39,53 @@
         android:layout_marginTop="5dp"
         android:text="Gloria Elizabeth"/>
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvUsername"
+        android:text="elizabeth@gmail.com"
+        android:layout_centerInParent="true"/>
+
+    <View
+        android:id="@+id/divider2"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:orientation="vertical"
-        android:layout_below="@+id/tvUsername"
-        android:layout_marginTop="10dp">
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_card"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_margin="5dp">
+    <ImageView
+        android:id="@+id/ivPayments"
+        android:onClick = "choosePaymentMethods"
+        android:layout_width="39dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/tvEmail"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp"
 
-        </androidx.recyclerview.widget.RecyclerView>
 
-    </LinearLayout>
+        android:background="@drawable/ic_credit_card_black_24dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvEmail"
+        android:layout_alignRight="@+id/tvEmail"
+        android:layout_alignBottom="@+id/tvEmail"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:layout_marginBottom="-40dp"
+        android:text="Payment Methods"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:onClick = "choosePaymentMethods"/>
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
 
 
 </RelativeLayout>
