@@ -22,9 +22,9 @@
         android:layout_alignEnd="@+id/li3"
         android:layout_alignRight="@+id/li3"
         android:layout_alignBottom="@+id/li3"
-        android:layout_marginEnd="-59dp"
-        android:layout_marginRight="-59dp"
-        android:layout_marginBottom="-65dp"
+        android:layout_marginEnd="-57dp"
+        android:layout_marginRight="-57dp"
+        android:layout_marginBottom="-48dp"
         android:background="@drawable/visa_icon" />
 
 
@@ -77,7 +77,7 @@
         android:layout_toEndOf="@+id/cardholder"
         android:layout_below="@+id/code"
         android:orientation="vertical"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="42dp">
 
         <TextView
             android:id="@+id/month"
@@ -122,7 +122,7 @@
         android:layout_toEndOf="@+id/divide"
         android:layout_below="@+id/code"
         android:orientation="vertical"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="42dp">
 
         <TextView
             android:id="@+id/year"
@@ -154,7 +154,7 @@
         android:layout_below="@+id/code"
         android:orientation="vertical"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="42dp">
 
         <TextView
             android:id="@+id/cvv"
@@ -310,19 +310,19 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="-6dp"
             android:layout_toEndOf="@+id/tv4"
-            android:hint="XXXX"
+            android:hint="XXX"
             android:inputType="number"
             android:maxLength="3"
             android:textColor="@color/blue" />
 
         <Button
             android:id="@+id/btn"
-            android:layout_width="219dp"
-            android:layout_height="53dp"
+            android:layout_width="224dp"
+            android:layout_height="57dp"
             android:layout_below="@id/et7"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="105dp"
+            android:layout_marginTop="80dp"
             android:background="@drawable/roundedbutton"
             android:text="SAVE DATA"
             android:textColor="#FFF" />
