@@ -46,9 +46,11 @@
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Markets_Details.MarketsDetailsActivity"
             android:parentActivityName=".MarketsActivity"/>
-        <activity android:name=".MarketsActivity" />
+        <activity android:name=".MarketsActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".Categories.Fruits_Legumes"
             android:parentActivityName=".MainActivity"/>
+       
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
