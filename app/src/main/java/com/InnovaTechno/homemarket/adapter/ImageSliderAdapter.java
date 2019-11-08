@@ -31,7 +31,7 @@ public class ImageSliderAdapter extends SliderViewAdapter<ImageSliderAdapter.Sli
         switch (position) {
             case 0:
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.homemerkett)
+                        .load(R.drawable.athome)
                         .into(viewHolder.imageView);
                 break;
             case 1:
@@ -44,6 +44,7 @@ public class ImageSliderAdapter extends SliderViewAdapter<ImageSliderAdapter.Sli
                         .load(R.drawable.freshboisson)
                         .into(viewHolder.imageView);
                 break;
+
             case 3:
                 Glide.with(viewHolder.itemView)
                         .load(R.drawable.methoddpayment)
@@ -51,7 +52,17 @@ public class ImageSliderAdapter extends SliderViewAdapter<ImageSliderAdapter.Sli
                 break;
             case 4:
                 Glide.with(viewHolder.itemView)
+                        .load(R.drawable.homemerkett)
+                        .into(viewHolder.imageView);
+                break;
+            case 5:
+                Glide.with(viewHolder.itemView)
                         .load(R.drawable.fastdelivery)
+                        .into(viewHolder.imageView);
+                break;
+            case 6:
+                Glide.with(viewHolder.itemView)
+                        .load(R.drawable.phone)
                         .into(viewHolder.imageView);
             default:
 
@@ -63,7 +74,7 @@ public class ImageSliderAdapter extends SliderViewAdapter<ImageSliderAdapter.Sli
     @Override
     public int getCount() {
         //slider view count could be dynamic size
-        return 5;
+        return 7;
     }
 
     class SliderAdapterVH extends SliderViewAdapter.ViewHolder {

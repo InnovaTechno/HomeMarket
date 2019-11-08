@@ -14,8 +14,10 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 
+import com.InnovaTechno.homemarket.PaymentMethods.ChoosePayments;
 import com.bumptech.glide.Glide;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -31,8 +33,10 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class Profile extends AppCompatActivity {
-    private static final String TAG = "Profile";
+
+     private static final String TAG = "Profile";
     public static final int REQUEST_IMAGE = 100;
+    ImageView ivPayments;
 
     @BindView(R.id.img_profile)
     ImageView imgProfile;
@@ -42,13 +46,18 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
+        setTitle("My Profile");
+        ivPayments = findViewById(R.id.ivPayments);
 
+
+       //Update profile image
         loadProfileDefault();
         // Clearing older images from cache directory
         // don't call this line if you want to choose multiple images in the same activity
         // call this once the bitmap(s) usage is over
         ImagePickerActivity.clearCache(this);
     }
+
 
     private void loadProfile(String url) {
         Log.d(TAG, "Image cache path: " + url);
@@ -175,5 +184,9 @@ public class Profile extends AppCompatActivity {
     }
 
 
-
+    public void choosePaymentMethods(View view) {
+        Intent p = new Intent(this, ChoosePayments.class);
+        startActivity(p);
+    }
 }
+

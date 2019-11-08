@@ -1,4 +1,4 @@
-package com.InnovaTechno.homemarket;
+package com.InnovaTechno.homemarket.Models;
 
 import com.parse.ParseACL;
 import com.parse.ParseClassName;

@@ -37,7 +37,6 @@
             android:layout_height="46dp"
             android:layout_alignParentBottom="true"
             android:background="#FBF6F6"
-            app:labelVisibilityMode="unlabeled"
             app:menu="@menu/menu_bottom_navigation" />
     </RelativeLayout>
 

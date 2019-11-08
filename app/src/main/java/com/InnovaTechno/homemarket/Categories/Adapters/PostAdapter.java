@@ -123,23 +123,18 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 }
             });
 
-         //passing and saving the data to FragmentCart when cliked add to cart
+            //Passing data in the Cart fragment
             btnAddToCart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
-                    //Passing the data using intent
                     Intent intent = new Intent(context, CartFragment.class);
-                    intent.putExtra("name", posts.get(position).getName());
-                    intent.putExtra("price2", posts.get(position).getPrice());
-                    intent.putExtra("devise", posts.get(position).getDevise());
-//                    context.startActivity(intent);
-
-
+                    Bundle bundle = new Bundle();
+                    bundle.putString("name",posts.get(position).getName());
+                    intent.putExtras(bundle);
+                    context.startActivity(intent);
                 }
-
-        });
-
+            });
     }
     }
 }

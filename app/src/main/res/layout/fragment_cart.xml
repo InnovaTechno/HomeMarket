@@ -5,18 +5,27 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ebebeb">
+    android:background="#f6f6f6">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorGreen"
+        android:textStyle="bold"
+        android:text="Liste de Produits acheté"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="242dp"
-        android:orientation="horizontal">
+        android:layout_height="250dp"
+        android:orientation="horizontal"
+        android:background="#f6f6f6">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_Cart"
             android:layout_width="401dp"
-            android:layout_height="239dp"
+            android:layout_height="250dp"
             android:layout_marginLeft="5dp">
 
         </androidx.recyclerview.widget.RecyclerView>
@@ -34,14 +43,13 @@
             android:layout_height="40dp"
             android:layout_marginLeft="5dp"
             android:textStyle="bold"
-            android:text="Total Acheter"
+            android:text="Total Acheter :"
             android:textColor="#3F3D3D" />
 
         <TextView
             android:id="@+id/tv_Total_Acheter"
             android:layout_width="194dp"
             android:layout_height="42dp"
-            android:layout_marginEnd="15dp"
             android:gravity="center"
             android:text="952.00 HTG"
             android:textColor="#3F3D3D"
@@ -60,7 +68,7 @@
         android:layout_width="203dp"
         android:layout_height="40dp"
         android:layout_marginLeft="5dp"
-        android:text="Livraison"
+        android:text="Livraison : "
         android:textStyle="bold"
         android:textColor="#3F3D3D"
         />
@@ -69,7 +77,7 @@
         android:id="@+id/tv_Total_Livraison"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginEnd="5dp"
+        android:layout_gravity="center"
         android:gravity="center"
         android:text="150,00 HTG"
         android:textStyle="bold"
@@ -94,7 +102,7 @@
             android:layout_height="42dp"
             android:textStyle="bold"
             android:layout_marginLeft="5dp"
-            android:text="TOTAL"
+            android:text="TOTAL :"
             android:textSize="20sp"
             android:textColor="#3F3D3D"
              />
@@ -104,7 +112,7 @@
             android:id="@+id/tv_TOTAL_PRICE"
             android:layout_width="188dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="15dp"
+            android:layout_gravity="center"
             android:gravity="center"
             android:text="1,000,00 HTG"
             android:textColor="#3F3D3D"
