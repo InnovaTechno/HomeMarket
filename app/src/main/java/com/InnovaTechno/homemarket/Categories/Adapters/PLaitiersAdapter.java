@@ -2,6 +2,7 @@ package com.InnovaTechno.homemarket.Categories.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.InnovaTechno.homemarket.Categories.Models.PostPLaitiers;
+import com.InnovaTechno.homemarket.Fragments.CartFragment;
 import com.InnovaTechno.homemarket.Items_Detail.ItemDetails;
 import com.InnovaTechno.homemarket.R;
 import com.bumptech.glide.Glide;
@@ -93,6 +95,7 @@ public class PLaitiersAdapter  extends RecyclerView.Adapter<PLaitiersAdapter.Vie
 
                 }
             });
+
         }
 
     }

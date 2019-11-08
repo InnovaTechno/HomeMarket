@@ -1,10 +1,14 @@
 package com.InnovaTechno.homemarket.Categories;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -12,6 +16,7 @@ import android.view.MenuItem;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.SearchView;
 
@@ -32,35 +37,75 @@ public class Fruits_Legumes extends AppCompatActivity {
     public static final String TAG ="Fruits_Legumes";
     private PostAdapter adapter;
     private List<Post> mPosts;
-    private Button btnAddToCart;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fruits_legumes);
+
+        //Check the internet connection state
+        if(!isConnected(Fruits_Legumes.this)) buildDialog(Fruits_Legumes.this).show();
+        else {
+            Toast.makeText(Fruits_Legumes.this,"Welcome", Toast.LENGTH_SHORT).show();
+            setContentView(R.layout.activity_fruits_legumes);
+        }
+
         //Set Title
         this.setTitle("Fruits et Légumes");
 
         RecyclerView rv_fruits_legumes = (RecyclerView) findViewById(R.id.rv_fruits_legumes);
-
         //set the animation
-        //LayoutAnimationController animationController = AnimationUtils.loadLayoutAnimation(this, R.anim.layout_animation_fall_down);
-        //rv_fruits_legumes.setLayoutAnimation(animationController);
+      //  LayoutAnimationController animationController = AnimationUtils.loadLayoutAnimation(this, R.anim.layout_animation_fall_down);
+//        rv_fruits_legumes.setLayoutAnimation(animationController);
 
 
         //create the data source
         mPosts = new ArrayList<>();
         //create the adapter
         adapter = new PostAdapter(this, mPosts );
+        //Check the internet connection state
+        if(!isConnected(Fruits_Legumes.this)) buildDialog(Fruits_Legumes.this).show();
+        else {
         rv_fruits_legumes.setLayoutManager(new GridLayoutManager(this, 2));
-        rv_fruits_legumes.setAdapter(adapter);
+        rv_fruits_legumes.setAdapter(adapter);}
 
-        //Bundle data = getIntent().getExtras();
-      //  Post post = (Post) data.getSerializable("post");
 
         queryPost();
+    }
+
+    //Check the network connection
+    public boolean isConnected(Context context) {
+
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netinfo = cm.getActiveNetworkInfo();
+
+        if (netinfo != null && netinfo.isConnectedOrConnecting()) {
+            android.net.NetworkInfo wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+            android.net.NetworkInfo mobile = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
+            if((mobile != null && mobile.isConnectedOrConnecting()) || (wifi != null && wifi.isConnectedOrConnecting()))
+                return true;
+        else return false;
+        } else
+        return false;
+    }
+
+        //Alert dialog for no network connection
+    public AlertDialog.Builder buildDialog(Context c) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(c);
+        builder.setTitle("No Internet Connection");
+        builder.setMessage("Make sure your devise is connected to the internet. Press ok to Exit");
+
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                finish();
+            }
+        });
+
+        return builder;
     }
 
     private void queryPost() {

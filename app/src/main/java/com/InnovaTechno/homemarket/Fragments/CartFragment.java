@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.InnovaTechno.homemarket.Categories.Models.Post;
 
+import com.InnovaTechno.homemarket.PaymentMethods.ChoosePayments;
 import com.InnovaTechno.homemarket.R;
 import com.InnovaTechno.homemarket.adapter.CartAdapter;
 
@@ -28,14 +30,7 @@ public class CartFragment extends Fragment {
     public static final String TAG = "CartFragment";
     private CartAdapter adapter;
     private List<Post> post;
-
-
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_cart, container, false);
-    }
+    TextView tvNameItem;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -50,7 +45,6 @@ public class CartFragment extends Fragment {
         final TextView tv_TOTAL_PRICE = view.findViewById(R.id.tv_TOTAL_PRICE);
         TextView tvDevise_Total = view.findViewById(R.id.tvDevise_Total);
 
-
         //create the data source
         post = new ArrayList<>();
         //set the adapter
@@ -59,21 +53,33 @@ public class CartFragment extends Fragment {
         rv_Cart.setLayoutManager(new LinearLayoutManager(getContext()));
         rv_Cart.setAdapter(adapter);
 
-        //receive data
-        //Intent intent = getIntent();
-        //String name = getActivity().getIntent().getExtras().getString("name");
-        //String price2 = getActivity().getIntent().getExtras().getString("price2");
-        //String devise = getActivity().getIntent().getExtras().getString("devise");
-        //String image = intent.getExtras().getString("productImage");
-
-                //setting values
-               // tvNameItem.setText(name);
-               // tvPrice_Item.setText(price2);
-               // tvDevise_Item.setText(devise);
-               // tvDevise_Total.setText(devise);
-
-
+        //Set intent on checkout button to choose payment method
+        btnCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent checkout = new Intent(getContext(), ChoosePayments.class);
+               startActivity(checkout);
             }
+        });
+
+
+    }
+
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        if (getArguments() == null){
+            Toast.makeText(getContext(), "You haven't add anything to the cart",Toast.LENGTH_SHORT).show();
+        } else{
+            String name = getArguments().getString("name");
+            tvNameItem.setText(name);
+        }
+
+        return inflater.inflate(R.layout.fragment_cart, container, false);
+    }
+
+
         }
 
 
