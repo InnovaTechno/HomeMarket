@@ -50,6 +50,9 @@ public class Viandes extends AppCompatActivity {
         //Set Title
         this.setTitle("Viandes");
 
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
             //create the data source
             mPosts = new ArrayList<>();
             //create the adapter

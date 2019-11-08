@@ -17,6 +17,8 @@ public class ChoosePayments  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_payments);
         setTitle("Choose Payment");
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     //@Onclick for cards Method

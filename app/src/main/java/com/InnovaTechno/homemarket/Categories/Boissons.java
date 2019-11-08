@@ -48,6 +48,8 @@ public class Boissons extends AppCompatActivity {
         setContentView(R.layout.activity_boissons);}
         //Set Title
         this.setTitle("Boissons");
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //create the data source
         mPosts = new ArrayList<>();

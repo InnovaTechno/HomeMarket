@@ -25,20 +25,32 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".PaymentMethods.ChoosePayments"/>
+        <activity android:name=".PaymentMethods.ChoosePayments"
+            android:parentActivityName=".Profile"/>
         <activity android:name=".Livraison.Livraison" />
         <activity android:name=".Items_Detail.ItemDetails" />
-        <activity android:name=".Categories.Viandes" />
-        <activity android:name=".Categories.Produits_Laitiers" />
-        <activity android:name=".Categories.Produits_Cosmetiques" />
-        <activity android:name=".Categories.Pains" />
-        <activity android:name=".Categories.Chips_Sucreries" />
-        <activity android:name=".Categories.Boissons" />
+        <activity android:name=".Categories.Viandes"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Produits_Laitiers"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Produits_Cosmetiques"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Pains"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Chips_Sucreries"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Boissons"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".Categories.Boissons_Alcolisees" />
-        <activity android:name=".Categories.Articles_Menagers" />
-        <activity android:name=".Markets_Details.MarketsDetailsActivity" />
-        <activity android:name=".MarketsActivity" />
-        <activity android:name=".Categories.Fruits_Legumes" />
+        <activity android:name=".Categories.Articles_Menagers"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Markets_Details.MarketsDetailsActivity"
+            android:parentActivityName=".MarketsActivity"/>
+        <activity android:name=".MarketsActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Fruits_Legumes"
+            android:parentActivityName=".MainActivity"/>
+       
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

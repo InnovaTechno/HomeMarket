@@ -48,6 +48,9 @@ public class Produits_Laitiers extends AppCompatActivity {
         //Set Title
         this.setTitle("Produits Laitiers");
 
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
                 //create the data source
                 mPosts = new ArrayList<>();
                 //create the adapter

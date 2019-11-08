@@ -43,8 +43,10 @@ public class Articles_Menagers  extends AppCompatActivity {
         if(!isConnected(Articles_Menagers.this)) buildDialog(Articles_Menagers.this).show();
         else {
             Toast.makeText(Articles_Menagers.this,"Welcome", Toast.LENGTH_SHORT).show();
-        setContentView(R.layout.activity_articles_menagers);
-        this.setTitle("Articles Ménagers");}
+        setContentView(R.layout.activity_articles_menagers);}
+        this.setTitle("Articles Ménagers");
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
            //create the data source
             mPosts = new ArrayList<>();
