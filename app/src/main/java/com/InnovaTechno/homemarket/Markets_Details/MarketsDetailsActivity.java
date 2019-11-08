@@ -37,6 +37,8 @@ public class MarketsDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_markets);
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ivDetailsMarkets = findViewById(R.id.ivDetailsMarkets);
         tvMarketsDescription = findViewById(R.id.tvMarketsDescription);

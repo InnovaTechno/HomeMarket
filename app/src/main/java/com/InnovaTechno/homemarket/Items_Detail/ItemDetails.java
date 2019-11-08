@@ -4,8 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,6 +18,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.parse.ParseFile;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -40,7 +43,6 @@ public class ItemDetails extends AppCompatActivity {
     private int counter;
     private int priceChange;
 
-
     ImageView ivItemDetails;
     TextView tvName, tv_Price, tv_Devise, tvCounter, tvDescription;
     Button btnPlus, btnMoins, btnAdd_to_Cart, btnBuy_Now;
@@ -63,6 +65,9 @@ public class ItemDetails extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_details);
+
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ivItemDetails = findViewById(R.id.ivItemDetails);
         tvName = findViewById(R.id.tvName);
@@ -92,6 +97,8 @@ public class ItemDetails extends AppCompatActivity {
         tv_Devise.setText(devise);
         tvName.setText(name);
         tvDescription.setText(description);
+
+
 
         //Related Items adapter
         relatedItems = new ArrayList<>();
@@ -151,7 +158,10 @@ public class ItemDetails extends AppCompatActivity {
             });
         }
 
-    }
+
+
+
+}
 
 
 

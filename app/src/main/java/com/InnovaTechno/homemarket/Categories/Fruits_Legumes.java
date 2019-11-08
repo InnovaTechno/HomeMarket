@@ -51,6 +51,8 @@ public class Fruits_Legumes extends AppCompatActivity {
 
         //Set Title
         this.setTitle("Fruits et Légumes");
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         RecyclerView rv_fruits_legumes = (RecyclerView) findViewById(R.id.rv_fruits_legumes);
         //set the animation

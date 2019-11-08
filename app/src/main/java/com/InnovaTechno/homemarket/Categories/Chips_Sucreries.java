@@ -50,6 +50,9 @@ public class Chips_Sucreries extends AppCompatActivity {
         //Set Title
         this.setTitle("Chips et Sucreries");
 
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
             //create the data source
             mPosts = new ArrayList<>();
             //create the adapter

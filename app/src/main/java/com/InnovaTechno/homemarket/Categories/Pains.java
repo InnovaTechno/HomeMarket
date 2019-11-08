@@ -49,6 +49,8 @@ public class Pains extends AppCompatActivity {
         setContentView(R.layout.activity_pains);}
         //Set Title
         this.setTitle("Pains");
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //create the data source
         mPosts = new ArrayList<>();

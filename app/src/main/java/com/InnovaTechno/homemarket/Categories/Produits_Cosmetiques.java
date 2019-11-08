@@ -48,6 +48,9 @@ public class Produits_Cosmetiques extends AppCompatActivity {
         //Set Title
         this.setTitle("Produits Cosmétiques");
 
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
                 //create the data source
                 mPosts = new ArrayList<>();
                 //create the adapter

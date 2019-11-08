@@ -25,6 +25,8 @@ public class MarketsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_markets);
         //Set Title
         this.setTitle("Markets");
+        //set the back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         lsMarket = new ArrayList<>();
         lsMarket.add( new Market("Avani", R.drawable.avani));
