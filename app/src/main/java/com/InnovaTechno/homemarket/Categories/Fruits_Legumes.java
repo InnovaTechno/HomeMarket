@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.InnovaTechno.homemarket.Categories.Adapters.PostAdapter;
 import com.InnovaTechno.homemarket.Categories.Models.Post;
@@ -37,6 +38,7 @@ public class Fruits_Legumes extends AppCompatActivity {
     public static final String TAG ="Fruits_Legumes";
     private PostAdapter adapter;
     private List<Post> mPosts;
+    private StaggeredGridLayoutManager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +69,9 @@ public class Fruits_Legumes extends AppCompatActivity {
         //Check the internet connection state
         if(!isConnected(Fruits_Legumes.this)) buildDialog(Fruits_Legumes.this).show();
         else {
-        rv_fruits_legumes.setLayoutManager(new GridLayoutManager(this, 2));
+            manager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+            rv_fruits_legumes.setLayoutManager(manager);
+       // rv_fruits_legumes.setLayoutManager(new GridLayoutManager(this, 2));
         rv_fruits_legumes.setAdapter(adapter);}
 
 
