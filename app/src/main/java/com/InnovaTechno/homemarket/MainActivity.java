@@ -2,14 +2,17 @@ package com.InnovaTechno.homemarket;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -127,9 +130,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     Toast.makeText(this, "Successfully Log out", Toast.LENGTH_SHORT).show();
                 ParseUser.logOut();
                 // ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
-                Intent i = new Intent(this, WelcomeActivity.class);
-                startActivity(i);
-                finish();
+                //Intent i = new Intent(this, WelcomeActivity.class);
+                //startActivity(i);
+                //finish();
+                    logoutDialog();
                 }
                 break;
 
@@ -137,6 +141,49 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mdrawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void logoutDialog() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        // Setting Alert Dialog Title
+        alertDialogBuilder.setTitle("Confirm Exit..!!!");
+        // Icon Of Alert Dialog
+     //   alertDialogBuilder.setIcon(R.drawable.question);
+        // Setting Alert Dialog Message
+        alertDialogBuilder.setMessage("Are you sure,You want to exit");
+        alertDialogBuilder.setCancelable(false);
+
+        alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                Intent i = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent i = new Intent(MainActivity.this, WelcomeActivity.class);
+                startActivity(i);
+               // Toast.makeText(MainActivity.this,"You clicked over No",Toast.LENGTH_SHORT).show();
+            }
+        });
+        alertDialogBuilder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent i = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(i);
+                //Toast.makeText(getApplicationContext(),"You clicked on Cancel",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+    }
+
+
 
 
 
