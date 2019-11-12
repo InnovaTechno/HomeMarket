@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ndroid="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb">
+
+    <ImageView
+        android:id="@+id/ivItemDetails"
+        android:layout_width="108dp"
+        android:layout_height="79dp"
+        android:layout_gravity="center"
+        android:background="#000"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Banane"
+        android:layout_marginTop="5dp"
+        android:textColor="#201D1D"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:text="150"
+            android:layout_gravity="center"
+            android:textColor="#C8020E"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_Devise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="center"
+            android:text="HTG/LBS"
+            android:textColor="#C8020E"
+            android:textStyle="bold"
+            ndroid:textSize="19sp" />
+
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvItem_Qty"
+            android:layout_width="141dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="35dp"
+            android:orientation="vertical"
+            cardview:cardBackgroundColor="#FFF">
+
+            <Button
+                android:id="@+id/btnMoins"
+                android:layout_width="38dp"
+                android:layout_height="match_parent"
+                android:background="#C92C36"
+                android:text="-"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="1"
+                android:textColor="#201D1D"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="100dp"
+                android:background="#C92C36"
+                android:text="+"
+                android:textColor="#201D1D"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/ic_local_shipping_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text=" Livraison pas disponible"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_store_mall_directory_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text=" PickUp disponible"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:layout_margin="5dp"
+        android:textSize="15dp"
+        android:textColor="#201D1D"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="2dp"
+        android:text="la banane est un fruit jaune ...." />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Produits Similaires"
+        android:textColor="#201D1D"
+        android:textSize="15dp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRelated_items"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="horizontal">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAdd_to_Cart"
+            android:layout_width="149dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_marginStart="10dp"
+            android:background="#4CAF50"
+            android:gravity="center"
+            android:text="Add to Cart"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btnBuy_Now"
+            android:layout_width="143dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="100dp"
+            android:background="#C92C36"
+            android:gravity="center"
+            android:paddingEnd="10dp"
+            android:text="Buy Now"
+            android:textColor="#fff" />
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

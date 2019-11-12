@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">HomeMarket</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="shop_by_categories">Shop by categories</string>
+    <string name="favorites">Favorites</string>
+    <string name="product_list">Product List</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="name">Name</string>
+    <string name="unit_price">Unit Price</string>
+    <string name="quantity">Quantity</string>
+    <string name="view">View</string>
+    <string name="action">Action</string>
+    <string name="order">Order</string>
+    <string name="price">Price</string>
+    <string name="total_price">Total Price</string>
+    <string name="remove">Remove</string>
+    <string name="clear_cart">Clear Cart</string>
+    <string name="shop">Shop</string>
+    <string name="delete_item">Delete Item</string>
+    <string name="delete_item_message">Are you sure you want to delete this item?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="msg_error_unable_select_profile_pic">Unable to set profile image. Please try again!</string>
+    <string name="lbl_set_profile_photo">Set profile image</string>
+    <string name="lbl_take_camera_picture">Take a picture</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="dialog_permission_title">Grant Permissions</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="go_to_settings">GOTO SETTINGS</string>
+    <string name="lbl_choose_from_gallery">Choose from gallery</string>
+    <string name="code">XXXX  XXXX  XXXX  XXXX </string>
+</resources>

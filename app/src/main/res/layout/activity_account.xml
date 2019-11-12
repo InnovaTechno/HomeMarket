@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Create an account"
+            android:textColor="#FF6347"
+            android:textSize="30dp"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/til2"
+            android:layout_below="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:textSize="20dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAdresse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etName"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:hint="Adresse"
+                android:inputType="textPersonName"
+                android:textSize="20dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etAdresse"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:hint="Phone"
+                android:inputType="phone"
+                android:textSize="20dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etPhone"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:hint="Alternative Phone"
+                android:inputType="phone"
+                android:textSize="20dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmaill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etAPhone"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:textSize="20dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etEmaill"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:ems="10"
+                android:hint="Username" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_below="@id/etUsername"
+            android:layout_marginTop="5dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPasswordd"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etEmailS"
+                android:layout_marginLeft="10dp"
+                android:ems="10"
+                android:hint="Enter your password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_below="@id/textField"
+            android:layout_marginTop="5dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassworddd"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etPassword"
+                android:layout_marginLeft="10dp"
+                android:ems="10"
+                android:hint="Confirm your password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnCAccount"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textField2"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roundedbutton"
+            android:text="Create account" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnCAccount"
+
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
+

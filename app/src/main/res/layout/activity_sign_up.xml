@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="92dp"
+        android:text="Create an account"
+        android:textColor="#C8020E"
+        android:textSize="30dp"
+         />
+
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Enter your first name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etFirstName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Enter your Last name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etEmailS"
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="Enter your email"
+        android:layout_below="@id/etLastName"
+        android:inputType="text" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@id/etEmailS"
+        android:layout_marginTop="5dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPasswordS"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etEmailS"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:hint="Enter your password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@id/textField"
+        android:layout_marginTop="5dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPasswordConfirmS"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etPassword"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:hint="Confirm your password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_below="@id/textField2"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Sign Up"
+        android:textColor="#fff"
+        android:typeface="normal" />
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="58dp"
+
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="-40dp"
+        android:layout_marginLeft="50dp"
+        android:text="Already have an account?"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/tvLoginback"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_toRightOf="@id/tvQuestion"
+        android:text="Login"
+        android:onClick="loginBack"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        android:layout_marginTop="-40dp"/>
+
+
+</RelativeLayout>

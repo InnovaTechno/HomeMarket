@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    tools:context=".Profile">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/img_profile"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_person_black_24dp"
+        app:civ_border_color="@android:color/holo_red_light"
+        app:civ_border_width="2dp" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/img_plus"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignRight="@id/img_profile"
+        android:layout_alignBottom="@id/img_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="1dp"
+        android:src="@drawable/ic_plus"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="1" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_profile"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:text="Gloria Elizabeth"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvUsername"
+        android:text="elizabeth@gmail.com"
+        android:layout_centerInParent="true"/>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvEmail"
+        android:layout_marginBottom="7dp"
+        android:background="?android:attr/listDivider" />
+
+    <ImageView
+        android:id="@+id/ivPayments"
+        android:layout_width="55dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/tvEmail"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/ic_credit_card_black_24dp"
+        android:onClick="choosePaymentMethods" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvEmail"
+        android:layout_alignRight="@+id/tvEmail"
+        android:layout_alignBottom="@+id/tvEmail"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="-44dp"
+        android:onClick="choosePaymentMethods"
+        android:text="Payment Methods"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/ivPayments"
+        android:layout_marginTop="7dp"
+        android:background="?android:attr/listDivider" />
+
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:background="@color/colorGreen"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profil"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_marketlist"
+            android:icon="@drawable/ic_market_list"
+            android:title="Liste de markets" />
+
+        <item
+            android:id="@+id/nav_livraison"
+            android:icon="@drawable/ic_local_shipping_black_24dp"
+            android:title="Livraison" />
+
+        <item
+            android:id="@+id/nav_pickup"
+            android:icon="@drawable/ic_store_mall_directory_black_24dp"
+            android:title="Pick Up" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_message"
+                android:title="Feedback" />
+
+        </menu>
+
+    </item>
+
+</menu>

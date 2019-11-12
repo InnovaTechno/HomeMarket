@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="387dp"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
+        android:onClick="chooseCardsMethod"
+        android:outlineSpotShadowColor="@color/grey"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp">
+
+            <ImageView
+                android:id="@+id/ivCardLogo"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/mastercard_icon"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/cardName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ivCardLogo"
+                android:layout_alignRight="@+id/ivCardLogo"
+                android:layout_marginEnd="-108dp"
+                android:layout_marginRight="-108dp"
+                android:text="Card Name : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardName"
+                android:layout_alignEnd="@+id/cardName"
+                android:layout_alignRight="@+id/cardName"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="-30dp"
+                android:layout_marginRight="-30dp"
+                android:layout_marginBottom="18dp"
+                android:text="Expiration date : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/card_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ivCardLogo"
+                android:layout_alignRight="@+id/ivCardLogo"
+                android:layout_marginEnd="-204dp"
+                android:layout_marginRight="-204dp"
+                android:text="MasterCard"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/exp_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardName"
+                android:layout_alignEnd="@+id/cardName"
+                android:layout_alignRight="@+id/cardName"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="-72dp"
+                android:layout_marginRight="-72dp"
+                android:text="6 / 22"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="387dp"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
+        android:onClick="chooseCardsMethod"
+        android:outlineSpotShadowColor="@color/grey"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp">
+
+            <ImageView
+                android:id="@+id/ivCardLogo2"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/visa_icon"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/cardName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ivCardLogo2"
+                android:layout_alignRight="@+id/ivCardLogo2"
+                android:layout_marginEnd="-121dp"
+                android:layout_marginRight="-121dp"
+                android:text="Card Name : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardName2"
+                android:layout_alignEnd="@+id/cardName2"
+                android:layout_alignRight="@+id/cardName2"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="-15dp"
+                android:layout_marginRight="-15dp"
+                android:layout_marginBottom="17dp"
+                android:text="Expiration date : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/card_Name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ivCardLogo2"
+                android:layout_alignRight="@+id/ivCardLogo2"
+                android:layout_marginEnd="-158dp"
+                android:layout_marginRight="-158dp"
+                android:text="Visa"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/exp_date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardName2"
+                android:layout_alignEnd="@+id/cardName2"
+                android:layout_alignRight="@+id/cardName2"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="-69dp"
+                android:layout_marginRight="-69dp"
+                android:text="6 / 22"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="387dp"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
+        android:onClick="chooseCardsMethod"
+        android:outlineSpotShadowColor="@color/grey"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp">
+
+            <ImageView
+                android:id="@+id/ivCardLogo3"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/paypal_icon"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/cardName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ivCardLogo3"
+                android:layout_alignRight="@+id/ivCardLogo3"
+                android:layout_marginEnd="-121dp"
+                android:layout_marginRight="-121dp"
+                android:text="Card Name : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardName3"
+                android:layout_alignEnd="@+id/cardName3"
+                android:layout_alignRight="@+id/cardName3"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="-20dp"
+                android:layout_marginRight="-20dp"
+                android:layout_marginBottom="17dp"
+                android:text="Expiration date : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/card_Name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ivCardLogo3"
+                android:layout_alignRight="@+id/ivCardLogo3"
+                android:layout_marginEnd="-178dp"
+                android:layout_marginRight="-178dp"
+                android:text="Paypal"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/exp_date3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardName3"
+                android:layout_alignEnd="@+id/cardName3"
+                android:layout_alignRight="@+id/cardName3"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="-68dp"
+                android:layout_marginRight="-68dp"
+                android:text="6 / 22"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="387dp"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
+        android:onClick="editMethods"
+        android:outlineSpotShadowColor="@color/grey"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp">
+
+            <ImageView
+                android:id="@+id/ivCardLogo4"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/moncash_icon"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/cardName4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ivCardLogo4"
+                android:layout_alignRight="@+id/ivCardLogo4"
+                android:layout_marginEnd="-78dp"
+                android:layout_marginRight="-78dp"
+                android:text="Name : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardName4"
+                android:layout_alignEnd="@+id/cardName4"
+                android:layout_alignRight="@+id/cardName4"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="-56dp"
+                android:layout_marginRight="-56dp"
+                android:layout_marginBottom="18dp"
+                android:text="Phone number : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/card_Name4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ivCardLogo4"
+                android:layout_alignRight="@+id/ivCardLogo4"
+                android:layout_marginEnd="-195dp"
+                android:layout_marginRight="-195dp"
+                android:text=" Gloria Dumervil"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/exp_date4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardName4"
+                android:layout_alignEnd="@+id/cardName4"
+                android:layout_alignRight="@+id/cardName4"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="-134dp"
+                android:layout_marginRight="-134dp"
+                android:inputType="number"
+                android:text="3737-3706"
+                android:textColor="#000"
+                android:textSize="18sp"
+
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="387dp"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
+        android:onClick="editMethods"
+        android:outlineSpotShadowColor="@color/grey"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp">
+
+            <ImageView
+                android:id="@+id/ivCardLogo5"
+                android:layout_width="120dp"
+                android:layout_height="77dp"
+                android:background="@drawable/cashmobile_icon"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/cardName5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ivCardLogo5"
+                android:layout_alignRight="@+id/ivCardLogo5"
+                android:layout_marginEnd="-82dp"
+                android:layout_marginRight="-82dp"
+                android:text="Name : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardName5"
+                android:layout_alignEnd="@+id/cardName5"
+                android:layout_alignRight="@+id/cardName5"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="-47dp"
+                android:layout_marginRight="-47dp"
+                android:layout_marginBottom="19dp"
+                android:text="Phone number : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/card_Name5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ivCardLogo5"
+                android:layout_alignRight="@+id/ivCardLogo5"
+                android:layout_marginEnd="-232dp"
+                android:layout_marginRight="-232dp"
+                android:text="Elizabeth Dumervil"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/exp_date5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardName5"
+                android:layout_alignEnd="@+id/cardName5"
+                android:layout_alignRight="@+id/cardName5"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="-131dp"
+                android:layout_marginRight="-131dp"
+                android:text="4364-7138"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

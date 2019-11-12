@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl">
+
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/ivCard"
+        android:layout_width="341dp"
+        android:layout_height="191dp"
+        android:layout_centerHorizontal="true"
+        android:src="@color/colorBlack"
+        />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@+id/li3"
+        android:layout_alignRight="@+id/li3"
+        android:layout_alignBottom="@+id/li3"
+        android:layout_marginEnd="-57dp"
+        android:layout_marginRight="-57dp"
+        android:layout_marginBottom="-48dp"
+        android:background="@drawable/visa_icon" />
+
+
+
+    <TextView
+        android:id="@+id/bankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ivCard"
+        android:layout_alignRight="@+id/ivCard"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="214dp"
+        android:layout_marginRight="214dp"
+        android:text="BANK NAME"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bankName"
+        android:layout_alignEnd="@+id/bankName"
+        android:layout_alignRight="@+id/bankName"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="-72dp"
+        android:layout_marginRight="-72dp"
+        android:text="@string/code"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/cardholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/code"
+        android:layout_alignEnd="@+id/bankName"
+        android:layout_alignRight="@+id/bankName"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="-6dp"
+        android:layout_marginRight="-6dp"
+        android:text="CARDHOLDER"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/li"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/cardholder"
+        android:layout_below="@+id/code"
+        android:orientation="vertical"
+        android:layout_marginTop="42dp">
+
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/code"
+            android:layout_marginStart="20dp"
+            android:text="06"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/code"
+            android:layout_marginStart="20dp"
+            android:text="MM"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/code"
+        android:layout_alignRight="@+id/code"
+        android:layout_alignBottom="@+id/cardholder"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="8dp"
+        android:text="/"
+        android:textColor="#fff" />
+
+
+    <LinearLayout
+        android:id="@+id/li2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/divide"
+        android:layout_below="@+id/code"
+        android:orientation="vertical"
+        android:layout_marginTop="42dp">
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/code"
+            android:layout_marginStart="5dp"
+            android:text="22"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/yy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/code"
+            android:layout_marginStart="5dp"
+            android:text="YY"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/li3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/li2"
+        android:layout_below="@+id/code"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="42dp">
+
+        <TextView
+            android:id="@+id/cvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/code"
+            android:hint="CVV"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rr1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/li2"
+        android:layout_marginTop="55dp">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="ENTER 16 DIGIT NUMBER"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:hint="XXXX"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="@color/blue" />
+
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/et1"
+            android:hint="XXXX"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="@color/blue" />
+
+        <EditText
+            android:id="@+id/et3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/et2"
+            android:hint="XXXX"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="@color/blue" />
+
+        <EditText
+            android:id="@+id/et4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/et3"
+            android:hint="XXXX"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="CARDHOLDER NAME"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/et5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv2"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:hint="CARD HOLDER"
+            android:textColor="@color/blue" />
+
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et5"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="EXIPY"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/et6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv3"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:hint="XX"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/blue" />
+
+        <EditText
+            android:id="@+id/et7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv3"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/tv3"
+            android:hint="YY"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/blue"
+         />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et7"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:text="ENTER CVV"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/et8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et7"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="-6dp"
+            android:layout_toEndOf="@+id/tv4"
+            android:hint="XXX"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@color/blue" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="224dp"
+            android:layout_height="57dp"
+            android:layout_below="@id/et7"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/roundedbutton"
+            android:text="SAVE DATA"
+            android:textColor="#FFF" />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

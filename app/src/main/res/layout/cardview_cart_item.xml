@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvCart_Item"
+    android:layout_width="391dp"
+    android:layout_height="125dp"
+    android:layout_margin="7dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    cardview:cardBackgroundColor="#85E49EA2"
+    cardview:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivCart_Item"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:background="#000"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tvNameItem"
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/ivCart_Item"
+            android:layout_alignRight="@+id/ivCart_Item"
+            android:layout_alignBottom="@+id/ivCart_Item"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="-101dp"
+            android:layout_marginRight="-101dp"
+            android:layout_marginBottom="88dp"
+            android:text="Citron"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPrice_Item"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/ivCart_Item"
+            android:layout_alignRight="@+id/ivCart_Item"
+            android:layout_alignBottom="@+id/tvNameItem"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="-62dp"
+            android:layout_marginRight="-62dp"
+            android:layout_marginBottom="-35dp"
+            android:text="125"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvDevise_Item"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tvPrice_Item"
+            android:layout_alignRight="@+id/tvPrice_Item"
+            android:layout_alignBottom="@+id/tvPrice_Item"
+            android:layout_marginEnd="-58dp"
+            android:layout_marginRight="-58dp"
+            android:layout_marginBottom="-1dp"
+            android:text="HTG/LBS" />
+
+        <Button
+            android:id="@+id/btn_moins"
+            android:layout_width="30dp"
+            android:layout_height="31dp"
+            android:layout_alignBottom="@+id/tvPrice_Item"
+            android:layout_marginEnd="-31dp"
+            android:layout_marginRight="-31dp"
+            android:layout_marginBottom="-45dp"
+            android:layout_toStartOf="@+id/tvPrice_Item"
+            android:layout_toLeftOf="@+id/tvPrice_Item"
+            android:background="#C8020E"
+            android:text="-"
+            android:textColor="#201D1D"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_plus"
+            android:layout_width="30dp"
+            android:layout_height="31dp"
+            android:layout_alignRight="@+id/tvDevise_Item"
+            android:layout_alignBottom="@+id/tvDevise_Item"
+            android:layout_marginRight="-1dp"
+            android:layout_marginBottom="-44dp"
+            android:background="#C8020E"
+            android:text="+"
+            android:textColor="#201D1D"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNbrsItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tvNameItem"
+            android:layout_alignRight="@+id/tvNameItem"
+            android:layout_alignBottom="@+id/ivCart_Item"
+            android:layout_marginEnd="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginBottom="16dp"
+            android:text="1"
+            android:textColor="#3F3D3D"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPrice_Total"
+            android:layout_width="53dp"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/tvNameItem"
+            android:layout_alignRight="@+id/tvNameItem"
+            android:layout_marginEnd="-96dp"
+            android:layout_marginRight="-96dp"
+            android:background="#ebebeb"
+            android:gravity="center"
+            android:text="125"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDevise_Total"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/tvPrice_Total"
+            android:layout_alignRight="@+id/tvPrice_Total"
+            android:layout_marginEnd="-70dp"
+            android:layout_marginRight="-70dp"
+            android:background="#ebebeb"
+            android:gravity="center"
+            android:text="HTG/LBS"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ivCart_Item"
+            android:layout_marginTop="-2dp"
+            android:background="?android:attr/listDivider" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

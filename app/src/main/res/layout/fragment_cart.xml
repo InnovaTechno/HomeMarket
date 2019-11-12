@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorGreen"
+        android:textStyle="bold"
+        android:text="Liste de Produits acheté"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="horizontal"
+        android:background="#f6f6f6">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_Cart"
+            android:layout_width="401dp"
+            android:layout_height="250dp"
+            android:layout_marginLeft="5dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTotal_Acheter"
+            android:layout_width="199dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:text="Total Acheter :"
+            android:textColor="#3F3D3D" />
+
+        <TextView
+            android:id="@+id/tv_Total_Acheter"
+            android:layout_width="194dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="952.00 HTG"
+            android:textColor="#3F3D3D"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvTotal_Livraison"
+        android:layout_width="203dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:text="Livraison : "
+        android:textStyle="bold"
+        android:textColor="#3F3D3D"
+        />
+
+    <TextView
+        android:id="@+id/tv_Total_Livraison"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="150,00 HTG"
+        android:textStyle="bold"
+        android:textColor="#3F3D3D"
+         />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTOTAL"
+            android:layout_width="202dp"
+            android:layout_height="42dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:text="TOTAL :"
+            android:textSize="20sp"
+            android:textColor="#3F3D3D"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_TOTAL_PRICE"
+            android:layout_width="188dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="1,000,00 HTG"
+            android:textColor="#3F3D3D"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCheckout"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/roundedbutton"
+        android:gravity="center"
+        android:text="CHECKOUT"
+        android:textColor="#fff" />
+
+</LinearLayout>

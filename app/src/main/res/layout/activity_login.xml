@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/imageSlider"
+        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        app:sliderStartAutoCycle="true"
+        app:sliderScrollTimeInSec="1"
+        app:sliderIndicatorUnselectedColor="#fff"
+        app:sliderIndicatorSelectedColor="#5A5A5A"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorAnimationDuration="500"
+        app:sliderCircularHandlerEnabled="true"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAnimationDuration="600"
+        />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_below="@id/imageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:inputType="textEmailAddress"
+        android:textSize="20dp"
+        android:hint="Email address"/>
+
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/til"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_below="@id/etEmail"
+    >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etPassword"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/colorBlack"
+
+        android:textSize="20dp">
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+</com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedbutton"
+        android:layout_marginHorizontal="30dp"
+        android:layout_below="@id/til"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Don't have an account yet? Please sign up."
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey"
+        android:onClick="goToSignUpActivity"
+    />
+
+    <ProgressBar
+        android:id="@+id/siProgressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLogin"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.InnovaTechno.homemarket">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".ParseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".PaymentMethods.CardsMethod"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".PaymentMethods.ChoosePayments"
+            android:parentActivityName=".Profile"/>
+        <activity android:name=".Livraison.Livraison" />
+        <activity android:name=".Items_Detail.ItemDetails" />
+        <activity android:name=".Categories.Viandes"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Produits_Laitiers"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Produits_Cosmetiques"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Pains"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Chips_Sucreries"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Boissons"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Boissons_Alcolisees" />
+        <activity android:name=".Categories.Articles_Menagers"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Markets_Details.MarketsDetailsActivity"
+            android:parentActivityName=".MarketsActivity"/>
+        <activity android:name=".MarketsActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Categories.Fruits_Legumes"
+            android:parentActivityName=".MainActivity"/>
+       
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ImagePickerActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.Default" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignUpActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.Default" />
+            </intent-filter>
+        </activity> <!-- uCrop cropping activity -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- cache directory file provider paths -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.InnovaTechno.file_paths"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
