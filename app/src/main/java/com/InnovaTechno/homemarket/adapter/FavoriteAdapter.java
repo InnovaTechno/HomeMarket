@@ -1,70 +1,107 @@
 package com.InnovaTechno.homemarket.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.InnovaTechno.homemarket.Models.Favorite;
+import com.InnovaTechno.homemarket.Categories.Models.Post;
+import com.InnovaTechno.homemarket.MainActivity;
+import com.InnovaTechno.homemarket.Models.Favorites;
+import com.InnovaTechno.homemarket.R;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.parse.DeleteCallback;
+import com.parse.ParseException;
 
-public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.FavoriteHolder>{
-    private Favorite favorites;
-    private Context context;
+import java.util.List;
 
-    public FavoriteAdapter(Favorite favorites, Context context) {
-        this.favorites = favorites;
+public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Viewholder> {
+    Context context;
+    List<Favorites> mFavorites;
+
+    public FavoriteAdapter(Context context, List<Favorites> list) {
         this.context = context;
+        this.mFavorites = list;
     }
 
     @NonNull
     @Override
-    public FavoriteHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(android.R.layout.cardview_favorite_item,parent, false);
-        return new FavoriteHolder(view);
-
+    public Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.cardview_favorite_item,parent,false);
+        return new Viewholder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FavoriteHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Viewholder holder, int position) {
+        Favorites favorites = mFavorites.get(position);
 
+        Post post = (Post) favorites.getProduct();
+
+        Glide.with(context)
+                .load(post.getImage().getUrl())
+                //.apply(new RequestOptions().error(R.drawable.error))
+                .into(holder.imageView);
+        holder.tvName.setText(post.getName());
+        holder.tvPrice.setText(post.getPrice());
+        holder.tvDevise.setText(post.getDevise());
+
+        //Remove favorites
+        holder.removeFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                favorites.deleteInBackground(new DeleteCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e!=null){
+                            Log.d("FavoriteAdapter","Erreur delete: "+e.getMessage());
+                            e.printStackTrace();
+                            return;
+                        }
+                       mFavorites.remove(position);
+                        notifyDataSetChanged();
+                        Toast.makeText(context,"successfully removed from favorites", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mFavorites.size();
     }
 
-    public class FavoriteHolder extends RecyclerView.ViewHolder {
-        private Favorite favorite;
-        private ImageView iv_empty_cart;
-        private TextView tv_start_shopping;
+    public void AddAllToList(List<Favorites> list){
+        mFavorites.clear();
+       mFavorites.addAll(list);
+        notifyDataSetChanged();
+    }
 
-        public FavoriteHolder(@NonNull View itemView) {
+    public class Viewholder extends RecyclerView.ViewHolder {
+
+        ImageView imageView;
+        TextView tvName, tvPrice, tvDevise;
+        Button btnAdd_to_Cart,removeFab;
+
+        public Viewholder(@NonNull View itemView) {
             super(itemView);
-            tv_start_shopping = (TextView) itemView;
-            iv_empty_cart = (ImageView) itemView;
+            imageView = itemView.findViewById(R.id.imageView);
+            tvName = itemView.findViewById(R.id.tvName);
+            tvPrice = itemView.findViewById(R.id.tvPrice);
+            tvDevise = itemView.findViewById(R.id.tvDevise);
+            btnAdd_to_Cart = itemView.findViewById(R.id.btnAdd_to_Cart);
+            removeFab = itemView.findViewById(R.id.removeFab);
         }
-
-        public void bindFavorite (Favorite favorite){
-            favorite = favorite;
-            tv_start_shopping.setText(favorite.getTitle());
-            iv_empty_cart.setImageResource(favorite.getImage());
-
-        }
-
-
-        //  public FavoriteHolder(View itemView) {
-         //   super(itemView);
-          //  titleTextView = (TextView)itemView;       }
-
-      //  public void bindTodo(Todo todo) {
-         //   todo = todo;
-          //  titleTextView.setText(todo.getTitle());        }
     }
 }

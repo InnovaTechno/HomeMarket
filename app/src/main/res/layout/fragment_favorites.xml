@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!-- Added a LinearLayout to enclose the EmptyRecyclerView and
-     the empty view -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,45 +7,14 @@
     android:background="#f6f6f6"
     android:orientation="vertical">
 
-    <!-- Replaced android.support.v7.widget.RecyclerView with the
-            new EmptyRecyclerView -->
-    <com.akbaribrahim.EmptyRecyclerView
-        android:id="@+id/rv_favorite"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_favorites"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="2dp"
         android:scrollbarAlwaysDrawVerticalTrack="true"
         android:scrollbarSize="2dp"
         android:scrollbars="vertical"
-        app:fastScrollVerticalThumbDrawable="@color/colorPrimary"/>
-
-
-    <!-- Added an empty view which will be shown when the EmptyRecyclerView
-         is empty -->
-    <LinearLayout
-        android:id="@+id/todo_list_empty_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:textAlignment="center">
-
-        <ImageView
-            android:id="@+id/iv_empty_cart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/empty_cart"
-            android:padding="16dp"
-            android:text=""/>
-
-        <Button
-            android:id="@+id/tv_start_shopping"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:background="@drawable/roundedbutton"
-            android:text="Start Shopping"
-            android:textColor="#fff"/>
-
-    </LinearLayout>
+        app:fastScrollVerticalThumbDrawable="@color/colorPrimary">
+    </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>
