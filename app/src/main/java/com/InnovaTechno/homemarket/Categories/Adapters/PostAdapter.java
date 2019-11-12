@@ -3,6 +3,7 @@ package com.InnovaTechno.homemarket.Categories.Adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,15 +25,22 @@ import com.InnovaTechno.homemarket.Fragments.CartFragment;
 import com.InnovaTechno.homemarket.Fragments.FavoritesFragment;
 import com.InnovaTechno.homemarket.GlideApp;
 import com.InnovaTechno.homemarket.Items_Detail.ItemDetails;
+import com.InnovaTechno.homemarket.Models.Favorites;
 import com.InnovaTechno.homemarket.R;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.parse.FindCallback;
+import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 import java.util.List;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     private Context context;
+    Post post;
     private List <Post> posts;
 
     public PostAdapter(Context context, List<Post> posts ) {
@@ -106,20 +114,15 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
                 }
             });
-            //SharedPreference
+            //Add to favorites
             favorites.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                     if (compoundButton != null) {
                         Toast.makeText(itemView.getContext(),
                                 "Added to your favorites" + isChecked, Toast.LENGTH_SHORT).show();
-                        int position = getAdapterPosition();
-                        Bundle bundle = new Bundle();
-                        bundle.putString("name", posts.get(position).getName());
-                        bundle.putString("price2", posts.get(position).getPrice());
-                        //set FavoritesFragment
-                        FavoritesFragment favoritesFragment = new FavoritesFragment();
-                        favoritesFragment.setArguments(bundle);
+                        //load the query to save the item
+                        addToFavorites();
                     }
                 }
             });
@@ -137,6 +140,48 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 }
             });
     }
+    private void addToFavorites() {
+        ParseQuery<Favorites> query = ParseQuery.getQuery(Favorites.class);
+        query.whereEqualTo(Favorites.KEY_USER, ParseUser.getCurrentUser());
+        query.whereEqualTo(Favorites.KEY_PRODUCT, post);
+        query.findInBackground(new FindCallback<Favorites>() {
+            @Override
+            public void done(List<Favorites> objects, ParseException e) {
+                if (e!=null){
+                    Log.d("Adapter","Erreur:"+e.getMessage());
+                    e.printStackTrace();
+                    return;
+                }
+                if(objects.size()!=0){
+                    //If the user already save this item
+                    //TODO - Better sentence
+                    Toast.makeText(context,"Saved already!", Toast.LENGTH_SHORT).show();
+
+                }else {
+                    Favorites favorites = new Favorites();
+                    favorites.setUser(ParseUser.getCurrentUser());
+                    favorites.setProduct(post);
+                    favorites.saveInBackground(new SaveCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            if(e!=null){
+                                Log.d("Adapter","Erreur:"+e.getMessage());
+                                e.printStackTrace();
+                                return;
+                                    }
+                           // Toast.makeText(context,"This product is saved in favorites!", Toast.LENGTH_SHORT).show();
+                        }
+                            });
+                        }
+                    }
+                });
+            }
+
     }
-}
+
+
+
+    }
+
+
 

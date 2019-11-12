@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/cvFruits_Legumes"
+    android:layout_width="360dp"
+    android:layout_height="95dp"
+    android:layout_marginTop="5dp"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="3dp"
+    cardview:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="95dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="87dp"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:scaleType="fitXY" />
+
+        <ToggleButton
+            android:id="@+id/favoritesBtn"
+            android:layout_width="27dp"
+            android:layout_height="23dp"
+            android:layout_above="@+id/tvName"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="-252dp"
+            android:layout_marginBottom="-62dp"
+            android:background="@drawable/ic_favorite_black_24dp"
+            android:textOff=""
+            android:textOn="" />
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_marginEnd="-107dp"
+            android:layout_marginRight="-107dp"
+            android:text="Pommes"
+            android:textColor="#C8020E"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RatingBar
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_marginEnd="-111dp"
+            android:layout_marginRight="-111dp"
+            android:layout_marginBottom="42dp"
+            android:numStars="5"
+            android:outlineAmbientShadowColor="@color/colorPrimary" />
+
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="43dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/tvName"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="109dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="-65dp"
+            android:layout_marginRight="-65dp"
+            android:gravity="center"
+            android:text="1000"
+            android:textColor="#3F3D3D"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvDevise"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_below="@+id/tvName"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="-129dp"
+            android:layout_marginRight="-129dp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="HTG/LBS"
+            android:textColor="#3F3D3D"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnAdd_to_Cart"
+            android:layout_width="27dp"
+            android:layout_height="23dp"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_marginEnd="-209dp"
+            android:layout_marginRight="-209dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ic_shopping_cart_black_24dp" />
+
+        <Button
+            android:id="@+id/removeFab"
+            android:layout_width="23dp"
+            android:layout_height="18dp"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_marginEnd="-272dp"
+            android:layout_marginRight="-272dp"
+            android:clickable="true"
+            android:background="@drawable/ic_close_black_24dp" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

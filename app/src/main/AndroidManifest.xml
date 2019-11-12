@@ -50,7 +50,7 @@
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Categories.Fruits_Legumes"
             android:parentActivityName=".MainActivity"/>
-       
+
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,7 +68,8 @@
         <activity android:name=".ImagePickerActivity" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".WelcomeActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

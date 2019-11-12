@@ -9,6 +9,7 @@ import com.parse.ParseObject;
 public class Post extends ParseObject {
 
     public static final String KEY_NAME =  "name";
+    public static final String KEY_PRODUCT= "Product";
     public static final String KEY_IMAGE =  "productImage";
     public static final String KEY_DEVISE = "devise";
     public static final String KEY_PRICE = "price2";
@@ -35,8 +36,6 @@ public class Post extends ParseObject {
     public void setName(String name) {
         put(KEY_NAME, name);
     }
-
-
 
     public void setImage (ParseFile parseFile){
         put(KEY_IMAGE, parseFile);
