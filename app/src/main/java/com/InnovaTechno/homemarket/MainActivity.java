@@ -98,6 +98,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                if (ParseUser.getCurrentUser() == null){
                 Toast.makeText(this, "You haven't login yet.",
                          Toast.LENGTH_SHORT).show();
+                   Intent l = new Intent(this, LoginActivity.class);
+                   startActivity(l);
                 } else{
                     Intent p = new Intent(this, Profile.class);
                     startActivity(p);
@@ -112,13 +114,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 break;
             case R.id.nav_livraison:
-                Toast.makeText(this, "Pick Up", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Livraison", Toast.LENGTH_SHORT).show();
                 Intent l = new Intent(this, Livraison.class);
                 startActivity(l);
 
                 break;
             case R.id.nav_pickup:
-                Toast.makeText(this, "MarketList", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Pickup", Toast.LENGTH_SHORT).show();
 
                 break;
 
