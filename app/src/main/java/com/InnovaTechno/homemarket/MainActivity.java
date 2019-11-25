@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                if (ParseUser.getCurrentUser() == null){
                 Toast.makeText(this, "You haven't login yet.",
                          Toast.LENGTH_SHORT).show();
+                //in case you haven't loggin yet
                    Intent l = new Intent(this, LoginActivity.class);
                    startActivity(l);
                 } else{
