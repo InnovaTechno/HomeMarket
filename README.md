@@ -1,4 +1,4 @@
-﻿Group Project - README Template
+﻿Group Project - CodePath
 ===
 
 # HOMEMARKET
@@ -20,7 +20,6 @@ Market at Home is an app that shows the nearby Markets, their daily products, al
 - **Story:** allow users to see all informations about selected supermarkets, including products and services. users will also be able to buy products online, compare prices and get a delivery.
 - **Market:** anyone with an online method of payment can use this app. 
 - **Habit:** This app could be used as often as the user wanted. User can verify available services and products of their surrounded markets many times a day. Users can learn more about available products with their respective price. User will know markets'trading hours, services like if the market have money fastfood or a café, money transfer services, atm, drugstore, etc...
-- **Scope:** 
 
 ## Product Spec
 
