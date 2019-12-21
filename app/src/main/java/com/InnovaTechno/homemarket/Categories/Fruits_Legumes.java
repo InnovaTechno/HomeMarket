@@ -68,10 +68,7 @@ public class Fruits_Legumes extends AppCompatActivity {
         adapter = new PostAdapter(this, mPosts );
         //Check the internet connection state
         if(!isConnected(Fruits_Legumes.this)) buildDialog(Fruits_Legumes.this).show();
-        else {
-            manager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-            rv_fruits_legumes.setLayoutManager(manager);
-       // rv_fruits_legumes.setLayoutManager(new GridLayoutManager(this, 2));
+        else { rv_fruits_legumes.setLayoutManager(new GridLayoutManager(this, 2));
         rv_fruits_legumes.setAdapter(adapter);}
 
 

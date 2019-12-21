@@ -169,7 +169,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                                 e.printStackTrace();
                                 return;
                                     }
-                           // Toast.makeText(context,"This product is saved in favorites!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context,"This product is saved in favorites!", Toast.LENGTH_SHORT).show();
                         }
                             });
                         }

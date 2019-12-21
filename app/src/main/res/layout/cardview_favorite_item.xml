@@ -74,7 +74,7 @@
             android:layout_gravity="center"
             android:layout_marginStart="109dp"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="27dp"
             android:layout_marginEnd="-65dp"
             android:layout_marginRight="-65dp"
             android:gravity="center"

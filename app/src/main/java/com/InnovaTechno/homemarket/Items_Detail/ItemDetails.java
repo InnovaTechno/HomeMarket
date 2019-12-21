@@ -38,7 +38,7 @@ public class ItemDetails extends AppCompatActivity {
     private RelatedItemsAdapter adapter;
     private List<RelatedItems> relatedItems;
     private Context context;
-    private List <Post> post;
+    private Post post;
     private static final String TAG = "RelatedItems";
     private int counter;
     private int priceChange;
@@ -90,15 +90,18 @@ public class ItemDetails extends AppCompatActivity {
         String price2 = intent.getExtras().getString("price2");
         String devise = intent.getExtras().getString("devise");
         String description = intent.getExtras().getString("description");
-       // String image = intent.getExtras().getString("productImage");
+      // String image = intent.getExtras().getString("productImage");
+
 
         //Setting the data
         tv_Price.setText(price2);
         tv_Devise.setText(devise);
         tvName.setText(name);
         tvDescription.setText(description);
-
-
+        Glide.with(getApplicationContext())
+                .load(post.getImage().getUrl())
+                //.apply(new RequestOptions().error(R.drawable.error))
+                .into(ivItemDetails);
 
         //Related Items adapter
         relatedItems = new ArrayList<>();
