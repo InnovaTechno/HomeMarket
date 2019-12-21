@@ -149,6 +149,11 @@ public class LoginActivity extends AppCompatActivity {
         finish();
     }
 
+    public void backToWelcomeScreen(View view) {
+        Intent back = new Intent(this, WelcomeActivity.class);
+        startActivity(back);
+        finish();
+    }
 }
 
 
